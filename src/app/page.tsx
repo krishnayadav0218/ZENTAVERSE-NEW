@@ -9,11 +9,12 @@ import ClientMarquee from "@/components/ClientMarquee";
 import StatsSection from "@/components/StatsSection";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
+import ProjectCostEstimator from "@/components/ProjectCostEstimator";
+import AIProjectAdvisor from "@/components/AIProjectAdvisor";
 import ProjectsSection from "@/components/ProjectsSection";
 import TechStackSection from "@/components/TechStackSection";
 import WorkProcessSection from "@/components/WorkProcessSection";
 import WhyMeSection from "@/components/WhyMeSection";
-import ProjectCostEstimator from "@/components/ProjectCostEstimator";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
@@ -21,6 +22,9 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import AppointmentBookingModal from "@/components/AppointmentBookingModal";
 import CompanyProfileModal from "@/components/CompanyProfileModal";
+import CustomCyberCursor from "@/components/CustomCyberCursor";
+import AudioToggle from "@/components/AudioToggle";
+import ExitIntentModal from "@/components/ExitIntentModal";
 
 export default function HomePage() {
   const [brand] = useState<BrandConfig>(defaultBrandConfig);
@@ -37,6 +41,9 @@ export default function HomePage() {
 
   return (
     <div className="relative min-h-screen bg-[#030712] text-slate-100 overflow-x-hidden selection:bg-cyan-500/30 selection:text-cyan-200">
+      {/* Magnetic Futuristic Cyber Cursor (Smooth follower, desktop only) */}
+      <CustomCyberCursor />
+
       {/* Persistent Futuristic Ambient Background & Grid */}
       <AmbientBackground />
 
@@ -70,34 +77,40 @@ export default function HomePage() {
         {/* 7. Interactive Project Cost & Scope Estimator */}
         <ProjectCostEstimator onOpenBooking={handleOpenBooking} />
 
-        {/* 8. Projects & Case Studies */}
-        <ProjectsSection />
+        {/* 8. AI Project Scope Generator & Tech Stack Blueprint Advisor */}
+        <AIProjectAdvisor onOpenBooking={handleOpenBooking} />
 
-        {/* 9. Tech Stack Ecosystem */}
+        {/* 9. Projects & Case Studies (Tabbed Problem/Solution, Architecture & Measurable ROI) */}
+        <ProjectsSection onOpenBooking={handleOpenBooking} />
+
+        {/* 10. Tech Stack Ecosystem */}
         <TechStackSection />
 
-        {/* 10. Work Process & Timeline */}
+        {/* 11. Work Process & Timeline */}
         <WorkProcessSection />
 
-        {/* 11. Why Choose Zyntaverse Section */}
+        {/* 12. Why Choose Zyntaverse Section */}
         <WhyMeSection />
 
-        {/* 12. Client Reviews & Testimonials Carousel */}
+        {/* 13. Client Reviews & Testimonials Carousel */}
         <TestimonialsSection />
 
-        {/* 13. Frequently Asked Questions (FAQ Accordion) */}
+        {/* 14. Frequently Asked Questions (FAQ Accordion) */}
         <FAQSection onOpenBooking={handleOpenBooking} />
 
-        {/* 14. Contact Section with Fine 3D Holographic Scannable QR Key & Custom Inquiry Form */}
+        {/* 15. Contact Section with Fine 3D Holographic Scannable QR Key & Custom Inquiry Form */}
         <ContactSection brand={brand} onOpenBooking={handleOpenBooking} />
       </main>
 
-      {/* 15. Futuristic Footer */}
+      {/* 16. Futuristic Footer */}
       <Footer
         brand={brand}
         onOpenBooking={handleOpenBooking}
         onOpenDeck={handleOpenDeck}
       />
+
+      {/* Floating Interactive Sci-Fi Sound FX Toggle (Web Audio API) */}
+      <AudioToggle />
 
       {/* Floating Interactive WhatsApp Chat Button */}
       <WhatsAppButton
@@ -116,6 +129,9 @@ export default function HomePage() {
         isOpen={deckModalOpen}
         onClose={() => setDeckModalOpen(false)}
       />
+
+      {/* Desktop Exit Intent Modal (Free 15-Minute Blueprint Lead Magnet) */}
+      <ExitIntentModal onOpenBooking={handleOpenBooking} />
     </div>
   );
 }
