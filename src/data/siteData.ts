@@ -27,9 +27,9 @@ export const defaultBrandConfig: BrandConfig = {
   email: "zyntaversetechnologies@gmail.com",
   phone: "+91 7992153750",
   whatsapp: "+91 7992153750",
-  linkedin: "https://linkedin.com/company/zyntaverse-technologies",
-  github: "https://github.com/zyntaverse",
-  portfolioUrl: "https://www.zyntaverse.com",
+  linkedin: "https://in.linkedin.com/in/krishnayadav0218",
+  github: "https://github.com/krishnayadav0218",
+  portfolioUrl: "https://krishna-portfolio0218.vercel.app/",
   availability: "Available for Q4 Enterprise & Startup Projects",
 };
 
