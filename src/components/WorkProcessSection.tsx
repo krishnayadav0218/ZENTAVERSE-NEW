@@ -34,21 +34,21 @@ const experienceMilestones = [
     role: "Lead Full-Stack & AI Systems Architect",
     focus:
       "Architecting bespoke Next.js platforms, autonomous LLM/RAG agents, and enterprise BI systems for global clients.",
-    accent: "#00F0FF",
+    accent: "#3B82F6",
   },
   {
     period: "2022 — 2024",
     role: "Full-Stack Developer & Data Solutions Engineer",
     focus:
       "Engineered scalable React/Node.js web apps, SQL/MongoDB backends, and interactive Power BI / Tableau analytics suites.",
-    accent: "#8B5CF6",
+    accent: "#6366F1",
   },
   {
     period: "2021 — 2022",
     role: "Software Engineering & AI Research Foundation",
     focus:
       "Built machine learning pipelines in Python, REST APIs, and responsive modern web interfaces across 20+ projects.",
-    accent: "#EC4899",
+    accent: "#0EA5E9",
   },
 ];
 
@@ -67,7 +67,7 @@ export default function WorkProcessSection() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3.5 py-1 text-xs font-mono uppercase tracking-widest text-cyan-300 mb-4">
+          <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-3.5 py-1 text-xs font-mono uppercase tracking-widest text-blue-300 mb-4">
             <Sparkles className="h-3.5 w-3.5" />
             <span>WORK PROCESS & EXPERIENCE // 01 — 07</span>
           </div>
@@ -75,23 +75,21 @@ export default function WorkProcessSection() {
             From Blueprint to{" "}
             <span className="text-gradient-cyber">Global Launch</span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-300/90">
+          <p className="mt-4 text-base sm:text-lg text-slate-300">
             A transparent, battle-tested 7-stage engineering protocol designed
             to eliminate risk and deliver high-ROI digital systems on schedule.
           </p>
         </motion.div>
 
-        {/* ======================================================= */}
-        {/* HORIZONTAL FUTURISTIC TIMELINE WITH GLOWING CONNECTIONS */}
-        {/* ======================================================= */}
+        {/* Timeline With Glowing Conduit */}
         <div className="relative mb-12">
-          {/* Desktop Horizontal Glowing Conduit Track */}
+          {/* Conduit Track */}
           <div
             className="hidden lg:block absolute top-10 left-[6%] right-[6%] h-0.5 bg-slate-800"
             aria-hidden="true"
           >
             <motion.div
-              className="h-full bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 shadow-[0_0_16px_rgba(0,240,255,0.85)]"
+              className="h-full bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-400 shadow-[0_0_12px_rgba(59,130,246,0.5)]"
               initial={{ width: "0%" }}
               animate={{
                 width: `${(activeIndex / (workProcessData.length - 1)) * 100}%`,
@@ -118,17 +116,17 @@ export default function WorkProcessSection() {
                   transition={{ duration: 0.45, delay: idx * 0.06 }}
                   className={`group flex flex-col items-center text-center p-3 rounded-2xl transition-all ${
                     isCurrent
-                      ? "bg-slate-900/90 border border-cyan-400/50 shadow-neon-cyan"
+                      ? "bg-slate-900/90 border border-blue-500/50 shadow-sm"
                       : "hover:bg-white/[0.03] border border-transparent"
                   }`}
                 >
-                  {/* Glowing Stage Node */}
+                  {/* Stage Node */}
                   <div
                     className={`relative flex h-14 w-14 items-center justify-center rounded-2xl border transition-all duration-300 ${
                       isCurrent
-                        ? "scale-110 border-cyan-300 bg-slate-950 text-cyan-300 shadow-[0_0_25px_rgba(0,240,255,0.55)]"
+                        ? "scale-110 border-blue-400 bg-slate-950 text-blue-300 shadow-[0_0_20px_rgba(59,130,246,0.3)]"
                         : isPassed
-                        ? "border-purple-400/50 bg-slate-900 text-purple-300"
+                        ? "border-blue-500/40 bg-slate-900 text-blue-300"
                         : "border-white/10 bg-slate-950/80 text-slate-400 group-hover:border-white/30"
                     }`}
                   >
@@ -136,7 +134,7 @@ export default function WorkProcessSection() {
                     <span
                       className={`absolute -top-2 -right-2 rounded-md px-1.5 py-0.5 font-mono text-[10px] font-bold ${
                         isCurrent
-                          ? "bg-cyan-400 text-slate-950"
+                          ? "bg-blue-600 text-white"
                           : "bg-slate-800 text-slate-300"
                       }`}
                     >
@@ -156,13 +154,13 @@ export default function WorkProcessSection() {
           </div>
         </div>
 
-        {/* Active Stage Holographic Inspection Panel */}
+        {/* Active Stage Inspection Panel */}
         <motion.div
           key={activeStage.step}
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.35 }}
-          className="glass-panel rounded-3xl p-6 sm:p-9 border border-cyan-400/30 mb-16"
+          className="glass-panel rounded-3xl p-6 sm:p-9 border border-slate-700/60 mb-16"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
             <div className="lg:col-span-7 space-y-3">
@@ -191,7 +189,7 @@ export default function WorkProcessSection() {
 
             <div className="lg:col-span-5 flex flex-col justify-between rounded-2xl border border-white/10 bg-slate-950/70 p-5 space-y-4">
               <div>
-                <div className="font-mono text-[10px] uppercase tracking-widest text-cyan-300">
+                <div className="font-mono text-[10px] uppercase tracking-widest text-blue-300">
                   Verified Stage Deliverable
                 </div>
                 <div className="mt-1.5 flex items-center gap-2 text-sm font-semibold text-white">
@@ -209,7 +207,7 @@ export default function WorkProcessSection() {
                   onClick={() =>
                     setActiveIndex((prev) => (prev + 1) % workProcessData.length)
                   }
-                  className="inline-flex items-center gap-1.5 font-mono text-xs text-cyan-300 hover:text-white transition-colors"
+                  className="inline-flex items-center gap-1.5 font-mono text-xs text-blue-300 hover:text-white transition-colors"
                 >
                   <span>Next Stage</span>
                   <ArrowRight className="h-3.5 w-3.5" />
@@ -222,9 +220,9 @@ export default function WorkProcessSection() {
         {/* Experience & Track Record Strip */}
         <div className="space-y-6">
           <div className="flex items-center gap-2.5">
-            <Briefcase className="h-4 w-4 text-purple-400" />
-            <h3 className="font-mono text-xs uppercase tracking-widest text-purple-300">
-              5+ Years Learning & Professional Engineering Trajectory
+            <Briefcase className="h-4 w-4 text-blue-400" />
+            <h3 className="font-mono text-xs uppercase tracking-widest text-blue-300">
+              5+ Years Professional Engineering Trajectory
             </h3>
           </div>
 
@@ -232,7 +230,7 @@ export default function WorkProcessSection() {
             {experienceMilestones.map((item, idx) => (
               <TiltCard
                 key={item.period}
-                glowColor={`${item.accent}35`}
+                glowColor={`${item.accent}25`}
                 intensity={8}
               >
                 <div className="p-6 space-y-2.5 h-full flex flex-col justify-between">

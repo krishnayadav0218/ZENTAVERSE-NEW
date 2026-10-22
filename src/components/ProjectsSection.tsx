@@ -28,12 +28,12 @@ import MagneticButton from "@/components/ui/MagneticButton";
 const categories = ["All", "AI & ML", "Full-Stack", "Data & BI"] as const;
 
 const TECH_PILL_COLORS = [
-  { border: "border-cyan-400/35", text: "text-cyan-300", dot: "#00F0FF" },
-  { border: "border-purple-400/35", text: "text-purple-300", dot: "#A855F7" },
-  { border: "border-pink-400/35", text: "text-pink-300", dot: "#EC4899" },
-  { border: "border-emerald-400/35", text: "text-emerald-300", dot: "#10B981" },
-  { border: "border-amber-400/35", text: "text-amber-300", dot: "#F59E0B" },
-  { border: "border-sky-400/35", text: "text-sky-300", dot: "#38BDF8" },
+  { border: "border-blue-500/25", text: "text-blue-300", dot: "#3B82F6" },
+  { border: "border-indigo-500/25", text: "text-indigo-300", dot: "#6366F1" },
+  { border: "border-sky-500/25", text: "text-sky-300", dot: "#0EA5E9" },
+  { border: "border-emerald-500/25", text: "text-emerald-300", dot: "#10B981" },
+  { border: "border-slate-700", text: "text-slate-300", dot: "#94A3B8" },
+  { border: "border-blue-500/25", text: "text-sky-300", dot: "#38BDF8" },
 ];
 
 // Rich Case Study Details for Each Project
@@ -98,105 +98,36 @@ const CASE_STUDIES: Record<string, CaseStudyDetail> = {
     industry: "Enterprise Manufacturing & Supply Chain",
     duration: "10 Weeks Sprint",
     challenge:
-      "Disparate spreadsheet siloes, manual inventory reconciliation errors causing ₹18 Lakhs in quarterly stock slippage, and no unified multi-branch access control.",
+      "Client suffered from siloed manual inventory spreadsheets, delayed invoicing cycles, and zero unified access control across 4 regional warehouses.",
     solution:
-      "Built a unified modular Cloud ERP with granular RBAC, automated GST invoicing, real-time inventory triggers, and encrypted audit logs with automatic database backups.",
+      "Delivered a bespoke multi-tenant ERP platform on Next.js 14 and Node.js with strict Role-Based Access Control (RBAC), automated recurring GST invoicing, and live warehouse inventory synchronization.",
     specs: [
-      { label: "Architecture", value: "Clean Architecture Modular Monolith with NestJS" },
-      { label: "Security & RBAC", value: "OAuth2, JWT, AES-256 encrypted fields" },
-      { label: "Database", value: "PostgreSQL with read replicas & Redis caching" },
-      { label: "Compliance", value: "Automated GST e-Invoicing & E-Way Bill integration" },
+      { label: "Architecture", value: "Microservices with Redis Event Pub/Sub" },
+      { label: "Database", value: "PostgreSQL with Citus Distributed Sharding" },
+      { label: "Security", value: "Role-Based Access Control (RBAC) + MFA" },
+      { label: "Integration", value: "Razorpay / Stripe + WhatsApp Webhooks" },
     ],
     roiMetrics: [
-      { value: "₹24L+", label: "Annual Cost Saved", detail: "Completely eliminated stockout slippage & manual errors" },
-      { value: "85%", label: "Workflow Automation", detail: "PO approvals and invoicing trigger automatically" },
-      { value: "99.99%", label: "System Uptime", detail: "High-availability deployment with failover" },
+      { value: "100%", label: "Audit Accuracy", detail: "Zero discrepancy in physical vs digital inventory" },
+      { value: "-45%", label: "Billing Cycle Time", detail: "Invoices generated & reconciled automatically" },
+      { value: "99.99%", label: "System Availability", detail: "Zero unplanned downtime across peak shifts" },
     ],
     beforeAfter: {
-      before: "Fragmented Excel sheets, frequent inventory stockouts, and 3-day invoicing delays.",
-      after: "Single unified pane of glass across 4 factory branches with instant 1-click GST invoices.",
-    },
-  },
-  "rag-knowledge-bot": {
-    industry: "EdTech & Corporate Legal Support",
-    duration: "4 Weeks Sprint",
-    challenge:
-      "Customer support team overwhelmed with 5,000+ weekly repetitive policy queries, leading to 6-hour average ticket resolution time and high support staff burn out.",
-    solution:
-      "Engineered an enterprise Retrieval-Augmented Generation (RAG) assistant utilizing pgvector semantic embeddings, hybrid keyword reranking, and citation verifiers with WhatsApp & Slack webhooks.",
-    specs: [
-      { label: "Embedding Engine", value: "Text-Embedding-3 with pgvector index" },
-      { label: "Reranker Model", value: "Cohere Rerank v3 with citation verification" },
-      { label: "First Token Latency", value: "< 750ms Streaming TTFT" },
-      { label: "Channels", value: "Web Widget, WhatsApp Business API, Slack Bot" },
-    ],
-    roiMetrics: [
-      { value: "82%", label: "Deflection Rate", detail: "Resolved 82% of inquiries without human intervention" },
-      { value: "< 2s", label: "Instant Resolution", detail: "Average response time dropped from 6 hours to 2s" },
-      { value: "4.9 / 5", label: "Customer CSAT", detail: "User satisfaction rating across 15,000+ queries" },
-    ],
-    beforeAfter: {
-      before: "6-hour wait times, overwhelmed support reps, and recurring customer dissatisfaction.",
-      after: "24/7 instant verified answers in English & Hindi with exact document source citations.",
-    },
-  },
-  "ecommerce-3d-experience": {
-    industry: "Luxury Retail & Home Furniture",
-    duration: "6 Weeks Sprint",
-    challenge:
-      "High product return rate (28%) because customers could not visualize texture, materials, and scale inside their physical living spaces before purchasing.",
-    solution:
-      "Developed a 3D WebGL product configurator allowing real-time material swapping, photorealistic lighting, and instant mobile WebXR augmented reality projection.",
-    specs: [
-      { label: "3D Pipeline", value: "Three.js + Draco Compressed GLTF (< 1.8MB asset sizes)" },
-      { label: "Checkout Engine", value: "Next.js 14 App Router + Stripe / Razorpay" },
-      { label: "Lighthouse Score", value: "98 Performance Score on mobile devices" },
-      { label: "Augmented Reality", value: "WebXR & QuickLook with zero app installation" },
-    ],
-    roiMetrics: [
-      { value: "+44%", label: "Checkout Conversion", detail: "Shoppers interacting with 3D converted at 1.44x" },
-      { value: "-62%", label: "Product Return Rate", detail: "Accurate spatial preview eliminated sizing regrets" },
-      { value: "2.8x", label: "Time on Site", detail: "Users explored multiple colors and custom configurations" },
-    ],
-    beforeAfter: {
-      before: "Static 2D photos leading to 28% return rates and hesitant online buyers.",
-      after: "Full 360-degree interactive 3D configurator with AR room preview boosting sales by 44%.",
-    },
-  },
-  "portfolio-3d-nexus": {
-    industry: "High-Tech Agency & SaaS Showcase",
-    duration: "3 Weeks Sprint",
-    challenge:
-      "Standard agency templates failed to communicate deep technical expertise, resulting in generic inbound inquiries with low conversion to premium development retainers.",
-    solution:
-      "Created a cinematic Cyberpunk spatial experience powered by React Three Fiber, custom procedural GLSL shaders, and frictionless WhatsApp lead capture workflows.",
-    specs: [
-      { label: "Graphics Framework", value: "React Three Fiber, Drei, Custom GLSL Shaders" },
-      { label: "Performance", value: "Locked 60 FPS across modern mobile & desktop" },
-      { label: "SEO & Metas", value: "Dynamic OpenGraph, JSON-LD schema, 100% SEO audit" },
-      { label: "Lead Funnel", value: "Instant WhatsApp pre-fill and interactive cost estimator" },
-    ],
-    roiMetrics: [
-      { value: "3.2x", label: "Qualified Inbound Leads", detail: "High-value clients booking direct architecture audits" },
-      { value: "99%", label: "Mobile Compatibility", detail: "Graceful WebGL fallback for low-spec devices" },
-      { value: "98/100", label: "Core Web Vitals", detail: "Blazing fast hydration and minimal bundle footprint" },
-    ],
-    beforeAfter: {
-      before: "Boring static portfolio overlooked by venture-funded startups and enterprise clients.",
-      after: "Futuristic interactive tech showcase converting casual visitors into high-ticket clients.",
+      before: "3-day delayed manual spreadsheet inventory counts and invoicing friction.",
+      after: "Live single-pane ERP system with automated billing and audit trails.",
     },
   },
 };
 
 function HolographicScreenMockup({ project }: { project: ProjectItem }) {
   return (
-    <div className="relative h-52 w-full overflow-hidden rounded-xl border border-white/15 bg-slate-950 p-3 flex flex-col justify-between group-hover:border-cyan-400/50 transition-colors">
-      {/* Top Holographic Browser / Monitor Bezel */}
+    <div className="relative w-full h-48 rounded-xl bg-slate-950/90 border border-white/10 p-3 overflow-hidden flex flex-col justify-between">
+      {/* Top Browser Bar */}
       <div className="flex items-center justify-between border-b border-white/10 pb-2 relative z-10">
         <div className="flex items-center gap-1.5">
-          <span className="h-2.5 w-2.5 rounded-full bg-rose-500" />
-          <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
-          <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
+          <span className="h-2 w-2 rounded-full bg-rose-500/80" />
+          <span className="h-2 w-2 rounded-full bg-amber-500/80" />
+          <span className="h-2 w-2 rounded-full bg-emerald-500/80" />
         </div>
         <div className="rounded-md bg-white/[0.05] px-2.5 py-0.5 font-mono text-[10px] text-slate-300 border border-white/10 truncate max-w-[170px]">
           https://{project.id}.zyntaverse.com
@@ -204,38 +135,38 @@ function HolographicScreenMockup({ project }: { project: ProjectItem }) {
         <span
           className="font-mono text-[9px] font-bold uppercase px-2 py-0.5 rounded-full"
           style={{
-            backgroundColor: `${project.accentColor}25`,
+            backgroundColor: `${project.accentColor}20`,
             color: project.accentColor,
-            border: `1px solid ${project.accentColor}55`,
+            border: `1px solid ${project.accentColor}40`,
           }}
         >
           LIVE CASE
         </span>
       </div>
 
-      {/* Dynamic Procedural Multi-Color Hologram Mockup Graphics */}
+      {/* Procedural Graphics */}
       <div className="relative flex-1 my-2 flex items-center justify-center overflow-hidden rounded-lg bg-slate-900/80 border border-white/10 p-3">
         <div
-          className="pointer-events-none absolute inset-0 opacity-30"
+          className="pointer-events-none absolute inset-0 opacity-25"
           style={{
-            background: `radial-gradient(circle at 30% 40%, ${project.accentColor}, rgba(236,72,153,0.35) 50%, transparent 80%)`,
+            background: `radial-gradient(circle at 30% 40%, ${project.accentColor}30, rgba(99,102,241,0.15) 50%, transparent 80%)`,
           }}
         />
 
         {project.visualType === "ai-game" && (
           <div className="relative z-10 w-full flex items-center justify-between gap-3">
             <div className="space-y-1.5 flex-1">
-              <div className="flex items-center gap-1.5 text-[10px] font-mono text-cyan-300">
-                <Cpu className="h-3.5 w-3.5 text-pink-400" />
+              <div className="flex items-center gap-1.5 text-[10px] font-mono text-blue-300">
+                <Cpu className="h-3.5 w-3.5 text-blue-400" />
                 <span>DQN POLICY NETWORK</span>
               </div>
               <div className="grid grid-cols-4 gap-1">
                 {Array.from({ length: 12 }).map((_, idx) => {
                   const colors = [
-                    "bg-cyan-400/40 border-cyan-400/60",
-                    "bg-purple-400/40 border-purple-400/60",
-                    "bg-pink-400/40 border-pink-400/60",
-                    "bg-emerald-400/40 border-emerald-400/60",
+                    "bg-blue-500/40 border-blue-500/60",
+                    "bg-indigo-500/40 border-indigo-500/60",
+                    "bg-sky-500/40 border-sky-500/60",
+                    "bg-emerald-500/40 border-emerald-500/60",
                   ];
                   return (
                     <div
@@ -248,35 +179,35 @@ function HolographicScreenMockup({ project }: { project: ProjectItem }) {
                   );
                 })}
               </div>
-              <div className="text-[10px] font-mono text-amber-300">
+              <div className="text-[10px] font-mono text-blue-300">
                 Epoch #420 • Reward +98.4%
               </div>
             </div>
-            <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl border border-cyan-400/50 bg-gradient-to-br from-cyan-500/20 to-pink-500/20 shadow-neon-cyan">
-              <Cpu className="h-9 w-9 text-cyan-300 animate-spin-slow" />
+            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-blue-500/30 bg-slate-900 shadow-sm">
+              <Cpu className="h-8 w-8 text-blue-400 animate-spin-slow" />
             </div>
           </div>
         )}
 
         {project.visualType === "analytics-bi" && (
           <div className="relative z-10 w-full space-y-2">
-            <div className="flex items-center justify-between text-[10px] font-mono text-purple-300">
+            <div className="flex items-center justify-between text-[10px] font-mono text-indigo-300">
               <span className="flex items-center gap-1">
-                <BarChart2 className="h-3.5 w-3.5 text-cyan-400" />
+                <BarChart2 className="h-3.5 w-3.5 text-blue-400" />
                 REAL-TIME TELEMETRY
               </span>
               <span className="text-emerald-400 font-bold">+24.8% YoY</span>
             </div>
             <div className="flex items-end gap-1.5 h-16 pt-2 px-1">
               {[
-                { h: 38, c: "from-cyan-500 to-blue-400" },
-                { h: 62, c: "from-blue-500 to-purple-400" },
-                { h: 48, c: "from-purple-500 to-pink-400" },
-                { h: 80, c: "from-pink-500 to-rose-400" },
-                { h: 68, c: "from-amber-500 to-yellow-400" },
+                { h: 38, c: "from-blue-600 to-blue-400" },
+                { h: 62, c: "from-blue-500 to-indigo-500" },
+                { h: 48, c: "from-indigo-600 to-indigo-400" },
+                { h: 80, c: "from-sky-600 to-sky-400" },
+                { h: 68, c: "from-blue-500 to-sky-400" },
                 { h: 92, c: "from-emerald-500 to-teal-400" },
-                { h: 75, c: "from-cyan-500 to-purple-400" },
-                { h: 100, c: "from-pink-500 to-amber-400" },
+                { h: 75, c: "from-indigo-500 to-blue-400" },
+                { h: 100, c: "from-blue-600 to-indigo-500" },
               ].map((bar, i) => (
                 <div
                   key={i}
@@ -293,21 +224,21 @@ function HolographicScreenMockup({ project }: { project: ProjectItem }) {
             {[
               {
                 title: "CRM Pipeline",
-                border: "border-cyan-400/40",
-                text: "text-cyan-300",
-                bar: "bg-cyan-400/60",
+                border: "border-blue-500/30",
+                text: "text-blue-300",
+                bar: "bg-blue-500/60",
               },
               {
                 title: "Auto Billing",
-                border: "border-pink-400/40",
-                text: "text-pink-300",
-                bar: "bg-pink-400/60",
+                border: "border-indigo-500/30",
+                text: "text-indigo-300",
+                bar: "bg-indigo-500/60",
               },
               {
                 title: "RBAC Core",
-                border: "border-amber-400/40",
-                text: "text-amber-300",
-                bar: "bg-amber-400/60",
+                border: "border-emerald-500/30",
+                text: "text-emerald-300",
+                bar: "bg-emerald-500/60",
               },
             ].map((col, idx) => (
               <div
@@ -318,7 +249,7 @@ function HolographicScreenMockup({ project }: { project: ProjectItem }) {
                   {col.title}
                 </div>
                 <div className={`h-1.5 w-full rounded ${col.bar}`} />
-                <div className="h-1.5 w-2/3 rounded bg-purple-400/50" />
+                <div className="h-1.5 w-2/3 rounded bg-blue-400/40" />
                 <div className="text-[9px] font-mono text-emerald-400">
                   99.9% Sync #{idx + 1}
                 </div>
@@ -329,34 +260,34 @@ function HolographicScreenMockup({ project }: { project: ProjectItem }) {
 
         {project.visualType === "ai-chatbot" && (
           <div className="relative z-10 w-full space-y-2">
-            <div className="flex items-center gap-2 rounded-lg border border-cyan-400/30 bg-slate-950/85 px-2.5 py-1.5 text-[10px] text-slate-200">
-              <Bot className="h-4 w-4 text-cyan-400 shrink-0" />
+            <div className="flex items-center gap-2 rounded-lg border border-blue-500/30 bg-slate-950/85 px-2.5 py-1.5 text-[10px] text-slate-200">
+              <Bot className="h-4 w-4 text-blue-400 shrink-0" />
               <span className="truncate">
                 Vector pgvector search • 14,200 chunks...
               </span>
             </div>
-            <div className="rounded-lg border border-pink-400/40 bg-gradient-to-r from-pink-500/15 to-purple-500/15 px-2.5 py-1.5 text-[10px] font-mono text-pink-200 flex items-center justify-between">
+            <div className="rounded-lg border border-indigo-500/30 bg-indigo-950/30 px-2.5 py-1.5 text-[10px] font-mono text-indigo-200 flex items-center justify-between">
               <span>Verified Citations • Zero Hallucination</span>
-              <span className="text-amber-300 font-bold">0.75s TTFT</span>
+              <span className="text-blue-300 font-bold">0.75s TTFT</span>
             </div>
           </div>
         )}
 
         {project.visualType === "ecommerce-3d" && (
           <div className="relative z-10 w-full flex items-center justify-between gap-3">
-            <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-emerald-400/50 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20">
-              <ShoppingBag className="h-8 w-8 text-emerald-300" />
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-emerald-500/30 bg-emerald-500/10">
+              <ShoppingBag className="h-7 w-7 text-emerald-300" />
             </div>
             <div className="flex-1 space-y-1.5">
               <div className="font-mono text-[10px] text-emerald-300">
                 360° WEBGL CONFIGURATOR
               </div>
               <div className="h-2 w-full rounded-full bg-slate-800 overflow-hidden">
-                <div className="h-full w-4/5 bg-gradient-to-r from-emerald-400 via-cyan-400 to-pink-500" />
+                <div className="h-full w-4/5 bg-gradient-to-r from-emerald-500 to-teal-400" />
               </div>
               <div className="flex justify-between text-[9px] font-mono text-slate-300">
                 <span>WebXR Live AR</span>
-                <span className="text-amber-300 font-bold">+44% Conv.</span>
+                <span className="text-emerald-300 font-bold">+44% Conv.</span>
               </div>
             </div>
           </div>
@@ -364,17 +295,17 @@ function HolographicScreenMockup({ project }: { project: ProjectItem }) {
 
         {project.visualType === "portfolio-3d" && (
           <div className="relative z-10 w-full flex items-center justify-between gap-3">
-            <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-cyan-400/50 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20">
-              <Globe className="h-8 w-8 text-cyan-300 animate-pulse" />
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-blue-500/30 bg-blue-500/10">
+              <Globe className="h-7 w-7 text-blue-400 animate-pulse" />
             </div>
             <div className="flex-1 space-y-1">
-              <div className="font-mono text-[10px] text-gradient-cyber font-bold">
+              <div className="font-mono text-[10px] text-blue-300 font-bold">
                 SPATIAL R3F EXPERIENCE
               </div>
-              <p className="text-[10px] text-slate-200">
-                Interactive 3D Workstation + Cyber Hologram UI
+              <p className="text-[10px] text-slate-300">
+                Interactive 3D Workstation + Clean UI
               </p>
-              <span className="inline-block font-mono text-[9px] text-amber-300">
+              <span className="inline-block font-mono text-[9px] text-slate-400">
                 60 FPS • Desktop & Mobile
               </span>
             </div>
@@ -382,25 +313,16 @@ function HolographicScreenMockup({ project }: { project: ProjectItem }) {
         )}
       </div>
 
-      {/* Bottom Multi-Color Metric Strip */}
+      {/* Bottom Metric Strip */}
       <div className="flex items-center justify-between gap-2 text-[10px] font-mono relative z-10">
-        {project.metrics.map((m, i) => {
-          const textColors = [
-            "text-cyan-300",
-            "text-pink-300",
-            "text-emerald-300",
-          ];
-          return (
-            <span
-              key={m}
-              className={`truncate rounded bg-white/[0.04] border border-white/10 px-2 py-0.5 ${
-                textColors[i % textColors.length]
-              }`}
-            >
-              {m}
-            </span>
-          );
-        })}
+        {project.metrics.map((m) => (
+          <span
+            key={m}
+            className="truncate rounded bg-white/[0.04] border border-white/10 px-2 py-0.5 text-slate-300"
+          >
+            {m}
+          </span>
+        ))}
       </div>
     </div>
   );
@@ -469,22 +391,22 @@ export default function ProjectsSection({ onOpenBooking }: ProjectsSectionProps)
             transition={{ duration: 0.6 }}
             className="max-w-2xl"
           >
-            <div className="inline-flex items-center gap-2 rounded-full border border-pink-400/35 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 px-3.5 py-1 text-xs font-mono uppercase tracking-widest text-pink-300 mb-4">
-              <Sparkles className="h-3.5 w-3.5 text-cyan-400" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-3.5 py-1 text-xs font-mono uppercase tracking-widest text-blue-300 mb-4">
+              <Sparkles className="h-3.5 w-3.5 text-blue-400" />
               <span>CASE STUDIES // PROVEN ROI & ARCHITECTURE</span>
             </div>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
               Engineered for{" "}
               <span className="text-gradient-cyber">Real-World Scale</span>
             </h2>
-            <p className="mt-3 text-base sm:text-lg text-slate-300/90">
+            <p className="mt-3 text-base sm:text-lg text-slate-300">
               Explore in-depth case studies with measurable business ROI, system architecture blueprints,
               and live performance telemetries engineered by Zyntaverse Technologies.
             </p>
           </motion.div>
 
           {/* Filter Pills */}
-          <div className="flex flex-wrap gap-2 rounded-2xl border border-white/15 bg-slate-950/75 p-1.5 backdrop-blur-xl self-start">
+          <div className="flex flex-wrap gap-2 rounded-2xl border border-white/10 bg-slate-950/75 p-1.5 backdrop-blur-xl self-start">
             {categories.map((cat) => {
               const active = activeCategory === cat;
               return (
@@ -494,7 +416,7 @@ export default function ProjectsSection({ onOpenBooking }: ProjectsSectionProps)
                   onClick={() => setActiveCategory(cat)}
                   className={`rounded-xl px-4 py-2 text-xs font-mono uppercase tracking-wider transition-all ${
                     active
-                      ? "bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 text-white font-bold shadow-neon-cyan"
+                      ? "bg-blue-600 text-white font-bold shadow-sm"
                       : "text-slate-300 hover:text-white"
                   }`}
                 >
@@ -505,7 +427,7 @@ export default function ProjectsSection({ onOpenBooking }: ProjectsSectionProps)
           </div>
         </div>
 
-        {/* 3D Project Cards Grid */}
+        {/* Project Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
           {filteredProjects.map((project, index) => {
             const cs = CASE_STUDIES[project.id];
@@ -518,10 +440,10 @@ export default function ProjectsSection({ onOpenBooking }: ProjectsSectionProps)
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.55, delay: index * 0.08 }}
               >
-                <TiltCard glowColor={`${project.accentColor}45`} intensity={12}>
+                <TiltCard glowColor={`${project.accentColor}25`} intensity={10}>
                   <div className="p-6 flex flex-col justify-between h-full">
                     <div>
-                      {/* Floating Glass/Holographic Screen Mockup */}
+                      {/* Floating Screen Mockup */}
                       <HolographicScreenMockup project={project} />
 
                       {/* Category & Industry */}
@@ -537,67 +459,54 @@ export default function ProjectsSection({ onOpenBooking }: ProjectsSectionProps)
                         </span>
                       </div>
 
-                      <h3 className="mt-1 font-display text-xl font-bold text-white group-hover:text-cyan-200 transition-colors">
+                      <h3 className="mt-1 font-display text-xl font-bold text-white group-hover:text-blue-300 transition-colors">
                         {project.title}
                       </h3>
-                      <p className="mt-1 text-xs font-mono text-purple-300">
+                      <p className="mt-1 text-xs font-mono text-indigo-300">
                         {project.tagline}
                       </p>
                       <p className="mt-2.5 text-sm text-slate-300 leading-relaxed line-clamp-3">
                         {project.description}
                       </p>
 
-                      {/* Top ROI Pill */}
-                      {cs && cs.roiMetrics[0] && (
-                        <div className="mt-3.5 inline-flex items-center gap-2 rounded-lg border border-emerald-400/30 bg-emerald-500/10 px-2.5 py-1 text-xs font-mono text-emerald-300">
-                          <TrendingUp className="h-3.5 w-3.5 text-emerald-400" />
-                          <span>ROI: {cs.roiMetrics[0].value} {cs.roiMetrics[0].label}</span>
-                        </div>
-                      )}
-                    </div>
-
-                    <div className="mt-6 space-y-4">
-                      {/* Multi-Color Technologies Badges */}
-                      <div className="flex flex-wrap gap-1.5">
-                        {project.technologies.slice(0, 4).map((tech, tIdx) => {
-                          const pill =
-                            TECH_PILL_COLORS[tIdx % TECH_PILL_COLORS.length];
+                      {/* Tech Stack Pills */}
+                      <div className="mt-4 flex flex-wrap gap-1.5 border-t border-white/10 pt-3">
+                        {project.technologies.map((t, idx) => {
+                          const pillStyle =
+                            TECH_PILL_COLORS[idx % TECH_PILL_COLORS.length];
                           return (
                             <span
-                              key={tech}
-                              className={`inline-flex items-center gap-1.5 rounded-lg border ${pill.border} bg-slate-950/80 px-2.5 py-1 font-mono text-[11px] ${pill.text}`}
+                              key={t}
+                              className={`inline-flex items-center gap-1 rounded-md border ${pillStyle.border} bg-white/[0.03] px-2 py-0.5 font-mono text-[10px] ${pillStyle.text}`}
                             >
                               <span
                                 className="h-1.5 w-1.5 rounded-full"
-                                style={{ backgroundColor: pill.dot }}
+                                style={{ backgroundColor: pillStyle.dot }}
                               />
-                              {tech}
+                              <span>{t}</span>
                             </span>
                           );
                         })}
-                        {project.technologies.length > 4 && (
-                          <span className="rounded-lg border border-white/10 bg-slate-900 px-2 py-1 font-mono text-[10px] text-slate-400">
-                            +{project.technologies.length - 4} more
-                          </span>
-                        )}
                       </div>
+                    </div>
 
-                      {/* Case Study Details & GitHub Action Buttons */}
-                      <div className="pt-3 border-t border-white/10 flex items-center gap-3">
-                        <button
-                          type="button"
-                          onClick={() => handleOpenProject(project)}
-                          className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 px-3.5 py-2.5 text-xs font-semibold text-white hover:opacity-95 transition-all shadow-neon-cyan"
-                        >
-                          <Zap className="h-3.5 w-3.5" />
-                          <span>Case Study & ROI</span>
-                        </button>
+                    {/* Bottom Action Footer */}
+                    <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between gap-2">
+                      <button
+                        type="button"
+                        onClick={() => handleOpenProject(project)}
+                        className="inline-flex items-center gap-1.5 rounded-xl border border-blue-500/30 bg-blue-500/10 px-3.5 py-2 font-mono text-xs font-semibold text-blue-200 hover:bg-blue-500/20 transition-all"
+                      >
+                        <Zap className="h-3.5 w-3.5" />
+                        <span>Case Study &amp; ROI</span>
+                      </button>
 
+                      <div className="flex items-center gap-1.5">
                         <a
                           href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/[0.04] p-2.5 text-slate-300 hover:border-cyan-400/60 hover:text-white transition-all"
+                          className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/[0.04] p-2.5 text-slate-300 hover:border-blue-400/60 hover:text-white transition-all"
                           title="View GitHub Source"
                         >
                           <Github className="h-4 w-4" />
@@ -612,7 +521,7 @@ export default function ProjectsSection({ onOpenBooking }: ProjectsSectionProps)
         </div>
       </div>
 
-      {/* Comprehensive Case Study & Live ROI Inspection Modal */}
+      {/* Case Study & Live ROI Inspection Modal */}
       <AnimatePresence>
         {previewProject && selectedCaseStudy && (
           <motion.div
@@ -627,7 +536,7 @@ export default function ProjectsSection({ onOpenBooking }: ProjectsSectionProps)
               animate={{ scale: 1, y: 0, opacity: 1 }}
               exit={{ scale: 0.94, y: 20, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-3xl max-h-[92vh] overflow-y-auto rounded-3xl glass-panel p-5 sm:p-8 border border-cyan-400/40 shadow-neon-cyan my-auto"
+              className="relative w-full max-w-3xl max-h-[92vh] overflow-y-auto rounded-3xl glass-panel p-5 sm:p-8 border border-slate-700 shadow-2xl my-auto"
             >
               {/* Close Button */}
               <button
@@ -650,10 +559,10 @@ export default function ProjectsSection({ onOpenBooking }: ProjectsSectionProps)
                 >
                   {previewProject.category}
                 </span>
-                <span className="rounded-lg border border-purple-400/30 bg-purple-500/10 px-2.5 py-0.5 font-mono text-[11px] text-purple-300">
+                <span className="rounded-lg border border-indigo-500/30 bg-indigo-500/10 px-2.5 py-0.5 font-mono text-[11px] text-indigo-300">
                   {selectedCaseStudy.industry}
                 </span>
-                <span className="rounded-lg border border-cyan-400/30 bg-cyan-500/10 px-2.5 py-0.5 font-mono text-[11px] text-cyan-300">
+                <span className="rounded-lg border border-blue-500/30 bg-blue-500/10 px-2.5 py-0.5 font-mono text-[11px] text-blue-300">
                   {selectedCaseStudy.duration}
                 </span>
               </div>
@@ -662,7 +571,7 @@ export default function ProjectsSection({ onOpenBooking }: ProjectsSectionProps)
               <h3 className="font-display text-2xl sm:text-3xl font-bold text-white">
                 {previewProject.title}
               </h3>
-              <p className="mt-1 font-mono text-xs sm:text-sm text-cyan-300">
+              <p className="mt-1 font-mono text-xs sm:text-sm text-blue-300">
                 {previewProject.tagline}
               </p>
 
@@ -682,7 +591,7 @@ export default function ProjectsSection({ onOpenBooking }: ProjectsSectionProps)
                       onClick={() => setActiveTab(tab.id as typeof activeTab)}
                       className={`rounded-xl px-3.5 py-1.5 text-xs font-mono transition-all ${
                         active
-                          ? "bg-gradient-to-r from-cyan-400 to-purple-500 text-white font-bold shadow-neon-cyan"
+                          ? "bg-blue-600 text-white font-medium shadow-sm"
                           : "bg-white/5 text-slate-300 hover:text-white hover:bg-white/10"
                       }`}
                     >
@@ -702,14 +611,14 @@ export default function ProjectsSection({ onOpenBooking }: ProjectsSectionProps)
                   </p>
 
                   <div className="space-y-2">
-                    <h4 className="font-mono text-xs uppercase tracking-wider text-cyan-300">
+                    <h4 className="font-mono text-xs uppercase tracking-wider text-blue-300">
                       Core Stack & Technologies
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {previewProject.technologies.map((t) => (
                         <span
                           key={t}
-                          className="rounded-lg border border-cyan-400/30 bg-cyan-500/10 px-2.5 py-1 font-mono text-xs text-cyan-200"
+                          className="rounded-lg border border-blue-500/30 bg-blue-500/10 px-2.5 py-1 font-mono text-xs text-blue-200"
                         >
                           {t}
                         </span>
@@ -763,7 +672,7 @@ export default function ProjectsSection({ onOpenBooking }: ProjectsSectionProps)
                         key={spec.label}
                         className="rounded-xl border border-white/10 bg-slate-900/70 p-3.5 space-y-1"
                       >
-                        <div className="font-mono text-[10px] text-cyan-300 uppercase tracking-wider">
+                        <div className="font-mono text-[10px] text-blue-300 uppercase tracking-wider">
                           {spec.label}
                         </div>
                         <div className="font-mono text-xs text-white font-semibold">
@@ -774,7 +683,7 @@ export default function ProjectsSection({ onOpenBooking }: ProjectsSectionProps)
                   </div>
 
                   <div className="space-y-2 pt-2">
-                    <h4 className="font-mono text-xs uppercase tracking-widest text-purple-300">
+                    <h4 className="font-mono text-xs uppercase tracking-widest text-indigo-300">
                       Architecture Blueprint Highlights
                     </h4>
                     {previewProject.architectureHighlights.map((item) => (
@@ -783,7 +692,7 @@ export default function ProjectsSection({ onOpenBooking }: ProjectsSectionProps)
                         className="flex items-start gap-2.5 rounded-xl border border-white/10 bg-slate-900/60 p-3 text-xs text-slate-200"
                       >
                         <CheckCircle2
-                          className="h-4 w-4 shrink-0 mt-0.5 text-cyan-400"
+                          className="h-4 w-4 shrink-0 mt-0.5 text-blue-400"
                         />
                         <span>{item}</span>
                       </div>
@@ -799,9 +708,9 @@ export default function ProjectsSection({ onOpenBooking }: ProjectsSectionProps)
                     {selectedCaseStudy.roiMetrics.map((roi) => (
                       <div
                         key={roi.label}
-                        className="rounded-2xl border border-cyan-400/30 bg-gradient-to-b from-cyan-500/10 to-transparent p-4 text-center space-y-1"
+                        className="rounded-2xl border border-blue-500/30 bg-gradient-to-b from-blue-500/10 to-transparent p-4 text-center space-y-1"
                       >
-                        <div className="font-display text-2xl sm:text-3xl font-extrabold text-cyan-300">
+                        <div className="font-display text-2xl sm:text-3xl font-extrabold text-blue-300">
                           {roi.value}
                         </div>
                         <div className="font-mono text-xs font-bold text-white uppercase">
@@ -814,9 +723,9 @@ export default function ProjectsSection({ onOpenBooking }: ProjectsSectionProps)
                     ))}
                   </div>
 
-                  <div className="rounded-2xl border border-purple-400/25 bg-purple-950/20 p-4">
-                    <div className="flex items-center gap-2 font-mono text-xs text-purple-300 font-bold uppercase mb-1">
-                      <TrendingUp className="h-4 w-4 text-pink-400" />
+                  <div className="rounded-2xl border border-indigo-500/25 bg-indigo-950/20 p-4">
+                    <div className="flex items-center gap-2 font-mono text-xs text-indigo-300 font-bold uppercase mb-1">
+                      <TrendingUp className="h-4 w-4 text-blue-400" />
                       <span>Commercial Impact Summary</span>
                     </div>
                     <p className="text-xs text-slate-200 leading-relaxed">
@@ -834,7 +743,7 @@ export default function ProjectsSection({ onOpenBooking }: ProjectsSectionProps)
                     href={getWhatsAppMessage(previewProject)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 px-4 py-2.5 text-xs font-semibold text-white hover:from-emerald-400 hover:to-teal-500 shadow-neon-cyan transition-all"
+                    className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 px-4 py-2.5 text-xs font-semibold text-white shadow-sm hover:opacity-95 transition-all"
                   >
                     <MessageCircle className="h-4 w-4" />
                     <span>Discuss on WhatsApp</span>
@@ -847,7 +756,7 @@ export default function ProjectsSection({ onOpenBooking }: ProjectsSectionProps)
                         setPreviewProject(null);
                         onOpenBooking();
                       }}
-                      className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 px-4 py-2.5 text-xs font-semibold text-white hover:opacity-95 shadow-neon-cyan transition-all"
+                      className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-2.5 text-xs font-semibold text-white shadow-sm hover:opacity-95 transition-all"
                     >
                       <Calendar className="h-4 w-4" />
                       <span>Book Free Strategy Call</span>
@@ -858,7 +767,7 @@ export default function ProjectsSection({ onOpenBooking }: ProjectsSectionProps)
                     href={previewProject.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-3.5 py-2.5 text-xs font-semibold text-white hover:border-cyan-400/50"
+                    className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-3.5 py-2.5 text-xs font-semibold text-white hover:border-blue-400/50"
                   >
                     <Github className="h-4 w-4" />
                     <span>GitHub</span>

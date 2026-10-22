@@ -32,11 +32,11 @@ const HolographicQRCanvas = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="flex h-[320px] sm:h-[370px] w-full items-center justify-center rounded-2xl border border-cyan-400/20 bg-slate-950/50">
+      <div className="flex h-[320px] sm:h-[370px] w-full items-center justify-center rounded-2xl border border-white/10 bg-slate-950/50">
         <div className="flex flex-col items-center gap-3">
-          <div className="h-8 w-8 rounded-full border-2 border-cyan-400 border-t-transparent animate-spin" />
-          <span className="font-mono text-xs text-cyan-300">
-            Initializing Holographic Matrix...
+          <div className="h-8 w-8 rounded-full border-2 border-blue-500 border-t-transparent animate-spin" />
+          <span className="font-mono text-xs text-slate-400">
+            Initializing Interactive 3D QR Key...
           </span>
         </div>
       </div>
@@ -105,8 +105,8 @@ export default function ContactSection({
       width: 400,
       margin: 2,
       color: {
-        dark: "#00F0FFFF",
-        light: "#030712FF",
+        dark: "#3B82F6FF",
+        light: "#080B11FF",
       },
     })
       .then((url) => setQrCodeDataUrl(url))
@@ -162,15 +162,15 @@ export default function ContactSection({
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3.5 py-1 text-xs font-mono uppercase tracking-widest text-cyan-300 mb-4">
+          <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-3.5 py-1 text-xs font-mono uppercase tracking-widest text-blue-300 mb-4">
             <Sparkles className="h-3.5 w-3.5" />
-            <span>INITIATE TRANSMISSION // CONTACT & INQUIRY</span>
+            <span>CONNECT WITH US // CONTACT & INQUIRY</span>
           </div>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
             Let&apos;s Build{" "}
             <span className="text-gradient-cyber">Something Great</span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-300/90">
+          <p className="mt-4 text-base sm:text-lg text-slate-300">
             Have an idea or a project in mind? Let&apos;s connect and turn it into
             an innovative digital reality that scales.
           </p>
@@ -185,23 +185,23 @@ export default function ContactSection({
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.65 }}
-            className="lg:col-span-7 glass-panel rounded-3xl p-6 sm:p-9 border border-cyan-400/25"
+            className="lg:col-span-7 glass-panel rounded-3xl p-6 sm:p-9 border border-slate-700/60"
           >
             {submitted ? (
               <div className="py-12 text-center space-y-5">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 shadow-neon-cyan">
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 shadow-sm">
                   <CheckCircle2 className="h-9 w-9" />
                 </div>
                 <h3 className="font-display text-2xl font-bold text-white">
-                  Project Inquiry Transmitted!
+                  Project Inquiry Received!
                 </h3>
                 <p className="max-w-md mx-auto text-sm text-slate-300 leading-relaxed">
                   Thank you,{" "}
-                  <span className="text-cyan-300 font-semibold">
+                  <span className="text-blue-300 font-semibold">
                     {formData.name || "Partner"}
                   </span>
                   ! Your inquiry for{" "}
-                  <span className="text-purple-300 font-semibold">
+                  <span className="text-indigo-300 font-semibold">
                     {formData.selectedService}
                   </span>{" "}
                   has been securely logged. Our technical team in Mumbai will
@@ -212,7 +212,7 @@ export default function ContactSection({
                   <button
                     type="button"
                     onClick={handleSendToWhatsApp}
-                    className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 px-5 py-2.5 text-xs font-bold text-slate-950 shadow-[0_0_20px_rgba(16,185,129,0.35)] hover:opacity-95"
+                    className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 px-5 py-2.5 text-xs font-bold text-slate-950 shadow-sm hover:opacity-95"
                   >
                     <MessageCircle className="h-4 w-4" />
                     <span>Send Copy to WhatsApp (+91 7992153750)</span>
@@ -229,7 +229,7 @@ export default function ContactSection({
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                  <span className="font-mono text-xs uppercase tracking-widest text-cyan-300">
+                  <span className="font-mono text-xs uppercase tracking-widest text-blue-300">
                     CUSTOM PROJECT INQUIRY FORM
                   </span>
                   <span className="font-mono text-xs text-emerald-400 flex items-center gap-1.5">
@@ -255,7 +255,7 @@ export default function ContactSection({
                         selectedService: e.target.value,
                       })
                     }
-                    className="w-full rounded-xl border border-white/15 bg-slate-950/90 px-4 py-3 text-sm text-white focus:border-cyan-400 focus:outline-none focus:ring-1 focus:ring-cyan-400"
+                    className="w-full rounded-xl border border-white/15 bg-slate-950/90 px-4 py-3 text-sm text-white focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                   >
                     {servicesData.map((s) => (
                       <option key={s.id} value={s.title} className="bg-slate-950">
@@ -283,7 +283,7 @@ export default function ContactSection({
                       onChange={(e) =>
                         setFormData({ ...formData, name: e.target.value })
                       }
-                      className="w-full rounded-xl border border-white/10 bg-slate-950/80 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-cyan-400 focus:outline-none focus:ring-1 focus:ring-cyan-400"
+                      className="w-full rounded-xl border border-white/10 bg-slate-950/80 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                     />
                   </div>
 
@@ -303,7 +303,7 @@ export default function ContactSection({
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
                       }
-                      className="w-full rounded-xl border border-white/10 bg-slate-950/80 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-cyan-400 focus:outline-none focus:ring-1 focus:ring-cyan-400"
+                      className="w-full rounded-xl border border-white/10 bg-slate-950/80 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                     />
                   </div>
                 </div>
@@ -326,7 +326,7 @@ export default function ContactSection({
                       onChange={(e) =>
                         setFormData({ ...formData, phone: e.target.value })
                       }
-                      className="w-full rounded-xl border border-white/10 bg-slate-950/80 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-cyan-400 focus:outline-none focus:ring-1 focus:ring-cyan-400"
+                      className="w-full rounded-xl border border-white/10 bg-slate-950/80 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                     />
                   </div>
 
@@ -345,7 +345,7 @@ export default function ContactSection({
                       onChange={(e) =>
                         setFormData({ ...formData, company: e.target.value })
                       }
-                      className="w-full rounded-xl border border-white/10 bg-slate-950/80 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-cyan-400 focus:outline-none focus:ring-1 focus:ring-cyan-400"
+                      className="w-full rounded-xl border border-white/10 bg-slate-950/80 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                     />
                   </div>
                 </div>
@@ -368,7 +368,7 @@ export default function ContactSection({
                           timeline: e.target.value,
                         })
                       }
-                      className="w-full rounded-xl border border-white/10 bg-slate-950/90 px-4 py-3 text-sm text-white focus:border-cyan-400 focus:outline-none focus:ring-1 focus:ring-cyan-400"
+                      className="w-full rounded-xl border border-white/10 bg-slate-950/90 px-4 py-3 text-sm text-white focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                     >
                       {timelineOptions.map((t) => (
                         <option key={t} value={t} className="bg-slate-950">
@@ -391,7 +391,7 @@ export default function ContactSection({
                       onChange={(e) =>
                         setFormData({ ...formData, budget: e.target.value })
                       }
-                      className="w-full rounded-xl border border-white/10 bg-slate-950/90 px-4 py-3 text-sm text-white focus:border-cyan-400 focus:outline-none focus:ring-1 focus:ring-cyan-400"
+                      className="w-full rounded-xl border border-white/10 bg-slate-950/90 px-4 py-3 text-sm text-white focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                     >
                       {budgetRanges.map((b) => (
                         <option key={b} value={b} className="bg-slate-950">
@@ -419,7 +419,7 @@ export default function ContactSection({
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
                     }
-                    className="w-full rounded-xl border border-white/10 bg-slate-950/80 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-cyan-400 focus:outline-none focus:ring-1 focus:ring-cyan-400"
+                    className="w-full rounded-xl border border-white/10 bg-slate-950/80 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                   />
                 </div>
 
@@ -449,7 +449,7 @@ export default function ContactSection({
                     <button
                       type="button"
                       onClick={onOpenBooking}
-                      className="font-mono text-xs text-cyan-300 hover:text-cyan-200 underline underline-offset-4 flex items-center gap-1"
+                      className="font-mono text-xs text-blue-300 hover:text-blue-200 underline underline-offset-4 flex items-center gap-1"
                     >
                       <Calendar className="h-3.5 w-3.5" />
                       <span>Book a Discovery Call Instead →</span>
@@ -461,7 +461,7 @@ export default function ContactSection({
           </motion.div>
 
           {/* ======================================================= */}
-          {/* RIGHT: 3D HOLOGRAPHIC SCANNABLE CONTACT KEY             */}
+          {/* RIGHT: SCANNABLE CONTACT KEY & CHANNELS                 */}
           {/* ======================================================= */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
@@ -470,14 +470,14 @@ export default function ContactSection({
             transition={{ duration: 0.65 }}
             className="lg:col-span-5 space-y-6"
           >
-            {/* 3D Holographic QR Code Card */}
-            <div className="glass-panel rounded-3xl p-6 border border-cyan-400/30 relative overflow-hidden">
+            {/* 3D QR Code Card */}
+            <div className="glass-panel rounded-3xl p-6 border border-slate-700/60 relative overflow-hidden">
               {/* Header with Mode Toggles */}
               <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
                 <div className="flex items-center gap-2">
-                  <QrCode className="h-4 w-4 text-cyan-400" />
-                  <span className="font-mono text-xs font-semibold uppercase tracking-wider text-cyan-300">
-                    3D Holographic Contact Key
+                  <QrCode className="h-4 w-4 text-blue-400" />
+                  <span className="font-mono text-xs font-semibold uppercase tracking-wider text-blue-300">
+                    Interactive 3D Contact Key
                   </span>
                 </div>
 
@@ -487,7 +487,7 @@ export default function ContactSection({
                     onClick={() =>
                       setScanMode(scanMode === "vcard" ? "whatsapp" : "vcard")
                     }
-                    className="rounded-lg border border-purple-400/30 bg-purple-500/10 px-2.5 py-1 font-mono text-[11px] text-purple-200 hover:bg-purple-500/20 transition-colors"
+                    className="rounded-lg border border-indigo-500/30 bg-indigo-500/10 px-2.5 py-1 font-mono text-[11px] text-indigo-200 hover:bg-indigo-500/20 transition-colors"
                   >
                     {scanMode === "vcard" ? "Switch: WhatsApp" : "Switch: vCard"}
                   </button>
@@ -496,7 +496,7 @@ export default function ContactSection({
                     type="button"
                     onClick={handleDownloadVCard}
                     title="Download vCard .vcf file"
-                    className="inline-flex items-center gap-1 rounded-lg border border-cyan-400/30 bg-cyan-500/10 px-2.5 py-1 font-mono text-[11px] text-cyan-200 hover:bg-cyan-500/20 transition-colors"
+                    className="inline-flex items-center gap-1 rounded-lg border border-blue-500/30 bg-blue-500/10 px-2.5 py-1 font-mono text-[11px] text-blue-200 hover:bg-blue-500/20 transition-colors"
                   >
                     <Download className="h-3 w-3" />
                     <span>.vcf</span>
@@ -515,7 +515,7 @@ export default function ContactSection({
                   className={`inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1 font-mono text-[11px] transition-all ${
                     isFrozen
                       ? "border-emerald-400 bg-emerald-500/20 text-emerald-300"
-                      : "border-cyan-400/30 bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20"
+                      : "border-blue-500/30 bg-blue-500/10 text-blue-300 hover:bg-blue-500/20"
                   }`}
                 >
                   <Scan className="h-3.5 w-3.5" />
@@ -532,13 +532,13 @@ export default function ContactSection({
                 </button>
               </div>
 
-              <div className="mt-2 text-center font-mono text-[10px] text-cyan-300/80">
+              <div className="mt-2 text-center font-mono text-[10px] text-slate-400">
                 POINT PHONE CAMERA AT QR CODE TO AUTO-IMPORT CONTACT DETAILS
               </div>
             </div>
 
-            {/* Direct Communication Channels (Phone/WhatsApp, Email, Mumbai Address, Web) */}
-            <div className="glass-panel rounded-3xl p-6 space-y-3">
+            {/* Direct Communication Channels */}
+            <div className="glass-panel rounded-3xl p-6 space-y-3 border border-slate-700/60">
               <div className="font-mono text-xs uppercase tracking-widest text-slate-400 mb-2">
                 Official Business Channels
               </div>
@@ -556,14 +556,14 @@ export default function ContactSection({
                   value: brand.email,
                   href: `mailto:${brand.email}`,
                   icon: Mail,
-                  color: "#00F0FF",
+                  color: "#3B82F6",
                 },
                 {
                   label: "Office Address",
                   value: brand.location,
                   href: "https://maps.google.com/?q=Mumbai,India",
                   icon: MapPin,
-                  color: "#EC4899",
+                  color: "#6366F1",
                 },
                 {
                   label: "Website",
@@ -577,12 +577,12 @@ export default function ContactSection({
                   value: "linkedin.com/company/zyntaverse-technologies",
                   href: brand.linkedin,
                   icon: Linkedin,
-                  color: "#8B5CF6",
+                  color: "#2563EB",
                 },
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="flex items-center justify-between gap-3 rounded-2xl border border-white/10 bg-slate-950/65 px-4 py-3 hover:border-cyan-400/40 transition-colors"
+                  className="flex items-center justify-between gap-3 rounded-2xl border border-white/10 bg-slate-950/65 px-4 py-3 hover:border-blue-500/40 transition-colors"
                 >
                   <a
                     href={item.href}
@@ -613,7 +613,7 @@ export default function ContactSection({
                     type="button"
                     onClick={() => handleCopy(item.label, item.value)}
                     title={`Copy ${item.label}`}
-                    className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] text-slate-400 hover:text-cyan-300 transition-colors"
+                    className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] text-slate-400 hover:text-blue-300 transition-colors"
                   >
                     {copiedField === item.label ? (
                       <Check className="h-3.5 w-3.5 text-emerald-400" />
@@ -643,7 +643,7 @@ export default function ContactSection({
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-sm rounded-3xl glass-panel p-6 border border-cyan-400/40 text-center space-y-4"
+              className="relative w-full max-w-sm rounded-3xl glass-panel p-6 border border-slate-700 text-center space-y-4 shadow-2xl"
             >
               <button
                 type="button"
@@ -653,7 +653,7 @@ export default function ContactSection({
                 <X className="h-4 w-4" />
               </button>
 
-              <div className="font-mono text-xs text-cyan-300 uppercase tracking-widest">
+              <div className="font-mono text-xs text-blue-300 uppercase tracking-widest">
                 DIRECT MOBILE SCAN PASS
               </div>
 
@@ -664,7 +664,7 @@ export default function ContactSection({
               </h4>
 
               {qrCodeDataUrl ? (
-                <div className="mx-auto flex justify-center p-3 rounded-2xl bg-slate-950 border border-cyan-400/40 shadow-neon-cyan">
+                <div className="mx-auto flex justify-center p-3 rounded-2xl bg-slate-950 border border-slate-700 shadow-sm">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={qrCodeDataUrl}
@@ -683,7 +683,7 @@ export default function ContactSection({
                 <button
                   type="button"
                   onClick={handleDownloadVCard}
-                  className="rounded-xl border border-cyan-400/30 bg-cyan-500/15 px-4 py-2 font-mono text-xs text-cyan-300 hover:bg-cyan-500/25"
+                  className="rounded-xl border border-blue-500/30 bg-blue-500/15 px-4 py-2 font-mono text-xs text-blue-200 hover:bg-blue-500/25"
                 >
                   Download .vcf File
                 </button>

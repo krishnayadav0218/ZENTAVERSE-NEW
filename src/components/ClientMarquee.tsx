@@ -11,8 +11,8 @@ export default function ClientMarquee() {
   return (
     <section aria-label="Trusted Partners" className="relative py-10 z-10 overflow-hidden border-y border-white/10 bg-slate-950/70 backdrop-blur-xl">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-5 flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
-        <div className="flex items-center gap-2 text-cyan-300">
-          <Sparkles className="h-3.5 w-3.5 text-cyan-400" />
+        <div className="flex items-center gap-2 text-blue-300">
+          <Sparkles className="h-3.5 w-3.5 text-blue-400" />
           <span className="uppercase tracking-widest text-[11px]">
             TRUSTED PARTNER ECOSYSTEM
           </span>
@@ -29,13 +29,13 @@ export default function ClientMarquee() {
           {logos.map((logo, idx) => (
             <div
               key={`${logo.name}-${idx}`}
-              className="flex items-center gap-3.5 rounded-2xl border border-white/10 bg-slate-900/60 px-5 py-3 hover:border-cyan-400/50 hover:bg-slate-900 transition-all cursor-default group"
+              className="flex items-center gap-3.5 rounded-2xl border border-white/10 bg-slate-900/60 px-5 py-3 hover:border-blue-500/40 hover:bg-slate-900 transition-all cursor-default group"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 border border-white/15 font-mono text-xs font-bold text-cyan-300 group-hover:scale-105 transition-transform">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500/15 to-indigo-500/15 border border-white/15 font-mono text-xs font-bold text-blue-300 group-hover:scale-105 transition-transform">
                 {logo.iconSymbol}
               </div>
               <div className="flex flex-col">
-                <span className="font-display text-sm font-bold text-white group-hover:text-cyan-200 transition-colors">
+                <span className="font-display text-sm font-bold text-white group-hover:text-blue-200 transition-colors">
                   {logo.name}
                 </span>
                 <span className="font-mono text-[10px] uppercase tracking-wider text-slate-400">

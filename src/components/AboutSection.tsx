@@ -44,7 +44,7 @@ export default function AboutSection({ brand }: AboutSectionProps) {
           transition={{ duration: 0.6 }}
           className="max-w-3xl mb-16"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3.5 py-1 text-xs font-mono uppercase tracking-widest text-cyan-300 mb-4">
+          <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-3.5 py-1 text-xs font-mono uppercase tracking-widest text-blue-300 mb-4">
             <Sparkles className="h-3.5 w-3.5" />
             <span>ABOUT // TECHNOLOGY PARTNER PROFILE</span>
           </div>
@@ -52,7 +52,7 @@ export default function AboutSection({ brand }: AboutSectionProps) {
             Turning Technology Into{" "}
             <span className="text-gradient-cyber">Measurable Solutions</span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-300/90 leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
             We partner with ambitious founders, startups, and growing enterprises
             to architect modern full-stack web and mobile platforms, autonomous AI
             workflows, and cloud ecosystems that scale reliably.
@@ -61,7 +61,7 @@ export default function AboutSection({ brand }: AboutSectionProps) {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
           {/* ======================================================= */}
-          {/* LEFT: 3D HOLOGRAPHIC COMPANY PROFILE CARD               */}
+          {/* LEFT: 3D COMPANY PROFILE CARD                           */}
           {/* ======================================================= */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -70,37 +70,35 @@ export default function AboutSection({ brand }: AboutSectionProps) {
             transition={{ duration: 0.65 }}
             className="lg:col-span-5"
           >
-            <TiltCard glowColor="rgba(0, 240, 255, 0.28)" intensity={12}>
+            <TiltCard glowColor="rgba(59, 130, 246, 0.2)" intensity={10}>
               <div className="relative p-6 sm:p-8 flex flex-col justify-between h-full overflow-hidden">
-                {/* Animated holographic scanline */}
+                {/* Subtle atmospheric scanline */}
                 <div
-                  className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-cyan-400/10 via-purple-500/5 to-transparent animate-scanline"
+                  className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-blue-500/10 via-indigo-500/5 to-transparent animate-scanline"
                   aria-hidden="true"
                 />
 
-                {/* Top Hologram Status Bar */}
+                {/* Top Status Bar */}
                 <div>
                   <div className="flex items-center justify-between border-b border-white/10 pb-4">
                     <div className="flex items-center gap-2">
-                      <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 animate-pulse" />
+                      <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
                       <span className="font-mono text-xs text-emerald-300 tracking-wider">
                         VERIFIED BUSINESS PARTNER
                       </span>
                     </div>
-                    <span className="font-mono text-xs text-cyan-300/80">
+                    <span className="font-mono text-xs text-slate-400">
                       EST // 2021
                     </span>
                   </div>
 
-                  {/* 3D Stylized Holographic Avatar Emblem with Real Logo */}
-                  <div className="my-6 relative mx-auto flex h-44 w-44 items-center justify-center rounded-3xl border border-cyan-400/30 bg-gradient-to-b from-cyan-500/15 via-slate-900 to-purple-600/20 shadow-neon-cyan">
-                    {/* Rotating outer HUD ring */}
-                    <div className="absolute inset-2 rounded-2xl border border-dashed border-cyan-400/40 animate-spin-slow" />
-                    <div className="absolute inset-5 rounded-full border border-purple-400/30" />
+                  {/* Stylized Avatar Emblem with Real Logo */}
+                  <div className="my-6 relative mx-auto flex h-40 w-40 items-center justify-center rounded-3xl border border-blue-500/25 bg-gradient-to-b from-blue-500/10 via-slate-900 to-indigo-600/15 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
+                    <div className="absolute inset-2 rounded-2xl border border-dashed border-blue-500/30 animate-spin-slow" />
 
-                    {/* Center Holographic Core with Official Logo */}
+                    {/* Center Core with Official Logo */}
                     <div className="relative z-10 flex flex-col items-center text-center">
-                      <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 p-[1.5px] shadow-lg">
+                      <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 p-[1.5px] shadow-md">
                         <div className="flex h-full w-full items-center justify-center rounded-[14px] bg-slate-950 p-2 overflow-hidden">
                           <Image
                             src="/logo.png"
@@ -111,7 +109,7 @@ export default function AboutSection({ brand }: AboutSectionProps) {
                           />
                         </div>
                       </div>
-                      <span className="mt-2 font-mono text-[11px] font-semibold tracking-widest text-cyan-300 uppercase">
+                      <span className="mt-2 font-mono text-[10px] font-semibold tracking-widest text-blue-300 uppercase">
                         ZYNTAVERSE.CORE
                       </span>
                     </div>
@@ -122,7 +120,7 @@ export default function AboutSection({ brand }: AboutSectionProps) {
                     <h3 className="font-display text-2xl font-bold text-white">
                       {brand.name}
                     </h3>
-                    <p className="text-xs font-mono text-cyan-300">
+                    <p className="text-xs font-mono text-blue-300">
                       {brand.role}
                     </p>
                     <p className="text-xs text-slate-400 pt-1">
@@ -130,14 +128,14 @@ export default function AboutSection({ brand }: AboutSectionProps) {
                     </p>
                   </div>
 
-                  {/* Holographic Telemetry Matrix */}
+                  {/* Telemetry Matrix */}
                   <div className="mt-6 grid grid-cols-2 gap-3 rounded-2xl border border-white/10 bg-slate-950/60 p-4">
                     <div>
                       <div className="text-[10px] font-mono uppercase text-slate-400">
                         Headquarters
                       </div>
                       <div className="text-xs font-semibold text-white mt-0.5 flex items-center gap-1">
-                        <MapPin className="h-3 w-3 text-pink-400" />
+                        <MapPin className="h-3 w-3 text-blue-400" />
                         <span>Mumbai, India</span>
                       </div>
                     </div>
@@ -145,7 +143,7 @@ export default function AboutSection({ brand }: AboutSectionProps) {
                       <div className="text-[10px] font-mono uppercase text-slate-400">
                         Reach &amp; Scale
                       </div>
-                      <div className="text-xs font-semibold text-purple-300 mt-0.5">
+                      <div className="text-xs font-semibold text-indigo-300 mt-0.5">
                         Global • Remote &amp; On-Site
                       </div>
                     </div>
@@ -153,7 +151,7 @@ export default function AboutSection({ brand }: AboutSectionProps) {
                       <div className="text-[10px] font-mono uppercase text-slate-400">
                         Delivery Record
                       </div>
-                      <div className="text-xs font-semibold text-cyan-300 mt-0.5">
+                      <div className="text-xs font-semibold text-blue-300 mt-0.5">
                         50+ Production Systems
                       </div>
                     </div>
@@ -170,7 +168,7 @@ export default function AboutSection({ brand }: AboutSectionProps) {
 
                 {/* Bottom Verified Footer */}
                 <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-slate-400">
-                  <span className="flex items-center gap-1.5 text-cyan-300">
+                  <span className="flex items-center gap-1.5 text-blue-300">
                     <ShieldCheck className="h-4 w-4" />
                     Security &amp; SLA Backed
                   </span>
@@ -196,7 +194,7 @@ export default function AboutSection({ brand }: AboutSectionProps) {
                 Engineering Digital Growth with Precision
               </h3>
               <p className="text-sm text-slate-300 leading-relaxed">
-                At <span className="text-cyan-300 font-semibold">Zyntaverse Technologies</span>,
+                At <span className="text-blue-300 font-semibold">Zyntaverse Technologies</span>,
                 we bridge the gap between creative visual excellence and rock-solid
                 engineering. We don&apos;t just deliver generic code—we craft custom
                 digital ecosystems engineered to scale, attract users, and drive
@@ -212,9 +210,9 @@ export default function AboutSection({ brand }: AboutSectionProps) {
                 ].map((item) => (
                   <span
                     key={item}
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-cyan-400/25 bg-cyan-500/10 px-3 py-1 font-mono text-xs text-cyan-200"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-blue-500/25 bg-blue-500/10 px-3 py-1 font-mono text-xs text-blue-200"
                   >
-                    <CheckCircle2 className="h-3 w-3 text-cyan-400" />
+                    <CheckCircle2 className="h-3 w-3 text-blue-400" />
                     <span>{item}</span>
                   </span>
                 ))}
@@ -240,7 +238,7 @@ export default function AboutSection({ brand }: AboutSectionProps) {
                       onClick={() => setActivePillar(pillar)}
                       className={`text-left rounded-2xl p-4 border transition-all ${
                         isActive
-                          ? "border-cyan-400/60 bg-slate-900/90 shadow-[0_0_20px_rgba(0,240,255,0.2)]"
+                          ? "border-blue-500/50 bg-slate-900/90 shadow-[0_0_20px_rgba(59,130,246,0.15)]"
                           : "border-white/10 bg-slate-950/60 hover:border-white/20 hover:bg-slate-900/50"
                       }`}
                     >
@@ -269,7 +267,7 @@ export default function AboutSection({ brand }: AboutSectionProps) {
               </div>
 
               {/* Active Pillar Detail Box */}
-              <div className="rounded-2xl border border-cyan-400/30 bg-slate-950/80 p-5 mt-2 space-y-2">
+              <div className="rounded-2xl border border-blue-500/30 bg-slate-950/80 p-5 mt-2 space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="font-display text-base font-bold text-white">
                     {activePillar.title}

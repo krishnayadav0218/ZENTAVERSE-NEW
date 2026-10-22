@@ -23,11 +23,11 @@ const HeroWorkstationCanvas = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="flex h-[440px] sm:h-[520px] lg:h-[620px] w-full items-center justify-center rounded-3xl border border-cyan-400/25 bg-slate-950/40 backdrop-blur-xl">
+      <div className="flex h-[440px] sm:h-[520px] lg:h-[620px] w-full items-center justify-center rounded-3xl border border-white/10 bg-slate-950/40 backdrop-blur-xl">
         <div className="flex flex-col items-center gap-3 text-center">
-          <div className="h-12 w-12 rounded-full border-2 border-cyan-400 border-r-pink-500 border-b-amber-400 border-t-transparent animate-spin" />
-          <p className="font-mono text-xs tracking-widest text-gradient-cyber uppercase">
-            Initializing Multi-Spectrum 3D Workstation...
+          <div className="h-10 w-10 rounded-full border-2 border-blue-500 border-t-transparent animate-spin" />
+          <p className="font-mono text-xs tracking-widest text-slate-400 uppercase">
+            Initializing 3D Interactive Workstation...
           </p>
         </div>
       </div>
@@ -46,32 +46,32 @@ const capabilityBadges = [
     icon: Code2,
     label: "Web & Apps",
     sub: "Next.js & React",
-    border: "border-cyan-400/30",
-    bg: "from-cyan-500/15 to-blue-500/5",
-    iconColor: "text-cyan-400",
+    border: "border-blue-500/20",
+    bg: "from-blue-500/10 to-transparent",
+    iconColor: "text-blue-400",
   },
   {
     icon: Cpu,
     label: "AI & Chatbots",
     sub: "Python & LLMs",
-    border: "border-purple-400/30",
-    bg: "from-purple-500/15 to-pink-500/5",
-    iconColor: "text-purple-400",
+    border: "border-indigo-500/20",
+    bg: "from-indigo-500/10 to-transparent",
+    iconColor: "text-indigo-400",
   },
   {
     icon: Smartphone,
     label: "Mobile Apps",
     sub: "Flutter & iOS/Android",
-    border: "border-pink-400/30",
-    bg: "from-pink-500/15 to-rose-500/5",
-    iconColor: "text-pink-400",
+    border: "border-sky-500/20",
+    bg: "from-sky-500/10 to-transparent",
+    iconColor: "text-sky-400",
   },
   {
     icon: Database,
     label: "Cloud & DevOps",
     sub: "AWS & Docker",
-    border: "border-emerald-400/30",
-    bg: "from-emerald-500/15 to-teal-500/5",
+    border: "border-emerald-500/20",
+    bg: "from-emerald-500/10 to-transparent",
     iconColor: "text-emerald-400",
   },
 ];
@@ -106,24 +106,24 @@ export default function HeroSection({
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-6 space-y-6"
           >
-            {/* Multi-Color Futuristic Badge */}
-            <div className="inline-flex items-center gap-2.5 rounded-full border border-cyan-400/40 bg-gradient-to-r from-cyan-500/15 via-purple-500/15 to-pink-500/15 px-4 py-1.5 backdrop-blur-xl shadow-[0_0_25px_rgba(0,240,255,0.25)]">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-75" />
-                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-gradient-to-r from-cyan-400 to-pink-500" />
+            {/* Modern Enterprise Badge */}
+            <div className="inline-flex items-center gap-2.5 rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-1.5 backdrop-blur-xl shadow-[0_0_20px_rgba(59,130,246,0.15)]">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-blue-500" />
               </span>
-              <span className="font-mono text-xs font-bold tracking-[0.2em] text-gradient-cyber uppercase">
+              <span className="font-mono text-xs font-semibold tracking-[0.2em] text-blue-300 uppercase">
                 INNOVATE • BUILD • SCALE
               </span>
             </div>
 
             {/* Brand Tagline Pill */}
             <div className="flex items-center gap-2 text-xs font-mono text-slate-300">
-              <Terminal className="h-3.5 w-3.5 text-pink-400" />
+              <Terminal className="h-3.5 w-3.5 text-blue-400" />
               <span>{brand.subTagline || "Smart technology. Real solutions. Lasting impact."}</span>
             </div>
 
-            {/* Large Headline with Gradient Highlight */}
+            {/* Large Headline with Refined Gradient Highlight */}
             <h1 className="font-display text-4xl sm:text-5xl xl:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
               Full-Stack{" "}
               <span className="text-gradient-cyber">Technology Partner</span>,{" "}
@@ -132,7 +132,7 @@ export default function HeroSection({
             </h1>
 
             {/* Short Description */}
-            <p className="max-w-xl text-base sm:text-lg text-slate-200/90 leading-relaxed">
+            <p className="max-w-xl text-base sm:text-lg text-slate-300 leading-relaxed">
               We build innovative digital solutions that help businesses grow,
               operate smarter, and stay ahead in a digital world. From scalable web
               platforms to AI copilots and enterprise cloud architecture.
@@ -149,9 +149,9 @@ export default function HeroSection({
                 <button
                   type="button"
                   onClick={onOpenBooking}
-                  className="inline-flex items-center gap-2 rounded-2xl border border-cyan-400/35 bg-cyan-500/10 px-5 py-3 text-xs font-mono font-semibold text-cyan-200 hover:bg-cyan-500/20 transition-all"
+                  className="inline-flex items-center gap-2 rounded-2xl border border-blue-500/30 bg-blue-500/10 px-5 py-3 text-xs font-mono font-medium text-blue-200 hover:bg-blue-500/20 transition-all"
                 >
-                  <Calendar className="h-4 w-4 text-cyan-300" />
+                  <Calendar className="h-4 w-4 text-blue-300" />
                   <span>Book Free Strategy Call</span>
                 </button>
               )}
@@ -160,9 +160,9 @@ export default function HeroSection({
                 <button
                   type="button"
                   onClick={onOpenDeck}
-                  className="inline-flex items-center gap-2 rounded-2xl border border-purple-400/30 bg-purple-500/10 px-4 py-3 text-xs font-mono text-purple-200 hover:bg-purple-500/20 transition-all"
+                  className="inline-flex items-center gap-2 rounded-2xl border border-slate-700 bg-slate-900/80 px-4 py-3 text-xs font-mono text-slate-300 hover:border-slate-600 hover:text-white transition-all"
                 >
-                  <FileText className="h-4 w-4 text-purple-300" />
+                  <FileText className="h-4 w-4 text-slate-400" />
                   <span>Company Profile</span>
                 </button>
               )}
@@ -171,14 +171,14 @@ export default function HeroSection({
                 href="https://wa.me/917992153750"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-2xl border border-emerald-400/30 bg-emerald-500/10 px-4 py-3 text-xs font-mono text-emerald-300 hover:bg-emerald-500/20 transition-all"
+                className="inline-flex items-center gap-2 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3 text-xs font-mono text-emerald-300 hover:bg-emerald-500/20 transition-all"
               >
                 <MessageCircle className="h-4 w-4" />
                 <span>WhatsApp Us</span>
               </a>
             </div>
 
-            {/* Multi-Color Capability Micro-Cards */}
+            {/* Capability Micro-Cards */}
             <div className="pt-4 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-3">
               {capabilityBadges.map((item) => (
                 <div
@@ -192,7 +192,7 @@ export default function HeroSection({
                     <div className="text-xs font-bold text-white">
                       {item.label}
                     </div>
-                    <div className="text-[10px] font-mono text-slate-300">
+                    <div className="text-[10px] font-mono text-slate-400">
                       {item.sub}
                     </div>
                   </div>

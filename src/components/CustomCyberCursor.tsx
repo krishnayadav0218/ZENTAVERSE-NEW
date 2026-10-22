@@ -65,8 +65,8 @@ export default function CustomCyberCursor() {
         const dx = pos.x - prev.x;
         const dy = pos.y - prev.y;
         return {
-          x: prev.x + dx * 0.2,
-          y: prev.y + dy * 0.2,
+          x: prev.x + dx * 0.22,
+          y: prev.y + dy * 0.22,
         };
       });
       animId = requestAnimationFrame(followCursor);
@@ -80,9 +80,9 @@ export default function CustomCyberCursor() {
 
   return (
     <div className="pointer-events-none fixed inset-0 z-[9999] overflow-hidden transition-opacity duration-300">
-      {/* Central Sharp Dot */}
+      {/* Central Precision Dot */}
       <div
-        className="fixed top-0 left-0 h-2 w-2 -ml-1 -mt-1 rounded-full bg-cyan-400 shadow-[0_0_10px_#00F0FF] will-change-transform"
+        className="fixed top-0 left-0 h-1.5 w-1.5 -ml-[3px] -mt-[3px] rounded-full bg-blue-400 shadow-[0_0_8px_rgba(96,165,250,0.8)] will-change-transform"
         style={{
           transform: `translate3d(${pos.x}px, ${pos.y}px, 0) scale(${
             isClicking ? 0.6 : 1
@@ -91,12 +91,12 @@ export default function CustomCyberCursor() {
         }}
       />
 
-      {/* Trailing Cyber Neon Ring */}
+      {/* Trailing Precision Ring */}
       <div
-        className={`fixed top-0 left-0 rounded-full border will-change-transform transition-all duration-150 ease-out ${
+        className={`fixed top-0 left-0 rounded-full border will-change-transform transition-all duration-200 ease-out ${
           isHovered
-            ? "h-11 w-11 -ml-5.5 -mt-5.5 border-pink-500 bg-pink-500/15 shadow-[0_0_20px_rgba(236,72,153,0.5)] scale-110"
-            : "h-7 w-7 -ml-3.5 -mt-3.5 border-cyan-400/70 bg-cyan-400/5 shadow-[0_0_14px_rgba(0,240,255,0.4)] scale-100"
+            ? "h-10 w-10 -ml-5 -mt-5 border-blue-400/80 bg-blue-500/10 shadow-[0_0_20px_rgba(59,130,246,0.3)] scale-110"
+            : "h-7 w-7 -ml-3.5 -mt-3.5 border-slate-500/40 bg-white/[0.02] shadow-[0_0_10px_rgba(59,130,246,0.15)] scale-100"
         } ${isClicking ? "scale-75" : ""}`}
         style={{
           transform: `translate3d(${trailingPos.x}px, ${trailingPos.y}px, 0)`,

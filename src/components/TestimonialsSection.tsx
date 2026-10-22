@@ -39,7 +39,7 @@ export default function TestimonialsSection() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3.5 py-1 text-xs font-mono uppercase tracking-widest text-cyan-300 mb-4">
+          <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-3.5 py-1 text-xs font-mono uppercase tracking-widest text-blue-300 mb-4">
             <Sparkles className="h-3.5 w-3.5" />
             <span>CLIENT REVIEWS // VERIFIED SOCIAL PROOF</span>
           </div>
@@ -47,7 +47,7 @@ export default function TestimonialsSection() {
             Trusted by Founders,{" "}
             <span className="text-gradient-cyber">Loved by Teams</span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-300/90">
+          <p className="mt-4 text-base sm:text-lg text-slate-300">
             Real feedback from startup founders and engineering leaders across the
             US, UK, UAE, and India who scaled their digital products with Zyntaverse.
           </p>
@@ -63,11 +63,11 @@ export default function TestimonialsSection() {
               viewport={{ once: true, margin: "-30px" }}
               transition={{ duration: 0.55, delay: index * 0.1 }}
             >
-              <TiltCard glowColor={`${item.accent}30`} intensity={10}>
+              <TiltCard glowColor={`${item.accent}20`} intensity={10}>
                 <div className="relative p-7 sm:p-8 flex flex-col justify-between h-full space-y-6">
                   {/* Ambient corner light */}
                   <div
-                    className="pointer-events-none absolute -top-12 -right-12 h-32 w-32 rounded-full blur-2xl opacity-20"
+                    className="pointer-events-none absolute -top-12 -right-12 h-32 w-32 rounded-full blur-2xl opacity-15"
                     style={{ backgroundColor: item.accent }}
                   />
 
@@ -87,8 +87,8 @@ export default function TestimonialsSection() {
                         className="rounded-full px-3 py-1 font-mono text-[10px] font-semibold border"
                         style={{
                           color: item.accent,
-                          borderColor: `${item.accent}40`,
-                          backgroundColor: `${item.accent}12`,
+                          borderColor: `${item.accent}30`,
+                          backgroundColor: `${item.accent}10`,
                         }}
                       >
                         {item.projectDelivered}
@@ -131,7 +131,7 @@ export default function TestimonialsSection() {
                     </div>
 
                     <div className="hidden sm:flex items-center gap-1 text-[11px] font-mono text-slate-400">
-                      <MapPin className="h-3 w-3 text-pink-400" />
+                      <MapPin className="h-3 w-3 text-blue-400" />
                       <span>{item.location}</span>
                     </div>
                   </div>

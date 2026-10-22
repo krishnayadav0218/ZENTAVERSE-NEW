@@ -81,11 +81,11 @@ export default function ExitIntentModal({ onOpenBooking }: ExitIntentModalProps)
             animate={{ scale: 1, y: 0, opacity: 1 }}
             exit={{ scale: 0.9, y: 30, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-lg rounded-3xl glass-panel p-6 sm:p-8 border border-pink-500/40 shadow-[0_0_50px_rgba(236,72,153,0.35)] overflow-hidden"
+            className="relative w-full max-w-lg rounded-3xl glass-panel p-6 sm:p-8 border border-white/10 shadow-[0_25px_80px_rgba(0,0,0,0.85)] overflow-hidden"
           >
-            {/* Ambient neon radial glow */}
-            <div className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-pink-500/20 blur-3xl" />
-            <div className="pointer-events-none absolute -left-20 -bottom-20 h-56 w-56 rounded-full bg-cyan-500/20 blur-3xl" />
+            {/* Ambient radial glow */}
+            <div className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-blue-600/15 blur-3xl" />
+            <div className="pointer-events-none absolute -left-20 -bottom-20 h-56 w-56 rounded-full bg-indigo-600/10 blur-3xl" />
 
             {/* Close Button */}
             <button
@@ -97,8 +97,8 @@ export default function ExitIntentModal({ onOpenBooking }: ExitIntentModalProps)
             </button>
 
             {/* Tag */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-pink-400/40 bg-pink-500/10 px-3 py-1 text-xs font-mono text-pink-300 mb-4">
-              <Sparkles className="h-3.5 w-3.5 text-pink-400" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 text-xs font-mono text-blue-400 mb-4">
+              <Sparkles className="h-3.5 w-3.5 text-blue-400" />
               <span>BEFORE YOU LEAVE // EXCLUSIVE OFFER</span>
             </div>
 
@@ -122,7 +122,7 @@ export default function ExitIntentModal({ onOpenBooking }: ExitIntentModalProps)
                 "100% Free Consultation • Zero Sales Pressure",
               ].map((bullet) => (
                 <div key={bullet} className="flex items-start gap-2.5 text-xs text-slate-200">
-                  <CheckCircle2 className="h-4 w-4 shrink-0 mt-0.5 text-cyan-400" />
+                  <CheckCircle2 className="h-4 w-4 shrink-0 mt-0.5 text-blue-400" />
                   <span>{bullet}</span>
                 </div>
               ))}
@@ -135,7 +135,7 @@ export default function ExitIntentModal({ onOpenBooking }: ExitIntentModalProps)
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleClose}
-                className="w-full inline-flex items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 px-4 py-3 text-sm font-semibold text-white hover:from-emerald-400 hover:to-teal-500 shadow-neon-cyan transition-all"
+                className="w-full inline-flex items-center justify-center gap-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 px-4 py-3 text-sm font-semibold text-white shadow-sm transition-all"
               >
                 <MessageCircle className="h-4 w-4" />
                 <span>Claim Blueprint on WhatsApp (Instant)</span>
@@ -145,7 +145,7 @@ export default function ExitIntentModal({ onOpenBooking }: ExitIntentModalProps)
                 <button
                   type="button"
                   onClick={handleBooking}
-                  className="w-full inline-flex items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 px-4 py-3 text-sm font-semibold text-white hover:opacity-95 shadow-neon-cyan transition-all"
+                  className="w-full inline-flex items-center justify-center gap-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/25 transition-all"
                 >
                   <Calendar className="h-4 w-4" />
                   <span>Schedule 15-Min Strategy Call</span>

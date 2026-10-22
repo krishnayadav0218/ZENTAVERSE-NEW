@@ -48,7 +48,7 @@ export default function Footer({
           {/* Column 1: Brand Logo & Information */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 p-[1.5px] shadow-neon-cyan">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 p-[1.5px] shadow-[0_0_15px_rgba(59,130,246,0.3)]">
                 <div className="flex h-full w-full items-center justify-center rounded-[10px] bg-slate-950 p-1">
                   <Image
                     src="/logo.png"
@@ -63,7 +63,7 @@ export default function Footer({
                 <div className="font-display text-lg font-bold tracking-wider text-white">
                   {brand.name}
                 </div>
-                <div className="font-mono text-[11px] text-cyan-400">
+                <div className="font-mono text-[11px] text-blue-400">
                   {brand.tagline}
                 </div>
               </div>
@@ -77,14 +77,14 @@ export default function Footer({
 
             <div className="space-y-1.5 text-xs text-slate-300 font-mono">
               <div className="flex items-center gap-2 text-slate-300">
-                <MapPin className="h-3.5 w-3.5 text-pink-400" />
+                <MapPin className="h-3.5 w-3.5 text-blue-400" />
                 <span>{brand.location}</span>
               </div>
               <div className="flex items-center gap-2 text-slate-300">
-                <Mail className="h-3.5 w-3.5 text-cyan-400" />
+                <Mail className="h-3.5 w-3.5 text-blue-400" />
                 <a
                   href={`mailto:${brand.email}`}
-                  className="hover:text-cyan-300 transition-colors"
+                  className="hover:text-blue-300 transition-colors"
                 >
                   {brand.email}
                 </a>
@@ -115,19 +115,19 @@ export default function Footer({
                   icon: Linkedin,
                   href: brand.linkedin,
                   label: "LinkedIn",
-                  color: "#8B5CF6",
+                  color: "#3B82F6",
                 },
                 {
                   icon: Mail,
                   href: `mailto:${brand.email}`,
                   label: "Email",
-                  color: "#00F0FF",
+                  color: "#60A5FA",
                 },
                 {
                   icon: Github,
                   href: brand.github,
                   label: "GitHub",
-                  color: "#EC4899",
+                  color: "#94A3B8",
                 },
               ].map((social) => (
                 <a
@@ -136,7 +136,7 @@ export default function Footer({
                   target={social.href.startsWith("http") ? "_blank" : undefined}
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-slate-300 hover:border-cyan-400/50 hover:text-cyan-300 hover:-translate-y-0.5 transition-all"
+                  className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-slate-300 hover:border-blue-500/50 hover:text-blue-300 hover:-translate-y-0.5 transition-all"
                 >
                   <social.icon className="h-4 w-4" />
                 </a>
@@ -146,7 +146,7 @@ export default function Footer({
 
           {/* Column 2: Quick Links */}
           <div className="lg:col-span-3 space-y-3">
-            <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-cyan-300">
+            <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-blue-300">
               Quick Navigation
             </h3>
             <ul className="space-y-2">
@@ -165,7 +165,7 @@ export default function Footer({
                   <button
                     type="button"
                     onClick={onOpenBooking}
-                    className="text-sm text-cyan-400 hover:text-cyan-200 transition-colors"
+                    className="text-sm text-blue-400 hover:text-blue-200 transition-colors"
                   >
                     Book a Strategy Call →
                   </button>
@@ -176,7 +176,7 @@ export default function Footer({
                   <button
                     type="button"
                     onClick={onOpenDeck}
-                    className="text-sm text-purple-400 hover:text-purple-200 transition-colors"
+                    className="text-sm text-indigo-400 hover:text-indigo-200 transition-colors"
                   >
                     Download Company Deck (PDF) →
                   </button>
@@ -187,15 +187,15 @@ export default function Footer({
 
           {/* Column 3: Core Services */}
           <div className="lg:col-span-4 space-y-3">
-            <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-purple-300">
-              Core Services (Pamphlet)
+            <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-indigo-300">
+              Core Services
             </h3>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
               {servicesData.slice(0, 10).map((s) => (
                 <li key={s.id}>
                   <a
                     href="#services"
-                    className="text-xs text-slate-400 hover:text-cyan-300 transition-colors flex items-center gap-1.5"
+                    className="text-xs text-slate-400 hover:text-blue-300 transition-colors flex items-center gap-1.5"
                   >
                     <span className="font-mono text-[10px] text-slate-500">
                       {s.number}
@@ -224,7 +224,7 @@ export default function Footer({
             type="button"
             onClick={scrollToTop}
             aria-label="Back to top"
-            className="inline-flex items-center gap-2 rounded-xl border border-cyan-400/30 bg-cyan-500/10 px-3.5 py-2 font-mono text-xs text-cyan-300 hover:bg-cyan-500/20 transition-colors"
+            className="inline-flex items-center gap-2 rounded-xl border border-blue-500/30 bg-blue-500/10 px-3.5 py-2 font-mono text-xs text-blue-300 hover:bg-blue-500/20 transition-colors"
           >
             <span>Top</span>
             <ArrowUp className="h-3.5 w-3.5" />

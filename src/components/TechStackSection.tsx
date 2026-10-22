@@ -13,8 +13,8 @@ const TechCloudCanvas = dynamic(
     loading: () => (
       <div className="flex h-[440px] sm:h-[520px] w-full items-center justify-center rounded-3xl border border-white/10 bg-slate-950/60 backdrop-blur-xl">
         <div className="flex flex-col items-center gap-3">
-          <div className="h-10 w-10 rounded-full border-2 border-purple-400 border-t-transparent animate-spin" />
-          <span className="font-mono text-xs text-purple-300 uppercase tracking-widest">
+          <div className="h-10 w-10 rounded-full border-2 border-blue-500 border-t-transparent animate-spin" />
+          <span className="font-mono text-xs text-slate-400 uppercase tracking-widest">
             Generating 3D Technology Constellation...
           </span>
         </div>
@@ -55,7 +55,7 @@ export default function TechStackSection() {
             transition={{ duration: 0.6 }}
             className="max-w-2xl"
           >
-            <div className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-3.5 py-1 text-xs font-mono uppercase tracking-widest text-purple-300 mb-4">
+            <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-3.5 py-1 text-xs font-mono uppercase tracking-widest text-blue-300 mb-4">
               <Network className="h-3.5 w-3.5" />
               <span>TECH STACK // 3D NEURAL CONSTELLATION</span>
             </div>
@@ -63,7 +63,7 @@ export default function TechStackSection() {
               Interactive{" "}
               <span className="text-gradient-cyber">3D Technology Wall</span>
             </h2>
-            <p className="mt-3 text-base sm:text-lg text-slate-300/90">
+            <p className="mt-3 text-base sm:text-lg text-slate-300">
               21 interconnected technologies powering modern web applications,
               distributed backends, AI/ML pipelines, and executive analytics.
             </p>
@@ -80,7 +80,7 @@ export default function TechStackSection() {
                   onClick={() => setActiveCategory(cat)}
                   className={`rounded-xl px-3.5 py-2 text-xs font-mono transition-all ${
                     active
-                      ? "bg-gradient-to-r from-cyan-400 to-purple-500 text-slate-950 font-bold shadow-neon-cyan"
+                      ? "bg-blue-600 text-white font-bold shadow-sm"
                       : "text-slate-400 hover:text-white"
                   }`}
                 >
@@ -103,19 +103,19 @@ export default function TechStackSection() {
             />
           </div>
 
-          {/* Right Side: Live Holographic Node Inspector + Quick Matrix */}
+          {/* Right Side: Node Inspector + Quick Matrix */}
           <div className="lg:col-span-4 flex flex-col justify-between gap-6">
-            <div className="glass-panel rounded-3xl p-6 sm:p-7 border border-cyan-400/30 space-y-5">
+            <div className="glass-panel rounded-3xl p-6 sm:p-7 border border-slate-700/60 space-y-5">
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
                 <div className="flex items-center gap-2.5">
                   <span
                     className="h-3.5 w-3.5 rounded-full"
                     style={{
                       backgroundColor: selectedNode.color,
-                      boxShadow: `0 0 12px ${selectedNode.color}`,
+                      boxShadow: `0 0 10px ${selectedNode.color}`,
                     }}
                   />
-                  <span className="font-mono text-xs uppercase tracking-widest text-cyan-300">
+                  <span className="font-mono text-xs uppercase tracking-widest text-blue-300">
                     {selectedNode.category}
                   </span>
                 </div>
@@ -146,7 +146,7 @@ export default function TechStackSection() {
                         key={connId}
                         type="button"
                         onClick={() => setSelectedNode(target)}
-                        className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 bg-white/[0.04] px-2.5 py-1 font-mono text-xs text-cyan-200 hover:border-cyan-400/60 transition-colors"
+                        className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 bg-white/[0.04] px-2.5 py-1 font-mono text-xs text-blue-200 hover:border-blue-400/60 transition-colors"
                       >
                         <span
                           className="h-1.5 w-1.5 rounded-full"
@@ -160,14 +160,14 @@ export default function TechStackSection() {
               </div>
             </div>
 
-            {/* Complete 21-Technology Interactive Wall Pills */}
-            <div className="glass-panel rounded-3xl p-6 space-y-3">
+            {/* Complete 21-Technology Wall Pills */}
+            <div className="glass-panel rounded-3xl p-6 space-y-3 border border-slate-700/60">
               <div className="flex items-center justify-between">
                 <span className="font-mono text-xs uppercase tracking-widest text-slate-400 flex items-center gap-1.5">
-                  <Layers className="h-3.5 w-3.5 text-cyan-400" />
+                  <Layers className="h-3.5 w-3.5 text-blue-400" />
                   All 21 Stack Nodes
                 </span>
-                <span className="font-mono text-[11px] text-cyan-300">
+                <span className="font-mono text-[11px] text-blue-300">
                   Click to Focus in 3D
                 </span>
               </div>
@@ -186,7 +186,7 @@ export default function TechStackSection() {
                       onClick={() => setSelectedNode(item)}
                       className={`inline-flex items-center gap-1.5 rounded-xl border px-3 py-1.5 font-mono text-xs transition-all ${
                         isSelected
-                          ? "border-cyan-400 bg-cyan-500/20 text-white shadow-neon-cyan scale-105"
+                          ? "border-blue-400 bg-blue-500/20 text-white shadow-sm scale-105"
                           : isCategoryMatch
                           ? "border-white/10 bg-slate-900/70 text-slate-300 hover:border-white/30 hover:text-white"
                           : "border-white/5 bg-slate-950/30 text-slate-600 opacity-45"

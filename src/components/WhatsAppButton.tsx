@@ -48,7 +48,7 @@ export default function WhatsAppButton({
             {/* Header */}
             <div className="flex items-center justify-between border-b border-white/10 pb-3.5">
               <div className="flex items-center gap-3">
-                <div className="relative h-11 w-11 rounded-2xl border border-emerald-400/40 bg-gradient-to-br from-emerald-500/20 via-cyan-500/20 to-purple-500/20 p-1 flex items-center justify-center shadow-lg">
+                <div className="relative h-11 w-11 rounded-2xl border border-white/15 bg-slate-900 p-1 flex items-center justify-center shadow-md">
                   <Image
                     src="/logo.png"
                     alt={businessName}
@@ -63,7 +63,7 @@ export default function WhatsAppButton({
                     <span className="text-sm font-bold text-white tracking-wide">
                       {businessName}
                     </span>
-                    <Sparkles className="h-3.5 w-3.5 text-cyan-400" />
+                    <Sparkles className="h-3.5 w-3.5 text-blue-400" />
                   </div>
                   <div className="flex items-center gap-1 text-[11px] font-mono text-emerald-400">
                     <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />

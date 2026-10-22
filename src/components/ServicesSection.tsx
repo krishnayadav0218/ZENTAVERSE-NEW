@@ -81,7 +81,7 @@ export default function ServicesSection({ onOpenBooking }: ServicesSectionProps)
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-3.5 py-1 text-xs font-mono uppercase tracking-widest text-purple-300 mb-4">
+          <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-3.5 py-1 text-xs font-mono uppercase tracking-widest text-blue-300 mb-4">
             <Sparkles className="h-3.5 w-3.5" />
             <span>OUR CORE SERVICES // 01 — 12</span>
           </div>
@@ -89,7 +89,7 @@ export default function ServicesSection({ onOpenBooking }: ServicesSectionProps)
             Smart Technology. Real Solutions.{" "}
             <span className="text-gradient-cyber">Lasting Impact.</span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-300/90">
+          <p className="mt-4 text-base sm:text-lg text-slate-300">
             Full-stack digital solutions that help businesses grow, operate
             smarter, and stay ahead in a fast-evolving digital landscape.
           </p>
@@ -111,7 +111,7 @@ export default function ServicesSection({ onOpenBooking }: ServicesSectionProps)
                 transition={{ duration: 0.5, delay: (index % 6) * 0.06 }}
               >
                 <TiltCard
-                  glowColor={`${service.accentColor}35`}
+                  glowColor={`${service.accentColor}25`}
                   intensity={10}
                   onClick={() => setSelectedService(service)}
                 >
@@ -127,24 +127,21 @@ export default function ServicesSection({ onOpenBooking }: ServicesSectionProps)
                       <div className="flex items-center justify-between mb-5">
                         <div className="relative">
                           <div
-                            className="absolute -inset-1 rounded-2xl blur-md opacity-40 transition-opacity group-hover:opacity-80"
+                            className="absolute -inset-1 rounded-2xl blur-md opacity-30 transition-opacity group-hover:opacity-70"
                             style={{ backgroundColor: service.accentColor }}
                           />
                           <div
-                            className="relative flex h-13 w-13 items-center justify-center rounded-2xl border border-white/20 bg-slate-950/90 shadow-lg transition-transform duration-300 group-hover:-translate-y-1"
-                            style={{
-                              boxShadow: `0 8px 20px -4px ${service.accentColor}45`,
-                            }}
+                            className="relative flex h-12 w-12 items-center justify-center rounded-2xl border border-white/15 bg-slate-950/90 shadow-sm transition-transform duration-300 group-hover:-translate-y-0.5"
                           >
                             <Icon
-                              className="h-6 w-6 transition-transform duration-300 group-hover:scale-110"
+                              className="h-5 w-5 transition-transform duration-300 group-hover:scale-110"
                               style={{ color: service.accentColor }}
                             />
                           </div>
                         </div>
 
                         <span
-                          className="font-mono text-2xl font-black tracking-tighter opacity-35 group-hover:opacity-85 transition-opacity"
+                          className="font-mono text-xl font-bold tracking-tighter opacity-30 group-hover:opacity-80 transition-opacity"
                           style={{ color: service.accentColor }}
                         >
                           {service.number}
@@ -152,10 +149,10 @@ export default function ServicesSection({ onOpenBooking }: ServicesSectionProps)
                       </div>
 
                       {/* Title & Short Description */}
-                      <h3 className="font-display text-lg font-bold text-white group-hover:text-cyan-200 transition-colors">
+                      <h3 className="font-display text-lg font-bold text-white group-hover:text-blue-300 transition-colors">
                         {service.title}
                       </h3>
-                      <p className="mt-2 text-xs sm:text-sm text-slate-300/90 leading-relaxed">
+                      <p className="mt-2 text-xs sm:text-sm text-slate-300 leading-relaxed">
                         {service.shortDescription}
                       </p>
 
@@ -164,7 +161,7 @@ export default function ServicesSection({ onOpenBooking }: ServicesSectionProps)
                         {service.deliverables.slice(0, 2).map((item) => (
                           <li
                             key={item}
-                            className="flex items-center gap-2 text-xs text-slate-300/80"
+                            className="flex items-center gap-2 text-xs text-slate-300"
                           >
                             <span
                               className="h-1.5 w-1.5 rounded-full shrink-0"
@@ -207,10 +204,10 @@ export default function ServicesSection({ onOpenBooking }: ServicesSectionProps)
         {/* ========================================================= */}
         {/* ADDITIONAL SERVICES SECTION FROM PAMPHLET                 */}
         {/* ========================================================= */}
-        <div className="mt-20 glass-panel rounded-3xl p-6 sm:p-10 border border-purple-400/25">
+        <div className="mt-20 glass-panel rounded-3xl p-6 sm:p-10 border border-slate-700/60">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-6 mb-8">
             <div>
-              <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-purple-300 mb-2">
+              <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-blue-300 mb-2">
                 <PlusCircle className="h-3.5 w-3.5" />
                 <span>EXPANDED CAPABILITIES</span>
               </div>
@@ -232,7 +229,7 @@ export default function ServicesSection({ onOpenBooking }: ServicesSectionProps)
                   onClick={() => setActiveCategory(cat)}
                   className={`rounded-xl px-3 py-1.5 text-xs font-mono transition-all ${
                     activeCategory === cat
-                      ? "border border-purple-400 bg-purple-500/20 text-purple-200 shadow-sm"
+                      ? "border border-blue-500 bg-blue-500/20 text-blue-200 shadow-sm"
                       : "border border-white/10 bg-slate-950/60 text-slate-400 hover:text-white"
                   }`}
                 >
@@ -246,9 +243,9 @@ export default function ServicesSection({ onOpenBooking }: ServicesSectionProps)
             {filteredAdditional.map((item) => (
               <div
                 key={item.name}
-                className="flex items-center gap-2.5 rounded-2xl border border-white/10 bg-slate-950/70 p-3 hover:border-cyan-400/40 hover:bg-slate-900/80 transition-all group"
+                className="flex items-center gap-2.5 rounded-2xl border border-white/10 bg-slate-950/70 p-3 hover:border-blue-500/40 hover:bg-slate-900/80 transition-all group"
               >
-                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-purple-400/30 bg-purple-500/10 text-purple-300 group-hover:border-cyan-400/40 group-hover:text-cyan-300 transition-colors">
+                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-blue-500/30 bg-blue-500/10 text-blue-300 group-hover:border-blue-500/40 group-hover:text-blue-300 transition-colors">
                   <CheckCircle2 className="h-4 w-4" />
                 </div>
                 <div className="min-w-0">
@@ -273,7 +270,7 @@ export default function ServicesSection({ onOpenBooking }: ServicesSectionProps)
                 <button
                   type="button"
                   onClick={onOpenBooking}
-                  className="rounded-xl border border-cyan-400/30 bg-cyan-500/15 px-4 py-2 font-mono text-xs text-cyan-200 hover:bg-cyan-500/25 transition-colors"
+                  className="rounded-xl border border-blue-500/30 bg-blue-500/15 px-4 py-2 font-mono text-xs text-blue-200 hover:bg-blue-500/25 transition-colors"
                 >
                   Schedule Consultation
                 </button>
@@ -307,7 +304,7 @@ export default function ServicesSection({ onOpenBooking }: ServicesSectionProps)
               animate={{ scale: 1, y: 0, opacity: 1 }}
               exit={{ scale: 0.92, y: 20, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-xl rounded-3xl glass-panel p-6 sm:p-8 border border-cyan-400/40 shadow-neon-cyan max-h-[90vh] overflow-y-auto"
+              className="relative w-full max-w-xl rounded-3xl glass-panel p-6 sm:p-8 border border-slate-700 shadow-2xl max-h-[90vh] overflow-y-auto"
             >
               <button
                 type="button"
@@ -317,7 +314,7 @@ export default function ServicesSection({ onOpenBooking }: ServicesSectionProps)
                 <X className="h-4 w-4" />
               </button>
 
-              <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-cyan-300 mb-2">
+              <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-blue-300 mb-2">
                 <Sparkles className="h-4 w-4" />
                 <span>
                   SERVICE SPECIFICATION // {selectedService.number}
@@ -358,7 +355,7 @@ export default function ServicesSection({ onOpenBooking }: ServicesSectionProps)
                       Standard Timeline
                     </div>
                     <div className="text-sm font-semibold text-white mt-1 flex items-center gap-1.5">
-                      <Clock className="h-4 w-4 text-cyan-300" />
+                      <Clock className="h-4 w-4 text-blue-300" />
                       <span>{selectedService.timeline}</span>
                     </div>
                   </div>
@@ -371,7 +368,7 @@ export default function ServicesSection({ onOpenBooking }: ServicesSectionProps)
                       {selectedService.technologies.slice(0, 3).map((t) => (
                         <span
                           key={t}
-                          className="font-mono text-[10px] text-cyan-300"
+                          className="font-mono text-[10px] text-blue-300"
                         >
                           {t}
                         </span>
@@ -401,7 +398,7 @@ export default function ServicesSection({ onOpenBooking }: ServicesSectionProps)
                       setSelectedService(null);
                       onOpenBooking();
                     }}
-                    className="inline-flex items-center gap-1.5 rounded-xl border border-cyan-400/30 bg-cyan-500/10 px-4 py-2.5 font-mono text-xs text-cyan-300 hover:bg-cyan-500/20"
+                    className="inline-flex items-center gap-1.5 rounded-xl border border-blue-500/30 bg-blue-500/10 px-4 py-2.5 font-mono text-xs text-blue-300 hover:bg-blue-500/20"
                   >
                     <span>Book Strategy Call</span>
                   </button>

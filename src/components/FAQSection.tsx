@@ -27,7 +27,7 @@ export default function FAQSection({ onOpenBooking }: FAQSectionProps) {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border border-pink-400/30 bg-pink-500/10 px-3.5 py-1 text-xs font-mono uppercase tracking-widest text-pink-300 mb-4">
+          <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-3.5 py-1 text-xs font-mono uppercase tracking-widest text-blue-300 mb-4">
             <HelpCircle className="h-3.5 w-3.5" />
             <span>KNOWLEDGE BASE // FREQUENTLY ASKED QUESTIONS</span>
           </div>
@@ -35,7 +35,7 @@ export default function FAQSection({ onOpenBooking }: FAQSectionProps) {
             Everything You Need{" "}
             <span className="text-gradient-cyber">To Know</span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-300/90">
+          <p className="mt-4 text-base sm:text-lg text-slate-300">
             Clear answers about our development timelines, intellectual property,
             milestones, and ongoing support.
           </p>
@@ -55,7 +55,7 @@ export default function FAQSection({ onOpenBooking }: FAQSectionProps) {
                 transition={{ duration: 0.45, delay: index * 0.06 }}
                 className={`rounded-2xl border transition-all overflow-hidden ${
                   isOpen
-                    ? "border-cyan-400/50 bg-slate-900/90 shadow-[0_0_25px_rgba(0,240,255,0.15)]"
+                    ? "border-blue-500/40 bg-slate-900/90 shadow-[0_0_20px_rgba(59,130,246,0.12)]"
                     : "border-white/10 bg-slate-950/60 hover:border-white/20 hover:bg-slate-900/50"
                 }`}
               >
@@ -66,7 +66,7 @@ export default function FAQSection({ onOpenBooking }: FAQSectionProps) {
                   aria-expanded={isOpen}
                 >
                   <div className="flex items-center gap-3.5 pr-4">
-                    <span className="font-mono text-xs font-bold text-cyan-400 opacity-80">
+                    <span className="font-mono text-xs font-bold text-blue-400 opacity-80">
                       0{index + 1}
                     </span>
                     <h3 className="font-display text-base sm:text-lg font-bold text-white">
@@ -77,7 +77,7 @@ export default function FAQSection({ onOpenBooking }: FAQSectionProps) {
                   <div
                     className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl border border-white/10 transition-transform duration-300 ${
                       isOpen
-                        ? "rotate-180 bg-cyan-500/20 text-cyan-300 border-cyan-400/40"
+                        ? "rotate-180 bg-blue-500/20 text-blue-300 border-blue-500/30"
                         : "text-slate-400"
                     }`}
                   >
@@ -105,7 +105,7 @@ export default function FAQSection({ onOpenBooking }: FAQSectionProps) {
         </div>
 
         {/* Bottom Help Box */}
-        <div className="mt-12 rounded-3xl border border-cyan-400/25 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-transparent p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <div className="mt-12 rounded-3xl border border-slate-700/60 bg-gradient-to-r from-blue-500/10 via-indigo-500/05 to-transparent p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <div>
             <div className="font-display text-lg font-bold text-white">
               Have a question not answered here?
@@ -121,7 +121,7 @@ export default function FAQSection({ onOpenBooking }: FAQSectionProps) {
               <button
                 type="button"
                 onClick={onOpenBooking}
-                className="rounded-xl border border-cyan-400/35 bg-cyan-500/15 px-4 py-2 text-xs font-mono font-semibold text-cyan-200 hover:bg-cyan-500/25"
+                className="rounded-xl border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-xs font-mono font-semibold text-blue-200 hover:bg-blue-500/20"
               >
                 Book Discovery Call
               </button>

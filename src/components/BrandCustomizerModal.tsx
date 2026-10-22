@@ -48,23 +48,23 @@ export default function BrandCustomizerModal({
             animate={{ scale: 1, y: 0, opacity: 1 }}
             exit={{ scale: 0.92, y: 20, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-lg rounded-3xl glass-panel p-6 sm:p-8 border border-cyan-400/40 shadow-neon-cyan max-h-[90vh] overflow-y-auto"
+            className="relative w-full max-w-lg rounded-3xl glass-panel p-6 sm:p-8 border border-white/10 shadow-[0_25px_80px_rgba(0,0,0,0.85)] max-h-[90vh] overflow-y-auto"
           >
             <button
               type="button"
               onClick={onClose}
-              className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-slate-300 hover:text-white"
+              className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-slate-300 hover:text-white hover:bg-white/10 transition-colors"
             >
               <X className="h-4 w-4" />
             </button>
 
-            <div className="flex items-center gap-2 text-xs font-mono text-cyan-300 uppercase tracking-widest mb-2">
+            <div className="flex items-center gap-2 text-xs font-mono text-blue-400 uppercase tracking-widest mb-2">
               <Sparkles className="h-4 w-4" />
               <span>PERSONALIZE BRAND IDENTITY</span>
             </div>
 
             <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-xl border border-cyan-400/40 p-1 flex items-center justify-center bg-slate-900">
+              <div className="h-10 w-10 rounded-xl border border-white/15 p-1 flex items-center justify-center bg-slate-900">
                 <Image
                   src="/logo.png"
                   alt="Zyntaverse"
@@ -95,7 +95,7 @@ export default function BrandCustomizerModal({
                     onChange={(e) =>
                       setDraft({ ...draft, name: e.target.value })
                     }
-                    className="w-full rounded-xl border border-white/15 bg-slate-950 px-3.5 py-2.5 text-sm text-white focus:border-cyan-400 focus:outline-none"
+                    className="w-full rounded-xl border border-white/15 bg-slate-950 px-3.5 py-2.5 text-sm text-white focus:border-blue-500 focus:outline-none"
                   />
                 </div>
                 <div>
@@ -109,7 +109,7 @@ export default function BrandCustomizerModal({
                     onChange={(e) =>
                       setDraft({ ...draft, shortName: e.target.value })
                     }
-                    className="w-full rounded-xl border border-white/15 bg-slate-950 px-3.5 py-2.5 text-sm text-white focus:border-cyan-400 focus:outline-none"
+                    className="w-full rounded-xl border border-white/15 bg-slate-950 px-3.5 py-2.5 text-sm text-white focus:border-blue-500 focus:outline-none"
                   />
                 </div>
               </div>
@@ -125,7 +125,7 @@ export default function BrandCustomizerModal({
                   onChange={(e) =>
                     setDraft({ ...draft, tagline: e.target.value })
                   }
-                  className="w-full rounded-xl border border-white/15 bg-slate-950 px-3.5 py-2.5 text-sm text-white focus:border-cyan-400 focus:outline-none"
+                  className="w-full rounded-xl border border-white/15 bg-slate-950 px-3.5 py-2.5 text-sm text-white focus:border-blue-500 focus:outline-none"
                 />
               </div>
 
@@ -141,7 +141,7 @@ export default function BrandCustomizerModal({
                     onChange={(e) =>
                       setDraft({ ...draft, email: e.target.value })
                     }
-                    className="w-full rounded-xl border border-white/15 bg-slate-950 px-3.5 py-2.5 text-sm text-white focus:border-cyan-400 focus:outline-none"
+                    className="w-full rounded-xl border border-white/15 bg-slate-950 px-3.5 py-2.5 text-sm text-white focus:border-blue-500 focus:outline-none"
                   />
                 </div>
                 <div>
@@ -159,7 +159,7 @@ export default function BrandCustomizerModal({
                         whatsapp: e.target.value,
                       })
                     }
-                    className="w-full rounded-xl border border-white/15 bg-slate-950 px-3.5 py-2.5 text-sm text-white focus:border-cyan-400 focus:outline-none"
+                    className="w-full rounded-xl border border-white/15 bg-slate-950 px-3.5 py-2.5 text-sm text-white focus:border-blue-500 focus:outline-none"
                   />
                 </div>
               </div>
@@ -175,7 +175,7 @@ export default function BrandCustomizerModal({
                   onChange={(e) =>
                     setDraft({ ...draft, location: e.target.value })
                   }
-                  className="w-full rounded-xl border border-white/15 bg-slate-950 px-3.5 py-2.5 text-sm text-white focus:border-cyan-400 focus:outline-none"
+                  className="w-full rounded-xl border border-white/15 bg-slate-950 px-3.5 py-2.5 text-sm text-white focus:border-blue-500 focus:outline-none"
                 />
               </div>
 
@@ -183,7 +183,7 @@ export default function BrandCustomizerModal({
                 <button
                   type="button"
                   onClick={handleReset}
-                  className="inline-flex items-center gap-1.5 rounded-xl border border-white/10 bg-white/5 px-3.5 py-2.5 text-xs font-mono text-slate-300 hover:text-white"
+                  className="inline-flex items-center gap-1.5 rounded-xl border border-white/10 bg-white/5 px-3.5 py-2.5 text-xs font-mono text-slate-300 hover:text-white hover:bg-white/10 transition-colors"
                 >
                   <RotateCcw className="h-3.5 w-3.5" />
                   <span>Reset Default</span>
@@ -191,7 +191,7 @@ export default function BrandCustomizerModal({
 
                 <button
                   type="submit"
-                  className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-400 to-purple-500 px-5 py-2.5 text-xs font-bold text-slate-950 shadow-neon-cyan"
+                  className="inline-flex items-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-500 px-5 py-2.5 text-xs font-semibold text-white shadow-lg shadow-blue-600/25 transition-all"
                 >
                   <Check className="h-4 w-4" />
                   <span>Apply Brand</span>

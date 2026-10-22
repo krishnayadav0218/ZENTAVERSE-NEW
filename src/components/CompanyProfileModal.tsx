@@ -100,13 +100,13 @@ Connect directly on WhatsApp: https://wa.me/917992153750
             animate={{ scale: 1, y: 0, opacity: 1 }}
             exit={{ scale: 0.93, y: 20, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-3xl my-8 rounded-3xl glass-panel p-6 sm:p-9 border border-cyan-400/40 shadow-[0_20px_70px_rgba(0,240,255,0.25)] max-h-[90vh] overflow-y-auto"
+            className="relative w-full max-w-3xl my-8 rounded-3xl glass-panel p-6 sm:p-9 border border-white/10 shadow-[0_25px_80px_rgba(0,0,0,0.85)] max-h-[90vh] overflow-y-auto"
           >
             {/* Close Button */}
             <button
               type="button"
               onClick={onClose}
-              className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-slate-300 hover:text-white"
+              className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-slate-300 hover:text-white hover:bg-white/10 transition-colors"
             >
               <X className="h-4 w-4" />
             </button>
@@ -114,7 +114,7 @@ Connect directly on WhatsApp: https://wa.me/917992153750
             {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-6 mb-6">
               <div className="flex items-center gap-3.5">
-                <div className="h-12 w-12 rounded-2xl border border-cyan-400/40 p-1.5 flex items-center justify-center bg-slate-900 shadow-neon-cyan">
+                <div className="h-12 w-12 rounded-2xl border border-white/15 p-1.5 flex items-center justify-center bg-slate-900 shadow-md">
                   <Image
                     src="/logo.png"
                     alt="Zyntaverse"
@@ -127,7 +127,7 @@ Connect directly on WhatsApp: https://wa.me/917992153750
                   <div className="font-display text-xl sm:text-2xl font-bold text-white">
                     ZYNTAVERSE TECHNOLOGIES
                   </div>
-                  <div className="font-mono text-xs text-gradient-cyber font-semibold uppercase">
+                  <div className="font-mono text-xs text-blue-400 font-semibold uppercase tracking-wider">
                     INNOVATE • BUILD • SCALE // CAPABILITY DECK
                   </div>
                 </div>
@@ -138,7 +138,7 @@ Connect directly on WhatsApp: https://wa.me/917992153750
                 <button
                   type="button"
                   onClick={handleDownloadDeck}
-                  className="inline-flex items-center gap-1.5 rounded-xl border border-cyan-400/35 bg-cyan-500/15 px-3.5 py-2 font-mono text-xs text-cyan-200 hover:bg-cyan-500/25 transition-all"
+                  className="inline-flex items-center gap-1.5 rounded-xl border border-blue-500/30 bg-blue-500/10 px-3.5 py-2 font-mono text-xs text-blue-200 hover:bg-blue-500/20 transition-all"
                 >
                   <Download className="h-3.5 w-3.5" />
                   <span>Download Deck</span>
@@ -146,7 +146,7 @@ Connect directly on WhatsApp: https://wa.me/917992153750
                 <button
                   type="button"
                   onClick={handlePrint}
-                  className="inline-flex items-center gap-1.5 rounded-xl border border-white/15 bg-white/5 px-3 py-2 font-mono text-xs text-slate-300 hover:text-white"
+                  className="inline-flex items-center gap-1.5 rounded-xl border border-white/15 bg-white/5 px-3 py-2 font-mono text-xs text-slate-300 hover:text-white transition-colors"
                   title="Print / Save PDF"
                 >
                   <Printer className="h-3.5 w-3.5" />
@@ -159,7 +159,7 @@ Connect directly on WhatsApp: https://wa.me/917992153750
             <div className="space-y-6 text-sm text-slate-200">
               {/* Executive Summary */}
               <div className="rounded-2xl border border-white/10 bg-slate-950/70 p-5 space-y-2">
-                <span className="font-mono text-xs uppercase tracking-wider text-cyan-300">
+                <span className="font-mono text-xs uppercase tracking-wider text-blue-400 font-semibold">
                   EXECUTIVE SUMMARY
                 </span>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
@@ -178,7 +178,7 @@ Connect directly on WhatsApp: https://wa.me/917992153750
                     key={stat.id}
                     className="rounded-2xl border border-white/10 bg-slate-950/60 p-3.5 text-center"
                   >
-                    <div className="font-display text-2xl font-bold text-gradient-cyber">
+                    <div className="font-display text-2xl font-bold text-white">
                       {stat.value}
                       {stat.suffix}
                     </div>
@@ -191,7 +191,7 @@ Connect directly on WhatsApp: https://wa.me/917992153750
 
               {/* 12 Core Services Overview */}
               <div>
-                <span className="font-mono text-xs uppercase tracking-wider text-purple-300 block mb-3">
+                <span className="font-mono text-xs uppercase tracking-wider text-indigo-400 font-semibold block mb-3">
                   OUR 12 CORE SERVICES (PAMPHLET)
                 </span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
@@ -200,7 +200,7 @@ Connect directly on WhatsApp: https://wa.me/917992153750
                       key={s.id}
                       className="flex items-center gap-2 rounded-xl border border-white/10 bg-slate-950/60 p-2.5"
                     >
-                      <CheckCircle2 className="h-4 w-4 text-cyan-400 shrink-0" />
+                      <CheckCircle2 className="h-4 w-4 text-blue-400 shrink-0" />
                       <span className="font-medium text-white truncate">
                         {s.number} — {s.title}
                       </span>
@@ -213,7 +213,7 @@ Connect directly on WhatsApp: https://wa.me/917992153750
               <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-400">
                 <div className="space-y-1 text-center sm:text-left">
                   <div className="text-white font-bold flex items-center gap-1.5 justify-center sm:justify-start">
-                    <MapPin className="h-3.5 w-3.5 text-pink-400" />
+                    <MapPin className="h-3.5 w-3.5 text-blue-400" />
                     <span>Mumbai, India • Global Delivery</span>
                   </div>
                   <div>Direct WhatsApp: +91 7992153750</div>
@@ -224,7 +224,7 @@ Connect directly on WhatsApp: https://wa.me/917992153750
                   href="https://wa.me/917992153750?text=Hello%20Zyntaverse%20Technologies,%20I%20reviewed%20your%20Company%20Capability%20Deck%20and%20would%20like%20to%20discuss%20a%20project."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 px-5 py-2.5 text-xs font-bold text-slate-950 shadow-sm hover:opacity-95"
+                  className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 px-5 py-2.5 text-xs font-semibold text-white shadow-sm transition-all"
                 >
                   <MessageCircle className="h-4 w-4" />
                   <span>Initiate Inquiry on WhatsApp</span>

@@ -102,20 +102,20 @@ export default function AppointmentBookingModal({
             animate={{ scale: 1, y: 0, opacity: 1 }}
             exit={{ scale: 0.94, y: 20, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-2xl my-8 rounded-3xl glass-panel p-6 sm:p-9 border border-cyan-400/35 shadow-[0_20px_70px_rgba(0,240,255,0.2)]"
+            className="relative w-full max-w-2xl my-8 rounded-3xl glass-panel p-6 sm:p-9 border border-white/10 shadow-[0_25px_80px_rgba(0,0,0,0.8)]"
           >
             {/* Close Button */}
             <button
               type="button"
               onClick={onClose}
-              className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-slate-300 hover:text-white"
+              className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-slate-300 hover:text-white hover:bg-white/10 transition-colors"
             >
               <X className="h-4 w-4" />
             </button>
 
             {isBooked ? (
               <div className="py-8 text-center space-y-5">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 shadow-neon-cyan">
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 shadow-lg shadow-emerald-500/10">
                   <CheckCircle2 className="h-9 w-9" />
                 </div>
                 <h3 className="font-display text-2xl sm:text-3xl font-bold text-white">
@@ -123,15 +123,15 @@ export default function AppointmentBookingModal({
                 </h3>
                 <p className="max-w-md mx-auto text-sm text-slate-300 leading-relaxed">
                   Thank you,{" "}
-                  <span className="text-cyan-300 font-semibold">
+                  <span className="text-blue-400 font-semibold">
                     {formData.name || "Partner"}
                   </span>
                   . Your 30-minute discovery session for{" "}
-                  <span className="text-purple-300 font-semibold">
+                  <span className="text-indigo-400 font-semibold">
                     {selectedService}
                   </span>{" "}
                   on{" "}
-                  <span className="text-emerald-300 font-semibold">
+                  <span className="text-emerald-400 font-semibold">
                     {selectedDate} at {selectedSlot}
                   </span>{" "}
                   has been initiated.
@@ -146,7 +146,7 @@ export default function AppointmentBookingModal({
                   </div>
                   <div className="flex justify-between">
                     <span className="text-slate-400">WhatsApp / Phone:</span>
-                    <span className="font-semibold text-cyan-300">
+                    <span className="font-semibold text-blue-400">
                       {formData.phone || "+91 7992153750"}
                     </span>
                   </div>
@@ -162,7 +162,7 @@ export default function AppointmentBookingModal({
                   <button
                     type="button"
                     onClick={handleSendToWhatsApp}
-                    className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 px-5 py-2.5 text-xs font-bold text-slate-950 shadow-[0_0_20px_rgba(16,185,129,0.35)] hover:opacity-95"
+                    className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 px-5 py-2.5 text-xs font-semibold text-white shadow-lg shadow-emerald-600/20 transition-all"
                   >
                     <MessageCircle className="h-4 w-4" />
                     <span>Send Details on WhatsApp</span>
@@ -171,7 +171,7 @@ export default function AppointmentBookingModal({
                   <button
                     type="button"
                     onClick={resetForm}
-                    className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-2.5 text-xs font-semibold text-white hover:bg-white/10"
+                    className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-2.5 text-xs font-semibold text-white hover:bg-white/10 transition-colors"
                   >
                     <span>Done</span>
                   </button>
@@ -181,12 +181,12 @@ export default function AppointmentBookingModal({
               <form onSubmit={handleSubmit} className="space-y-5">
                 {/* Modal Title */}
                 <div>
-                  <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-xs font-mono uppercase tracking-widest text-cyan-300 mb-2">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 text-xs font-mono uppercase tracking-widest text-blue-400 mb-2">
                     <Sparkles className="h-3.5 w-3.5" />
                     <span>ZYNTAVERSE // 1-ON-1 DISCOVERY</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="h-9 w-9 rounded-xl border border-cyan-400/30 p-1 flex items-center justify-center bg-slate-900">
+                    <div className="h-9 w-9 rounded-xl border border-white/15 p-1 flex items-center justify-center bg-slate-900">
                       <Image
                         src="/logo.png"
                         alt="Zyntaverse"
@@ -213,7 +213,7 @@ export default function AppointmentBookingModal({
                   <select
                     value={selectedService}
                     onChange={(e) => setSelectedService(e.target.value)}
-                    className="w-full rounded-xl border border-white/15 bg-slate-950 px-3.5 py-2.5 text-sm text-white focus:border-cyan-400 focus:outline-none"
+                    className="w-full rounded-xl border border-white/15 bg-slate-950 px-3.5 py-2.5 text-sm text-white focus:border-blue-500 focus:outline-none"
                   >
                     {servicesData.map((s) => (
                       <option key={s.id} value={s.title}>
@@ -239,7 +239,7 @@ export default function AppointmentBookingModal({
                           onClick={() => setSelectedPlatform(p.id)}
                           className={`flex items-center gap-2 rounded-xl border px-3 py-2.5 text-xs font-medium transition-all ${
                             active
-                              ? "border-cyan-400 bg-cyan-500/15 text-cyan-200 shadow-sm"
+                              ? "border-blue-500 bg-blue-500/15 text-blue-200 shadow-sm"
                               : "border-white/10 bg-slate-950/60 text-slate-400 hover:border-white/20 hover:text-white"
                           }`}
                         >
@@ -255,7 +255,7 @@ export default function AppointmentBookingModal({
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block font-mono text-xs uppercase tracking-wider text-slate-300 mb-2 flex items-center gap-1.5">
-                      <Calendar className="h-3.5 w-3.5 text-cyan-400" />
+                      <Calendar className="h-3.5 w-3.5 text-blue-400" />
                       <span>Preferred Date</span>
                     </label>
                     <input
@@ -263,19 +263,19 @@ export default function AppointmentBookingModal({
                       required
                       value={selectedDate}
                       onChange={(e) => setSelectedDate(e.target.value)}
-                      className="w-full rounded-xl border border-white/15 bg-slate-950 px-3.5 py-2.5 text-sm text-white focus:border-cyan-400 focus:outline-none"
+                      className="w-full rounded-xl border border-white/15 bg-slate-950 px-3.5 py-2.5 text-sm text-white focus:border-blue-500 focus:outline-none"
                     />
                   </div>
 
                   <div>
                     <label className="block font-mono text-xs uppercase tracking-wider text-slate-300 mb-2 flex items-center gap-1.5">
-                      <Clock className="h-3.5 w-3.5 text-purple-400" />
+                      <Clock className="h-3.5 w-3.5 text-indigo-400" />
                       <span>Time Slot (IST)</span>
                     </label>
                     <select
                       value={selectedSlot}
                       onChange={(e) => setSelectedSlot(e.target.value)}
-                      className="w-full rounded-xl border border-white/15 bg-slate-950 px-3.5 py-2.5 text-sm text-white focus:border-cyan-400 focus:outline-none"
+                      className="w-full rounded-xl border border-white/15 bg-slate-950 px-3.5 py-2.5 text-sm text-white focus:border-blue-500 focus:outline-none"
                     >
                       {timeSlots.map((slot) => (
                         <option key={slot} value={slot}>
@@ -300,7 +300,7 @@ export default function AppointmentBookingModal({
                       onChange={(e) =>
                         setFormData({ ...formData, name: e.target.value })
                       }
-                      className="w-full rounded-xl border border-white/15 bg-slate-950 px-3 py-2 text-xs text-white placeholder-slate-500 focus:border-cyan-400 focus:outline-none"
+                      className="w-full rounded-xl border border-white/15 bg-slate-950 px-3 py-2 text-xs text-white placeholder-slate-500 focus:border-blue-500 focus:outline-none"
                     />
                   </div>
                   <div>
@@ -315,7 +315,7 @@ export default function AppointmentBookingModal({
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
                       }
-                      className="w-full rounded-xl border border-white/15 bg-slate-950 px-3 py-2 text-xs text-white placeholder-slate-500 focus:border-cyan-400 focus:outline-none"
+                      className="w-full rounded-xl border border-white/15 bg-slate-950 px-3 py-2 text-xs text-white placeholder-slate-500 focus:border-blue-500 focus:outline-none"
                     />
                   </div>
                   <div>
@@ -330,7 +330,7 @@ export default function AppointmentBookingModal({
                       onChange={(e) =>
                         setFormData({ ...formData, phone: e.target.value })
                       }
-                      className="w-full rounded-xl border border-white/15 bg-slate-950 px-3 py-2 text-xs text-white placeholder-slate-500 focus:border-cyan-400 focus:outline-none"
+                      className="w-full rounded-xl border border-white/15 bg-slate-950 px-3 py-2 text-xs text-white placeholder-slate-500 focus:border-blue-500 focus:outline-none"
                     />
                   </div>
                   <div>
@@ -344,7 +344,7 @@ export default function AppointmentBookingModal({
                       onChange={(e) =>
                         setFormData({ ...formData, company: e.target.value })
                       }
-                      className="w-full rounded-xl border border-white/15 bg-slate-950 px-3 py-2 text-xs text-white placeholder-slate-500 focus:border-cyan-400 focus:outline-none"
+                      className="w-full rounded-xl border border-white/15 bg-slate-950 px-3 py-2 text-xs text-white placeholder-slate-500 focus:border-blue-500 focus:outline-none"
                     />
                   </div>
                 </div>
@@ -360,7 +360,7 @@ export default function AppointmentBookingModal({
                     onChange={(e) =>
                       setFormData({ ...formData, notes: e.target.value })
                     }
-                    className="w-full rounded-xl border border-white/15 bg-slate-950 px-3 py-2 text-xs text-white placeholder-slate-500 focus:border-cyan-400 focus:outline-none"
+                    className="w-full rounded-xl border border-white/15 bg-slate-950 px-3 py-2 text-xs text-white placeholder-slate-500 focus:border-blue-500 focus:outline-none"
                   />
                 </div>
 
@@ -368,7 +368,7 @@ export default function AppointmentBookingModal({
                 <div className="pt-2 flex flex-wrap items-center justify-between gap-3">
                   <button
                     type="submit"
-                    className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 px-6 py-2.5 text-xs font-bold text-white shadow-[0_0_20px_rgba(0,240,255,0.35)] hover:opacity-95 transition-opacity"
+                    className="inline-flex items-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-500 px-6 py-2.5 text-xs font-semibold text-white shadow-lg shadow-blue-600/25 transition-all"
                   >
                     <span>Confirm Strategy Call</span>
                     <ArrowRight className="h-4 w-4" />

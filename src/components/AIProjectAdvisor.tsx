@@ -168,13 +168,13 @@ _Hi Zyntaverse team, I generated this AI blueprint on your website and would lik
   return (
     <section id="ai-advisor" className="relative py-20 z-10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="relative rounded-3xl glass-panel p-6 sm:p-10 border border-cyan-400/35 overflow-hidden shadow-[0_0_50px_rgba(0,240,255,0.15)]">
+        <div className="relative rounded-3xl glass-panel p-6 sm:p-10 border border-white/10 overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
           {/* Subtle Ambient Radial Glow */}
-          <div className="pointer-events-none absolute -top-32 -right-32 h-72 w-72 rounded-full bg-gradient-to-br from-cyan-500/25 via-purple-500/20 to-transparent blur-3xl" />
+          <div className="pointer-events-none absolute -top-32 -right-32 h-72 w-72 rounded-full bg-gradient-to-br from-blue-600/15 via-indigo-600/10 to-transparent blur-3xl" />
 
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto space-y-3 mb-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3.5 py-1 text-xs font-mono uppercase tracking-widest text-cyan-300">
+            <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-3.5 py-1 text-xs font-mono uppercase tracking-widest text-blue-400">
               <Bot className="h-3.5 w-3.5" />
               <span>AI ARCHITECTURE ADVISOR // LIVE BLUEPRINT ENGINE</span>
             </div>
@@ -192,9 +192,9 @@ _Hi Zyntaverse team, I generated this AI blueprint on your website and would lik
 
           {/* Interactive Prompt Input Bar */}
           <div className="max-w-3xl mx-auto space-y-3">
-            <div className="relative flex flex-col sm:flex-row items-stretch gap-2 rounded-2xl border border-white/15 bg-slate-950/90 p-2 shadow-inner focus-within:border-cyan-400">
+            <div className="relative flex flex-col sm:flex-row items-stretch gap-2 rounded-2xl border border-white/15 bg-slate-950/90 p-2 shadow-inner focus-within:border-blue-500/60 focus-within:ring-1 focus-within:ring-blue-500/20">
               <div className="flex items-center gap-2.5 px-3 py-2 flex-1">
-                <Sparkles className="h-4 w-4 text-cyan-400 shrink-0" />
+                <Sparkles className="h-4 w-4 text-blue-400 shrink-0" />
                 <input
                   type="text"
                   placeholder="e.g. AI SaaS with WhatsApp Bot and Stripe subscriptions..."
@@ -211,7 +211,7 @@ _Hi Zyntaverse team, I generated this AI blueprint on your website and would lik
                 type="button"
                 onClick={() => handleGenerate()}
                 disabled={isGenerating}
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 px-6 py-3 text-xs font-bold text-white shadow-neon-cyan hover:opacity-95 disabled:opacity-50 transition-opacity"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-500 px-6 py-3 text-xs font-semibold text-white shadow-lg shadow-blue-600/25 disabled:opacity-50 transition-all"
               >
                 {isGenerating ? (
                   <>
@@ -240,7 +240,7 @@ _Hi Zyntaverse team, I generated this AI blueprint on your website and would lik
                     setPrompt(preset.prompt);
                     handleGenerate(preset.prompt);
                   }}
-                  className="rounded-lg border border-white/10 bg-white/[0.04] px-2.5 py-1 text-xs text-slate-300 hover:border-cyan-400/40 hover:text-cyan-300 transition-colors"
+                  className="rounded-lg border border-white/10 bg-white/[0.04] px-2.5 py-1 text-xs text-slate-300 hover:border-blue-500/40 hover:text-blue-300 hover:bg-blue-500/5 transition-colors"
                 >
                   {preset.label}
                 </button>
@@ -256,12 +256,12 @@ _Hi Zyntaverse team, I generated this AI blueprint on your website and would lik
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
                 transition={{ duration: 0.4 }}
-                className="mt-8 max-w-4xl mx-auto rounded-3xl border border-cyan-400/40 bg-slate-950/95 p-6 sm:p-8 space-y-6 shadow-[0_15px_45px_rgba(0,0,0,0.8)]"
+                className="mt-8 max-w-4xl mx-auto rounded-3xl border border-blue-500/30 bg-slate-950/95 p-6 sm:p-8 space-y-6 shadow-[0_15px_45px_rgba(0,0,0,0.8)]"
               >
                 {/* Result Header */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-4">
                   <div>
-                    <span className="inline-block rounded-md bg-cyan-500/20 border border-cyan-400/40 px-2.5 py-0.5 font-mono text-[10px] text-cyan-300 font-bold uppercase mb-1">
+                    <span className="inline-block rounded-md bg-blue-500/15 border border-blue-500/30 px-2.5 py-0.5 font-mono text-[10px] text-blue-300 font-bold uppercase mb-1">
                       {blueprint.architectureTier}
                     </span>
                     <h4 className="font-display text-xl sm:text-2xl font-bold text-white">
@@ -276,8 +276,8 @@ _Hi Zyntaverse team, I generated this AI blueprint on your website and would lik
                     <div className="font-mono text-[10px] uppercase text-slate-400">
                       Estimated Delivery
                     </div>
-                    <div className="font-mono text-sm font-bold text-cyan-300 flex items-center gap-1.5 justify-end">
-                      <Clock className="h-3.5 w-3.5 text-purple-400" />
+                    <div className="font-mono text-sm font-bold text-blue-400 flex items-center gap-1.5 justify-end">
+                      <Clock className="h-3.5 w-3.5 text-indigo-400" />
                       <span>{blueprint.timeline}</span>
                     </div>
                   </div>
@@ -285,7 +285,7 @@ _Hi Zyntaverse team, I generated this AI blueprint on your website and would lik
 
                 {/* Tech Stack Specs */}
                 <div>
-                  <div className="font-mono text-xs uppercase tracking-wider text-purple-300 mb-2.5">
+                  <div className="font-mono text-xs uppercase tracking-wider text-indigo-400 mb-2.5">
                     Recommended Production Tech Stack:
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
@@ -309,7 +309,7 @@ _Hi Zyntaverse team, I generated this AI blueprint on your website and would lik
                       <span className="font-mono text-[10px] uppercase text-slate-400 block mb-1">
                         AI Engine &amp; Cloud
                       </span>
-                      <span className="text-cyan-300 font-medium">
+                      <span className="text-blue-300 font-medium">
                         {blueprint.techStack.aiCloud}
                       </span>
                     </div>
@@ -326,7 +326,7 @@ _Hi Zyntaverse team, I generated this AI blueprint on your website and would lik
 
                 {/* Core Architecture Modules */}
                 <div>
-                  <div className="font-mono text-xs uppercase tracking-wider text-cyan-300 mb-2">
+                  <div className="font-mono text-xs uppercase tracking-wider text-blue-400 mb-2">
                     Key Architectural Modules Included:
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -335,7 +335,7 @@ _Hi Zyntaverse team, I generated this AI blueprint on your website and would lik
                         key={mod}
                         className="flex items-center gap-2 rounded-xl border border-white/10 bg-slate-900/50 p-2.5 text-xs text-slate-200"
                       >
-                        <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400 shrink-0" />
+                        <CheckCircle2 className="h-3.5 w-3.5 text-blue-400 shrink-0" />
                         <span className="truncate">{mod}</span>
                       </div>
                     ))}
@@ -360,7 +360,7 @@ _Hi Zyntaverse team, I generated this AI blueprint on your website and would lik
                     <button
                       type="button"
                       onClick={handleSendToWhatsApp}
-                      className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 px-5 py-2.5 text-xs font-bold text-slate-950 shadow-sm hover:opacity-95"
+                      className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 px-5 py-2.5 text-xs font-semibold text-white shadow-sm transition-all"
                     >
                       <MessageCircle className="h-4 w-4" />
                       <span>Discuss Blueprint on WhatsApp</span>
@@ -370,9 +370,9 @@ _Hi Zyntaverse team, I generated this AI blueprint on your website and would lik
                       <button
                         type="button"
                         onClick={onOpenBooking}
-                        className="inline-flex items-center gap-1.5 rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-4 py-2.5 font-mono text-xs text-cyan-200 hover:bg-cyan-500/20"
+                        className="inline-flex items-center gap-1.5 rounded-xl border border-blue-500/30 bg-blue-500/10 px-4 py-2.5 font-mono text-xs text-blue-200 hover:bg-blue-500/20 transition-colors"
                       >
-                        <Calendar className="h-3.5 w-3.5 text-cyan-300" />
+                        <Calendar className="h-3.5 w-3.5 text-blue-400" />
                         <span>Book Strategy Call</span>
                       </button>
                     )}

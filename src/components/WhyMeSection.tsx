@@ -28,7 +28,7 @@ export default function WhyMeSection() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border border-pink-400/30 bg-pink-500/10 px-3.5 py-1 text-xs font-mono uppercase tracking-widest text-pink-300 mb-4">
+          <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-3.5 py-1 text-xs font-mono uppercase tracking-widest text-blue-300 mb-4">
             <Sparkles className="h-3.5 w-3.5" />
             <span>THE ADVANTAGE // WHY CHOOSE US</span>
           </div>
@@ -36,7 +36,7 @@ export default function WhyMeSection() {
             Full-Stack Technology Partner,{" "}
             <span className="text-gradient-cyber">From Idea to Scale</span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-300/90">
+          <p className="mt-4 text-base sm:text-lg text-slate-300">
             Five core commitments that set Zyntaverse Technologies apart—built
             around speed, architectural rigor, and direct business ROI.
           </p>
@@ -56,16 +56,13 @@ export default function WhyMeSection() {
                 transition={{ duration: 0.55, delay: idx * 0.08 }}
                 className={idx === 4 ? "md:col-span-2 lg:col-span-1" : ""}
               >
-                <TiltCard glowColor={`${item.accentColor}35`} intensity={10}>
+                <TiltCard glowColor={`${item.accentColor}25`} intensity={10}>
                   <div className="p-7 flex flex-col justify-between h-full space-y-6">
                     <div>
                       {/* Top Header & Metric Pill */}
                       <div className="flex items-center justify-between gap-4 mb-5">
                         <div
-                          className="flex h-13 w-13 items-center justify-center rounded-2xl border border-white/15 bg-slate-950/90 shadow-lg"
-                          style={{
-                            boxShadow: `0 8px 22px -5px ${item.accentColor}45`,
-                          }}
+                          className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/15 bg-slate-950/90 shadow-sm"
                         >
                           <Icon
                             className="h-6 w-6"
@@ -89,7 +86,7 @@ export default function WhyMeSection() {
                       <h3 className="font-display text-xl font-bold text-white">
                         {item.title}
                       </h3>
-                      <p className="mt-1 font-mono text-xs text-cyan-300/90">
+                      <p className="mt-1 font-mono text-xs text-blue-300">
                         {item.subtitle}
                       </p>
                       <p className="mt-2.5 text-xs sm:text-sm text-slate-300 leading-relaxed">

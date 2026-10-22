@@ -21,13 +21,13 @@ interface NavbarProps {
 }
 
 const navLinks = [
-  { label: "Home", href: "#home", color: "#00F0FF" },
-  { label: "Services", href: "#services", color: "#8B5CF6" },
-  { label: "Projects", href: "#projects", color: "#EC4899" },
-  { label: "Estimator", href: "#estimator", color: "#38BDF8" },
+  { label: "Home", href: "#home", color: "#60A5FA" },
+  { label: "Services", href: "#services", color: "#818CF8" },
+  { label: "Projects", href: "#projects", color: "#38BDF8" },
+  { label: "Estimator", href: "#estimator", color: "#60A5FA" },
   { label: "Reviews", href: "#testimonials", color: "#10B981" },
   { label: "FAQ", href: "#faq", color: "#F59E0B" },
-  { label: "Contact", href: "#contact", color: "#00F0FF" },
+  { label: "Contact", href: "#contact", color: "#38BDF8" },
 ];
 
 export default function Navbar({
@@ -75,13 +75,13 @@ export default function Navbar({
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className={`relative mx-auto max-w-7xl rounded-2xl transition-all duration-300 overflow-hidden ${
           scrolled
-            ? "glass-panel py-3 px-4 sm:px-6 shadow-[0_15px_35px_rgba(0,0,0,0.8)] border-cyan-400/30"
-            : "bg-slate-950/60 backdrop-blur-xl border border-white/15 py-3.5 px-4 sm:px-6"
+            ? "glass-panel py-3 px-4 sm:px-6 shadow-[0_15px_35px_rgba(0,0,0,0.8)] border-slate-700/60"
+            : "bg-slate-950/70 backdrop-blur-xl border border-white/10 py-3.5 px-4 sm:px-6"
         }`}
       >
-        {/* Multi-color prismatic bottom laser line */}
+        {/* Subtle bottom accent line */}
         <div
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-[1.5px] bg-gradient-to-r from-cyan-400 via-purple-500 via-pink-500 via-amber-400 to-emerald-400 opacity-75"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-[1.5px] bg-gradient-to-r from-transparent via-blue-500/40 to-transparent"
           aria-hidden="true"
         />
 
@@ -92,7 +92,7 @@ export default function Navbar({
               href="#home"
               className="group flex items-center gap-3 focus:outline-none"
             >
-              <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 p-[1.5px] shadow-neon-cyan">
+              <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 via-indigo-500 to-sky-400 p-[1.5px] shadow-[0_0_15px_rgba(59,130,246,0.25)]">
                 <div className="flex h-full w-full items-center justify-center rounded-[10px] bg-slate-950 overflow-hidden p-1">
                   <Image
                     src="/logo.png"
@@ -110,12 +110,11 @@ export default function Navbar({
                 <span className="font-display text-sm sm:text-base font-bold tracking-wider text-white flex items-center gap-1.5">
                   {brand.name}
                 </span>
-                <span className="hidden sm:inline-block font-mono text-[10px] tracking-widest text-gradient-cyber font-semibold uppercase">
+                <span className="hidden sm:inline-block font-mono text-[10px] tracking-widest text-blue-400 font-semibold uppercase">
                   INNOVATE • BUILD • SCALE
                 </span>
               </div>
             </a>
-
           </div>
 
           {/* Desktop Navigation Links */}
@@ -142,7 +141,7 @@ export default function Navbar({
                           stiffness: 350,
                           damping: 30,
                         }}
-                        className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500/25 via-purple-500/25 to-pink-500/25 border border-cyan-400/45"
+                        className="absolute inset-0 rounded-lg bg-blue-600/20 border border-blue-500/40 shadow-sm"
                       />
                     )}
                     <span
@@ -165,9 +164,9 @@ export default function Navbar({
               <button
                 type="button"
                 onClick={onOpenBooking}
-                className="hidden md:inline-flex items-center gap-1.5 rounded-xl border border-cyan-400/35 bg-cyan-500/10 px-3.5 py-2 text-xs font-mono text-cyan-200 hover:bg-cyan-500/20 transition-colors"
+                className="hidden md:inline-flex items-center gap-1.5 rounded-xl border border-blue-500/30 bg-blue-500/10 px-3.5 py-2 text-xs font-mono text-blue-200 hover:bg-blue-500/20 transition-colors"
               >
-                <Calendar className="h-3.5 w-3.5 text-cyan-300" />
+                <Calendar className="h-3.5 w-3.5 text-blue-300" />
                 <span>Book Call</span>
               </button>
             )}
@@ -188,7 +187,7 @@ export default function Navbar({
               type="button"
               onClick={() => setMobileMenuOpen((prev) => !prev)}
               aria-label="Toggle Menu"
-              className="flex lg:hidden h-10 w-10 items-center justify-center rounded-xl border border-white/15 bg-slate-900/80 text-slate-200 hover:border-cyan-400/50 hover:text-cyan-300 transition-colors"
+              className="flex lg:hidden h-10 w-10 items-center justify-center rounded-xl border border-white/15 bg-slate-900/80 text-slate-200 hover:border-blue-500/50 hover:text-blue-300 transition-colors"
             >
               {mobileMenuOpen ? (
                 <X className="h-5 w-5" />
@@ -220,7 +219,7 @@ export default function Navbar({
                       onClick={() => setMobileMenuOpen(false)}
                       className={`flex items-center justify-between rounded-xl px-4 py-2.5 text-sm font-medium transition-colors ${
                         isActive
-                          ? "bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-white border border-cyan-400/40"
+                          ? "bg-blue-600/20 text-white border border-blue-500/40"
                           : "text-slate-300 hover:bg-white/5"
                       }`}
                     >
@@ -244,7 +243,7 @@ export default function Navbar({
                         setMobileMenuOpen(false);
                         onOpenBooking();
                       }}
-                      className="flex items-center justify-center gap-2 rounded-xl border border-cyan-400/40 bg-cyan-500/15 px-4 py-3 text-xs font-semibold text-cyan-200"
+                      className="flex items-center justify-center gap-2 rounded-xl border border-blue-500/40 bg-blue-500/15 px-4 py-3 text-xs font-semibold text-blue-200"
                     >
                       <Calendar className="h-4 w-4" />
                       <span>Book Free Strategy Call</span>
@@ -254,7 +253,7 @@ export default function Navbar({
                   <a
                     href="#contact"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 px-4 py-3 text-xs font-semibold text-white"
+                    className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-3 text-xs font-semibold text-white shadow-md"
                   >
                     <Sparkles className="h-4 w-4" />
                     <span>Get a Free Quote</span>

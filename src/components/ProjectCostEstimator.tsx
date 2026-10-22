@@ -209,7 +209,7 @@ _Hello Zyntaverse team, I calculated this project scope on your website and woul
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-3.5 py-1 text-xs font-mono uppercase tracking-widest text-purple-300 mb-4">
+          <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-3.5 py-1 text-xs font-mono uppercase tracking-widest text-blue-300 mb-4">
             <Calculator className="h-3.5 w-3.5" />
             <span>TRANSPARENT PRICING // INSTANT ESTIMATOR</span>
           </div>
@@ -217,7 +217,7 @@ _Hello Zyntaverse team, I calculated this project scope on your website and woul
             Estimate Your{" "}
             <span className="text-gradient-cyber">Project Investment</span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-300/90">
+          <p className="mt-4 text-base sm:text-lg text-slate-300">
             Select your platform, features, and design requirements to calculate
             an instant estimated budget and timeline for your digital project.
           </p>
@@ -229,7 +229,7 @@ _Hello Zyntaverse team, I calculated this project scope on your website and woul
               onClick={() => setCurrency("INR")}
               className={`rounded-lg px-4 py-1.5 font-mono text-xs font-bold transition-all ${
                 currency === "INR"
-                  ? "bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 shadow-sm"
+                  ? "bg-blue-600 text-white shadow-sm"
                   : "text-slate-400 hover:text-white"
               }`}
             >
@@ -240,7 +240,7 @@ _Hello Zyntaverse team, I calculated this project scope on your website and woul
               onClick={() => setCurrency("USD")}
               className={`rounded-lg px-4 py-1.5 font-mono text-xs font-bold transition-all ${
                 currency === "USD"
-                  ? "bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 shadow-sm"
+                  ? "bg-blue-600 text-white shadow-sm"
                   : "text-slate-400 hover:text-white"
               }`}
             >
@@ -253,8 +253,8 @@ _Hello Zyntaverse team, I calculated this project scope on your website and woul
           {/* LEFT: Configuration Options */}
           <div className="lg:col-span-8 space-y-8">
             {/* 1. Platform Selection */}
-            <div className="glass-panel rounded-3xl p-6 sm:p-8 space-y-4">
-              <span className="font-mono text-xs uppercase tracking-widest text-cyan-300 flex items-center gap-2">
+            <div className="glass-panel rounded-3xl p-6 sm:p-8 space-y-4 border border-slate-700/60">
+              <span className="font-mono text-xs uppercase tracking-widest text-blue-300 flex items-center gap-2">
                 <span>01. SELECT PRIMARY PLATFORM</span>
               </span>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
@@ -268,7 +268,7 @@ _Hello Zyntaverse team, I calculated this project scope on your website and woul
                       onClick={() => setSelectedPlatform(p)}
                       className={`text-left rounded-2xl p-4 border transition-all ${
                         isSelected
-                          ? "border-cyan-400 bg-cyan-500/15 shadow-[0_0_20px_rgba(0,240,255,0.2)]"
+                          ? "border-blue-500 bg-blue-500/15 shadow-[0_0_20px_rgba(59,130,246,0.15)]"
                           : "border-white/10 bg-slate-950/60 hover:border-white/20 hover:bg-slate-900/60"
                       }`}
                     >
@@ -276,7 +276,7 @@ _Hello Zyntaverse team, I calculated this project scope on your website and woul
                         <div
                           className={`flex h-10 w-10 items-center justify-center rounded-xl border ${
                             isSelected
-                              ? "border-cyan-400/50 bg-cyan-400/20 text-cyan-300"
+                              ? "border-blue-400/50 bg-blue-400/20 text-blue-300"
                               : "border-white/10 bg-white/5 text-slate-400"
                           }`}
                         >
@@ -286,7 +286,7 @@ _Hello Zyntaverse team, I calculated this project scope on your website and woul
                           <div className="font-display text-sm font-bold text-white">
                             {p.title}
                           </div>
-                          <div className="font-mono text-[10px] text-cyan-300">
+                          <div className="font-mono text-[10px] text-blue-300">
                             {p.weeks}
                           </div>
                         </div>
@@ -301,8 +301,8 @@ _Hello Zyntaverse team, I calculated this project scope on your website and woul
             </div>
 
             {/* 2. Feature Add-Ons */}
-            <div className="glass-panel rounded-3xl p-6 sm:p-8 space-y-4">
-              <span className="font-mono text-xs uppercase tracking-widest text-purple-300 flex items-center gap-2">
+            <div className="glass-panel rounded-3xl p-6 sm:p-8 space-y-4 border border-slate-700/60">
+              <span className="font-mono text-xs uppercase tracking-widest text-indigo-300 flex items-center gap-2">
                 <span>02. SELECT FEATURE CAPABILITIES</span>
               </span>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -316,7 +316,7 @@ _Hello Zyntaverse team, I calculated this project scope on your website and woul
                       onClick={() => toggleAddOn(addon.id)}
                       className={`flex items-center justify-between p-3.5 rounded-2xl border text-left transition-all ${
                         isChecked
-                          ? "border-purple-400/60 bg-purple-500/15 text-white shadow-sm"
+                          ? "border-indigo-500/60 bg-indigo-500/15 text-white shadow-sm"
                           : "border-white/10 bg-slate-950/60 text-slate-300 hover:border-white/20"
                       }`}
                     >
@@ -324,7 +324,7 @@ _Hello Zyntaverse team, I calculated this project scope on your website and woul
                         <div
                           className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${
                             isChecked
-                              ? "bg-purple-500/20 text-purple-300"
+                              ? "bg-indigo-500/20 text-indigo-300"
                               : "bg-white/5 text-slate-400"
                           }`}
                         >
@@ -345,7 +345,7 @@ _Hello Zyntaverse team, I calculated this project scope on your website and woul
                       <div
                         className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-md border ${
                           isChecked
-                            ? "border-purple-400 bg-purple-500 text-slate-950"
+                            ? "border-indigo-500 bg-indigo-600 text-white"
                             : "border-white/20 bg-transparent"
                         }`}
                       >
@@ -358,8 +358,8 @@ _Hello Zyntaverse team, I calculated this project scope on your website and woul
             </div>
 
             {/* 3. Design Scope */}
-            <div className="glass-panel rounded-3xl p-6 sm:p-8 space-y-4">
-              <span className="font-mono text-xs uppercase tracking-widest text-pink-300 flex items-center gap-2">
+            <div className="glass-panel rounded-3xl p-6 sm:p-8 space-y-4 border border-slate-700/60">
+              <span className="font-mono text-xs uppercase tracking-widest text-sky-300 flex items-center gap-2">
                 <span>03. DESIGN &amp; BRANDING TIER</span>
               </span>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
@@ -373,12 +373,12 @@ _Hello Zyntaverse team, I calculated this project scope on your website and woul
                       onClick={() => setSelectedDesign(d)}
                       className={`text-left rounded-2xl p-4 border transition-all ${
                         isSelected
-                          ? "border-pink-400 bg-pink-500/15 shadow-[0_0_20px_rgba(236,72,153,0.2)]"
+                          ? "border-sky-500 bg-sky-500/15 shadow-[0_0_20px_rgba(14,165,233,0.15)]"
                           : "border-white/10 bg-slate-950/60 hover:border-white/20"
                       }`}
                     >
                       <div className="flex items-center gap-2.5 mb-1.5">
-                        <Icon className="h-4 w-4 text-pink-400" />
+                        <Icon className="h-4 w-4 text-sky-400" />
                         <span className="font-display text-sm font-bold text-white">
                           {d.title}
                         </span>
@@ -393,9 +393,9 @@ _Hello Zyntaverse team, I calculated this project scope on your website and woul
 
           {/* RIGHT: Live Dynamic Estimate Card */}
           <div className="lg:col-span-4 sticky top-28">
-            <div className="glass-panel rounded-3xl p-6 sm:p-8 border border-cyan-400/40 shadow-[0_0_40px_rgba(0,240,255,0.2)] space-y-6">
+            <div className="glass-panel rounded-3xl p-6 sm:p-8 border border-slate-700/60 shadow-xl space-y-6">
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                <span className="font-mono text-xs font-bold uppercase tracking-wider text-cyan-300">
+                <span className="font-mono text-xs font-bold uppercase tracking-wider text-blue-300">
                   ESTIMATED SUMMARY
                 </span>
                 <span className="flex items-center gap-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/40 px-2.5 py-0.5 font-mono text-[10px] text-emerald-300">
@@ -432,7 +432,7 @@ _Hello Zyntaverse team, I calculated this project scope on your website and woul
               <div className="space-y-2.5 text-xs text-slate-300 border-y border-white/10 py-4">
                 <div className="flex items-center justify-between">
                   <span className="text-slate-400 flex items-center gap-1.5">
-                    <Clock className="h-3.5 w-3.5 text-purple-400" />
+                    <Clock className="h-3.5 w-3.5 text-indigo-400" />
                     <span>Estimated Timeline:</span>
                   </span>
                   <span className="font-mono font-semibold text-white">
@@ -452,10 +452,10 @@ _Hello Zyntaverse team, I calculated this project scope on your website and woul
 
                 <div className="flex items-center justify-between">
                   <span className="text-slate-400 flex items-center gap-1.5">
-                    <Check className="h-3.5 w-3.5 text-cyan-400" />
+                    <Check className="h-3.5 w-3.5 text-blue-400" />
                     <span>Active Features:</span>
                   </span>
-                  <span className="font-mono font-semibold text-cyan-300">
+                  <span className="font-mono font-semibold text-blue-300">
                     {selectedAddOns.length} Add-Ons
                   </span>
                 </div>
@@ -466,7 +466,7 @@ _Hello Zyntaverse team, I calculated this project scope on your website and woul
                 <button
                   type="button"
                   onClick={handleSendToWhatsApp}
-                  className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 px-5 py-3 text-xs font-bold text-slate-950 shadow-[0_0_20px_rgba(16,185,129,0.35)] hover:opacity-95 transition-opacity"
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 px-5 py-3 text-xs font-bold text-slate-950 shadow-sm hover:opacity-95 transition-opacity"
                 >
                   <MessageCircle className="h-4 w-4" />
                   <span>Send Estimate to WhatsApp</span>
@@ -476,9 +476,9 @@ _Hello Zyntaverse team, I calculated this project scope on your website and woul
                   <button
                     type="button"
                     onClick={onOpenBooking}
-                    className="w-full inline-flex items-center justify-center gap-2 rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-5 py-3 text-xs font-mono font-semibold text-cyan-200 hover:bg-cyan-500/20 transition-all"
+                    className="w-full inline-flex items-center justify-center gap-2 rounded-xl border border-blue-500/30 bg-blue-500/10 px-5 py-3 text-xs font-mono font-semibold text-blue-200 hover:bg-blue-500/20 transition-all"
                   >
-                    <Calendar className="h-4 w-4 text-cyan-300" />
+                    <Calendar className="h-4 w-4 text-blue-300" />
                     <span>Book Call with this Estimate</span>
                   </button>
                 )}
