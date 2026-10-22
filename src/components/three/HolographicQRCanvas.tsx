@@ -63,26 +63,26 @@ function HolographicQRObject({
       const ctx = canvas.getContext("2d");
       if (!ctx) return;
 
-      // 1. Deep Obsidian Sci-Fi Canvas Background
-      ctx.fillStyle = "#030712";
+      // 1. Deep Obsidian Canvas Background
+      ctx.fillStyle = "#080b11";
       ctx.fillRect(0, 0, 1024, 1024);
 
       // Subtle radial glow behind the QR code
       const radGlow = ctx.createRadialGradient(512, 512, 50, 512, 512, 480);
-      radGlow.addColorStop(0, "rgba(0, 240, 255, 0.12)");
-      radGlow.addColorStop(0.6, "rgba(139, 92, 246, 0.06)");
-      radGlow.addColorStop(1, "rgba(3, 7, 18, 0)");
+      radGlow.addColorStop(0, "rgba(59, 130, 246, 0.12)");
+      radGlow.addColorStop(0.6, "rgba(99, 102, 241, 0.05)");
+      radGlow.addColorStop(1, "rgba(8, 11, 17, 0)");
       ctx.fillStyle = radGlow;
       ctx.fillRect(0, 0, 1024, 1024);
 
       // 2. High-Tech Outer Tech Frame
-      ctx.strokeStyle = "rgba(0, 240, 255, 0.4)";
+      ctx.strokeStyle = "rgba(59, 130, 246, 0.35)";
       ctx.lineWidth = 4;
       ctx.strokeRect(40, 40, 944, 944);
 
       // Corner Tech Accents
       const cornerLen = 50;
-      ctx.strokeStyle = "#00F0FF";
+      ctx.strokeStyle = "#3B82F6";
       ctx.lineWidth = 6;
       // Top-Left
       ctx.beginPath();
@@ -111,7 +111,7 @@ function HolographicQRObject({
 
       // Header Tag on Texture
       ctx.font = "bold 22px 'JetBrains Mono', monospace";
-      ctx.fillStyle = "rgba(0, 240, 255, 0.85)";
+      ctx.fillStyle = "rgba(96, 165, 250, 0.9)";
       ctx.fillText("ZYNTAVERSE // 3D PASS", 65, 80);
 
       ctx.font = "18px 'JetBrains Mono', monospace";
@@ -153,12 +153,12 @@ function HolographicQRObject({
 
           if (isTopLeft || isTopRight || isBottomLeft) {
             ctx.fillStyle = isTopLeft
-              ? "#00F0FF"
+              ? "#3B82F6"
               : isTopRight
-              ? "#EC4899"
-              : "#A855F7";
+              ? "#6366F1"
+              : "#38BDF8";
           } else {
-            ctx.fillStyle = "#38BDF8"; // Fine Electric Sky Cyan
+            ctx.fillStyle = "#60A5FA"; // Fine Electric Sky Blue
           }
 
           // Draw fine, slightly rounded rectangular module
@@ -169,7 +169,7 @@ function HolographicQRObject({
         }
       }
 
-      // 4. Center Glowing Cyber Logo Badge
+      // 4. Center Logo Badge
       const cx = 512;
       const cy = 512;
       const radius = 68;
@@ -177,19 +177,18 @@ function HolographicQRObject({
       // Dark circular backing
       ctx.beginPath();
       ctx.arc(cx, cy, radius, 0, Math.PI * 2);
-      ctx.fillStyle = "#030712";
+      ctx.fillStyle = "#080b11";
       ctx.fill();
 
-      // Glowing multi-color border
+      // Glowing border
       const gradBorder = ctx.createLinearGradient(
         cx - radius,
         cy - radius,
         cx + radius,
         cy + radius
       );
-      gradBorder.addColorStop(0, "#00F0FF");
-      gradBorder.addColorStop(0.5, "#8B5CF6");
-      gradBorder.addColorStop(1, "#EC4899");
+      gradBorder.addColorStop(0, "#3B82F6");
+      gradBorder.addColorStop(1, "#6366F1");
       ctx.strokeStyle = gradBorder;
       ctx.lineWidth = 5;
       ctx.stroke();
@@ -198,9 +197,9 @@ function HolographicQRObject({
       ctx.font = "bold 56px 'Space Grotesk', sans-serif";
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
-      ctx.fillStyle = "#00F0FF";
-      ctx.shadowColor = "rgba(0, 240, 255, 0.8)";
-      ctx.shadowBlur = 12;
+      ctx.fillStyle = "#38BDF8";
+      ctx.shadowColor = "rgba(59, 130, 246, 0.6)";
+      ctx.shadowBlur = 10;
       ctx.fillText("Z", cx, cy + 2);
       ctx.shadowBlur = 0; // reset
 
@@ -289,13 +288,13 @@ function HolographicQRObject({
             </mesh>
           )}
 
-          {/* 3. Glowing Neon Holographic Frame */}
+          {/* 3. Holographic Frame */}
           <RoundedBox args={[2.86, 2.86, 0.03]} radius={0.12} smoothness={4}>
             <meshBasicMaterial
-              color="#00F0FF"
+              color="#3B82F6"
               wireframe
               transparent
-              opacity={0.35}
+              opacity={0.25}
             />
           </RoundedBox>
 
@@ -314,45 +313,45 @@ function HolographicQRObject({
               <mesh position={[0.08, 0, 0]}>
                 <boxGeometry args={[0.22, 0.035, 0.02]} />
                 <meshStandardMaterial
-                  color="#00F0FF"
-                  emissive="#00F0FF"
-                  emissiveIntensity={1.2}
+                  color="#3B82F6"
+                  emissive="#3B82F6"
+                  emissiveIntensity={1.0}
                 />
               </mesh>
               <mesh position={[0, -0.08, 0]}>
                 <boxGeometry args={[0.035, 0.22, 0.02]} />
                 <meshStandardMaterial
-                  color="#00F0FF"
-                  emissive="#00F0FF"
-                  emissiveIntensity={1.2}
+                  color="#3B82F6"
+                  emissive="#3B82F6"
+                  emissiveIntensity={1.0}
                 />
               </mesh>
             </group>
           ))}
 
-          {/* 5. Sweeping Neon Laser Beam */}
+          {/* 5. Sweeping Laser Beam */}
           <mesh ref={scanBeamRef} position={[0, 0, 0.12]}>
             <boxGeometry args={[2.85, 0.03, 0.05]} />
-            <meshBasicMaterial color="#00F0FF" transparent opacity={0.95} />
+            <meshBasicMaterial color="#38BDF8" transparent opacity={0.7} />
           </mesh>
 
-          {/* 6. Orbiting Planetary Electron Ring & Orb (From Zyntaverse Logo!) */}
+          {/* 6. Orbiting Planetary Electron Ring & Orb */}
           <group ref={orbitGroupRef} rotation={[0.4, 0.25, 0]}>
             <Torus args={[2.15, 0.022, 16, 80]}>
               <meshStandardMaterial
-                color="#00F0FF"
-                emissive="#00F0FF"
-                emissiveIntensity={1.2}
+                color="#3B82F6"
+                emissive="#3B82F6"
+                emissiveIntensity={1.0}
                 transparent
-                opacity={0.8}
+                opacity={0.7}
               />
             </Torus>
-            {/* Orbiting Neon Electron Orb */}
+            {/* Orbiting Electron Orb */}
             <Sphere args={[0.075, 24, 24]} position={[2.15, 0, 0]}>
               <meshStandardMaterial
-                color="#EC4899"
-                emissive="#EC4899"
-                emissiveIntensity={1.8}
+                color="#6366F1"
+                emissive="#6366F1"
+                emissiveIntensity={1.5}
               />
             </Sphere>
           </group>
@@ -374,28 +373,27 @@ function HolographicQRObject({
           rotation={[Math.PI / 2, 0, 0]}
           position={[0, 0.12, 0]}
         >
-          <meshBasicMaterial color="#00F0FF" />
+          <meshBasicMaterial color="#3B82F6" />
         </Torus>
         <Torus
           args={[0.92, 0.018, 16, 48]}
           rotation={[Math.PI / 2, 0, 0]}
           position={[0, 0.18, 0]}
         >
-          <meshBasicMaterial color="#EC4899" />
+          <meshBasicMaterial color="#6366F1" />
         </Torus>
         <Torus
           args={[0.66, 0.015, 16, 48]}
           rotation={[Math.PI / 2, 0, 0]}
           position={[0, 0.24, 0]}
         >
-          <meshBasicMaterial color="#8B5CF6" />
+          <meshBasicMaterial color="#38BDF8" />
         </Torus>
       </group>
 
       {/* Atmospheric Particles */}
-      <Sparkles count={25} scale={4.0} size={2.0} speed={0.35} color="#00F0FF" />
-      <Sparkles count={20} scale={3.8} size={1.8} speed={0.3} color="#EC4899" />
-      <Sparkles count={15} scale={3.6} size={1.6} speed={0.25} color="#8B5CF6" />
+      <Sparkles count={25} scale={4.0} size={2.0} speed={0.35} color="#3B82F6" />
+      <Sparkles count={20} scale={3.8} size={1.8} speed={0.3} color="#6366F1" />
     </group>
   );
 }
@@ -414,13 +412,13 @@ export default function HolographicQRCanvas({
         gl={{ antialias: true, alpha: true }}
       >
         <ambientLight intensity={1.1} />
-        <directionalLight position={[4, 6, 4]} intensity={2.2} color="#00F0FF" />
+        <directionalLight position={[4, 6, 4]} intensity={2.0} color="#3B82F6" />
         <directionalLight
           position={[-4, -2, 3]}
-          intensity={1.8}
-          color="#EC4899"
+          intensity={1.5}
+          color="#6366F1"
         />
-        <pointLight position={[0, 2, 2.5]} intensity={1.6} color="#8B5CF6" />
+        <pointLight position={[0, 2, 2.5]} intensity={1.4} color="#38BDF8" />
         <HolographicQRObject dataString={currentData} isFrozen={isFrozen} />
         <OrbitControls
           enableZoom={false}

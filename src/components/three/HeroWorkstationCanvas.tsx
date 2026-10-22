@@ -32,14 +32,14 @@ function DeveloperWorkstationGroup({
   const dbStackRef = useRef<THREE.Group>(null);
   const headRef = useRef<THREE.Group>(null);
 
-  // Orbiting Multi-Color Tech Icons
+  // Orbiting Precision Tech Icons
   const orbitingIcons = useMemo(
     () => [
       {
         label: "React",
         badge: "⚛",
-        color: "#00F0FF",
-        bg: "rgba(0, 240, 255, 0.2)",
+        color: "#38BDF8",
+        bg: "rgba(56, 189, 248, 0.2)",
         angle: 0,
         radius: 2.9,
         yOffset: 0.55,
@@ -65,8 +65,8 @@ function DeveloperWorkstationGroup({
       {
         label: "SQL",
         badge: "SQL",
-        color: "#A855F7",
-        bg: "rgba(168, 85, 247, 0.22)",
+        color: "#6366F1",
+        bg: "rgba(99, 102, 241, 0.22)",
         angle: (Math.PI * 6) / 5,
         radius: 2.9,
         yOffset: -0.4,
@@ -74,8 +74,8 @@ function DeveloperWorkstationGroup({
       {
         label: "AI Core",
         badge: "AI",
-        color: "#EC4899",
-        bg: "rgba(236, 72, 153, 0.22)",
+        color: "#3B82F6",
+        bg: "rgba(59, 130, 246, 0.22)",
         angle: (Math.PI * 8) / 5,
         radius: 2.9,
         yOffset: 0.3,
@@ -167,27 +167,27 @@ function DeveloperWorkstationGroup({
             />
           </RoundedBox>
 
-          {/* Top Cyan Neon Desk Trim */}
+          {/* Top Sapphire Micro Desk Trim */}
           <RoundedBox
             args={[3.58, 0.028, 1.89]}
             radius={0.02}
             smoothness={2}
             position={[0, 0.025, 0]}
           >
-            <meshBasicMaterial color="#00F0FF" transparent opacity={0.85} />
+            <meshBasicMaterial color="#3B82F6" transparent opacity={0.5} />
           </RoundedBox>
 
-          {/* Bottom Magenta Neon Underglow Trim */}
+          {/* Bottom Indigo Underglow Trim */}
           <RoundedBox
             args={[3.52, 0.022, 1.83]}
             radius={0.02}
             smoothness={2}
             position={[0, -0.05, 0]}
           >
-            <meshBasicMaterial color="#EC4899" transparent opacity={0.75} />
+            <meshBasicMaterial color="#6366F1" transparent opacity={0.35} />
           </RoundedBox>
 
-          {/* Under-desk Multi-Color Anti-Gravity Thruster Core */}
+          {/* Under-desk Anti-Gravity Thruster Core */}
           <Cylinder args={[1.1, 0.65, 0.22, 32]} position={[0, -0.18, 0]}>
             <meshStandardMaterial
               color="#090d16"
@@ -200,24 +200,24 @@ function DeveloperWorkstationGroup({
             rotation={[Math.PI / 2, 0, 0]}
             position={[0, -0.28, 0]}
           >
-            <meshBasicMaterial color="#00F0FF" />
+            <meshBasicMaterial color="#3B82F6" transparent opacity={0.7} />
           </Torus>
           <Torus
             args={[0.72, 0.022, 16, 56]}
             rotation={[Math.PI / 2, 0, 0]}
             position={[0, -0.38, 0]}
           >
-            <meshBasicMaterial color="#EC4899" />
+            <meshBasicMaterial color="#6366F1" transparent opacity={0.6} />
           </Torus>
           <Torus
             args={[0.48, 0.018, 16, 48]}
             rotation={[Math.PI / 2, 0, 0]}
             position={[0, -0.48, 0]}
           >
-            <meshBasicMaterial color="#F59E0B" />
+            <meshBasicMaterial color="#38BDF8" transparent opacity={0.5} />
           </Torus>
 
-          {/* RGB Illuminated Holographic Mechanical Keyboard */}
+          {/* Illuminated Holographic Mechanical Keyboard */}
           <group position={[0, 0.09, 0.38]}>
             <RoundedBox args={[1.15, 0.035, 0.38]} radius={0.01} smoothness={2}>
               <meshStandardMaterial
@@ -226,22 +226,22 @@ function DeveloperWorkstationGroup({
                 roughness={0.2}
               />
             </RoundedBox>
-            {/* Multi-color RGB key zones */}
+            {/* Precision keyboard ambient zones */}
             <mesh position={[-0.34, 0.02, 0]} rotation={[-Math.PI / 2, 0, 0]}>
               <planeGeometry args={[0.32, 0.3]} />
-              <meshBasicMaterial color="#00F0FF" transparent opacity={0.6} />
+              <meshBasicMaterial color="#3B82F6" transparent opacity={0.4} />
             </mesh>
             <mesh position={[0, 0.02, 0]} rotation={[-Math.PI / 2, 0, 0]}>
               <planeGeometry args={[0.34, 0.3]} />
-              <meshBasicMaterial color="#8B5CF6" transparent opacity={0.6} />
+              <meshBasicMaterial color="#6366F1" transparent opacity={0.4} />
             </mesh>
             <mesh position={[0.34, 0.02, 0]} rotation={[-Math.PI / 2, 0, 0]}>
               <planeGeometry args={[0.32, 0.3]} />
-              <meshBasicMaterial color="#EC4899" transparent opacity={0.6} />
+              <meshBasicMaterial color="#38BDF8" transparent opacity={0.4} />
             </mesh>
           </group>
 
-          {/* 3D RGB Holographic Computer Tower on Right Desk Corner */}
+          {/* 3D Holographic Computer Tower on Right Desk Corner */}
           <group position={[1.36, 0.42, -0.25]}>
             <RoundedBox args={[0.46, 0.78, 0.68]} radius={0.03} smoothness={4}>
               <meshPhysicalMaterial
@@ -253,27 +253,27 @@ function DeveloperWorkstationGroup({
                 opacity={0.92}
               />
             </RoundedBox>
-            {/* Multi-color internal GPU & Neural cores */}
+            {/* Precision internal GPU & Neural cores */}
             <RoundedBox
               args={[0.34, 0.11, 0.5]}
               radius={0.02}
               position={[0, 0.2, 0]}
             >
-              <meshBasicMaterial color="#00F0FF" />
+              <meshBasicMaterial color="#3B82F6" />
             </RoundedBox>
             <RoundedBox
               args={[0.34, 0.11, 0.5]}
               radius={0.02}
               position={[0, 0.02, 0]}
             >
-              <meshBasicMaterial color="#EC4899" />
+              <meshBasicMaterial color="#6366F1" />
             </RoundedBox>
             <RoundedBox
               args={[0.34, 0.11, 0.5]}
               radius={0.02}
               position={[0, -0.16, 0]}
             >
-              <meshBasicMaterial color="#10B981" />
+              <meshBasicMaterial color="#38BDF8" />
             </RoundedBox>
           </group>
         </group>
@@ -306,7 +306,7 @@ function DeveloperWorkstationGroup({
             />
           </RoundedBox>
 
-          {/* Glowing Multi-Color Monitor Frame */}
+          {/* Clean Monitor Frame */}
           <RoundedBox
             args={[2.39, 1.29, 0.02]}
             radius={0.04}
@@ -314,54 +314,54 @@ function DeveloperWorkstationGroup({
             position={[0, 0, -0.01]}
           >
             <meshBasicMaterial
-              color="#00F0FF"
+              color="#3B82F6"
               wireframe
               transparent
-              opacity={0.32}
+              opacity={0.22}
             />
           </RoundedBox>
 
-          {/* Multi-Color Syntax Code & Telemetry Bars inside Center Monitor */}
+          {/* Clean Syntax Code & Telemetry Bars inside Center Monitor */}
           <mesh position={[-0.55, 0.34, 0.035]}>
             <planeGeometry args={[0.92, 0.055]} />
-            <meshBasicMaterial color="#00F0FF" />
+            <meshBasicMaterial color="#38BDF8" />
           </mesh>
           <mesh position={[-0.65, 0.2, 0.035]}>
             <planeGeometry args={[0.72, 0.04]} />
-            <meshBasicMaterial color="#EC4899" />
+            <meshBasicMaterial color="#818CF8" />
           </mesh>
           <mesh position={[-0.48, 0.07, 0.035]}>
             <planeGeometry args={[1.05, 0.04]} />
-            <meshBasicMaterial color="#F59E0B" />
+            <meshBasicMaterial color="#94A3B8" />
           </mesh>
           <mesh position={[-0.6, -0.06, 0.035]}>
             <planeGeometry args={[0.82, 0.04]} />
-            <meshBasicMaterial color="#A855F7" />
+            <meshBasicMaterial color="#60A5FA" />
           </mesh>
           <mesh position={[-0.45, -0.2, 0.035]}>
             <planeGeometry args={[1.1, 0.04]} />
-            <meshBasicMaterial color="#10B981" />
+            <meshBasicMaterial color="#3B82F6" />
           </mesh>
 
-          {/* Right half of monitor: Multi-Color Holographic Rings */}
+          {/* Right half of monitor: Precision Holographic Rings */}
           <mesh position={[0.58, 0.05, 0.035]}>
             <ringGeometry args={[0.25, 0.3, 32]} />
-            <meshBasicMaterial color="#00F0FF" side={THREE.DoubleSide} />
+            <meshBasicMaterial color="#38BDF8" side={THREE.DoubleSide} />
           </mesh>
           <mesh position={[0.58, 0.05, 0.035]}>
             <ringGeometry args={[0.16, 0.2, 28]} />
-            <meshBasicMaterial color="#EC4899" side={THREE.DoubleSide} />
+            <meshBasicMaterial color="#6366F1" side={THREE.DoubleSide} />
           </mesh>
           <mesh position={[0.58, 0.05, 0.035]}>
             <ringGeometry args={[0.07, 0.11, 24]} />
-            <meshBasicMaterial color="#F59E0B" side={THREE.DoubleSide} />
+            <meshBasicMaterial color="#3B82F6" side={THREE.DoubleSide} />
           </mesh>
 
-          {/* Left Tilted Vertical Glass Monitor (Purple/Magenta Theme) */}
+          {/* Left Tilted Vertical Glass Monitor (Modern Slate/Indigo Theme) */}
           <group position={[-1.58, 0.05, 0.28]} rotation={[0, 0.42, 0]}>
             <RoundedBox args={[0.75, 1.15, 0.04]} radius={0.03} smoothness={4}>
               <meshPhysicalMaterial
-                color="#140c2e"
+                color="#0c1222"
                 metalness={0.3}
                 roughness={0.1}
                 transmission={0.7}
@@ -371,19 +371,19 @@ function DeveloperWorkstationGroup({
             </RoundedBox>
             <mesh position={[0, 0.35, 0.025]}>
               <planeGeometry args={[0.55, 0.045]} />
-              <meshBasicMaterial color="#EC4899" />
+              <meshBasicMaterial color="#818CF8" />
             </mesh>
             <mesh position={[-0.05, 0.22, 0.025]}>
               <planeGeometry args={[0.45, 0.035]} />
-              <meshBasicMaterial color="#00F0FF" />
+              <meshBasicMaterial color="#38BDF8" />
             </mesh>
             <mesh position={[0.02, 0.1, 0.025]}>
               <planeGeometry args={[0.5, 0.035]} />
-              <meshBasicMaterial color="#F59E0B" />
+              <meshBasicMaterial color="#94A3B8" />
             </mesh>
             <mesh position={[-0.04, -0.1, 0.025]}>
               <planeGeometry args={[0.5, 0.25]} />
-              <meshBasicMaterial color="#A855F7" transparent opacity={0.35} />
+              <meshBasicMaterial color="#6366F1" transparent opacity={0.25} />
             </mesh>
           </group>
         </group>
@@ -404,14 +404,14 @@ function DeveloperWorkstationGroup({
               roughness={0.25}
             />
           </RoundedBox>
-          {/* Chair Multi-Color Neon Spine */}
+          {/* Chair Micro-Accent Spine */}
           <RoundedBox
             args={[0.12, 0.95, 0.04]}
             radius={0.02}
             position={[0, 0.3, 0.42]}
             rotation={[-0.08, 0, 0]}
           >
-            <meshBasicMaterial color="#EC4899" />
+            <meshBasicMaterial color="#3B82F6" />
           </RoundedBox>
           <RoundedBox
             args={[0.76, 0.12, 0.65]}
@@ -443,7 +443,7 @@ function DeveloperWorkstationGroup({
             rotation={[Math.PI / 2, 0, 0]}
             position={[0, 0.58, 0.06]}
           >
-            <meshBasicMaterial color="#00F0FF" />
+            <meshBasicMaterial color="#6366F1" />
           </Torus>
 
           {/* Developer Arms */}
@@ -466,7 +466,7 @@ function DeveloperWorkstationGroup({
             </RoundedBox>
           </group>
 
-          {/* Developer Head & Dual-Tone Visor */}
+          {/* Developer Head & Visor */}
           <group ref={headRef} position={[0, 0.85, 0.04]}>
             <RoundedBox args={[0.42, 0.44, 0.42]} radius={0.14} smoothness={4}>
               <meshPhysicalMaterial
@@ -481,7 +481,7 @@ function DeveloperWorkstationGroup({
               radius={0.04}
               position={[0, 0.03, 0]}
             >
-              <meshBasicMaterial color="#00F0FF" />
+              <meshBasicMaterial color="#38BDF8" />
             </RoundedBox>
           </group>
         </group>
@@ -505,30 +505,30 @@ function DeveloperWorkstationGroup({
             rotation={[Math.PI / 2, 0, 0]}
             position={[0, -0.48, 0]}
           >
-            <meshBasicMaterial color="#10B981" />
+            <meshBasicMaterial color="#3B82F6" />
           </Torus>
 
           <Icosahedron ref={aiOuterRef} args={[0.36, 1]} position={[0, 0, 0]}>
             <meshBasicMaterial
-              color="#00F0FF"
+              color="#38BDF8"
               wireframe
               transparent
-              opacity={0.85}
+              opacity={0.45}
             />
           </Icosahedron>
           <Sphere ref={aiCoreRef} args={[0.18, 24, 24]} position={[0, 0, 0]}>
-            <meshBasicMaterial color="#EC4899" />
+            <meshBasicMaterial color="#6366F1" />
           </Sphere>
         </group>
 
         {/* ======================================================= */}
-        {/* 5. MULTI-COLOR FLOATING DATABASE CYLINDER STACK         */}
+        {/* 5. FLOATING DATABASE CYLINDER STACK                     */}
         {/* ======================================================= */}
         <group ref={dbStackRef} position={[2.05, 0.4, 0.35]}>
           {[
-            { y: 0, color: "#00F0FF" },
-            { y: 0.24, color: "#EC4899" },
-            { y: 0.48, color: "#10B981" },
+            { y: 0, color: "#3B82F6" },
+            { y: 0.24, color: "#6366F1" },
+            { y: 0.48, color: "#38BDF8" },
           ].map((ring, idx) => (
             <group key={idx} position={[0, ring.y, 0]}>
               <Cylinder args={[0.34, 0.34, 0.16, 32]}>
@@ -561,25 +561,25 @@ function DeveloperWorkstationGroup({
               distanceFactor={6.5}
               zIndexRange={[10, 0]}
             >
-              <div className="w-56 rounded-xl border border-cyan-400/50 bg-slate-950/90 p-3 backdrop-blur-md shadow-[0_0_30px_rgba(0,240,255,0.28)] select-none pointer-events-none">
+              <div className="w-56 rounded-xl border border-blue-500/30 bg-slate-950/90 p-3 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.5)] select-none pointer-events-none">
                 <div className="flex items-center justify-between border-b border-white/10 pb-1.5 mb-2">
                   <div className="flex items-center gap-1.5">
                     <span className="h-2 w-2 rounded-full bg-rose-500" />
                     <span className="h-2 w-2 rounded-full bg-amber-400" />
                     <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                    <span className="ml-1 font-mono text-[10px] tracking-wider text-cyan-300 uppercase">
+                    <span className="ml-1 font-mono text-[10px] tracking-wider text-blue-400 uppercase">
                       neural_ai.py
                     </span>
                   </div>
-                  <span className="font-mono text-[9px] text-amber-300">
+                  <span className="font-mono text-[9px] text-indigo-300">
                     99.8%
                   </span>
                 </div>
                 <pre className="font-mono text-[10px] leading-relaxed text-slate-200">
-                  <span className="text-pink-400">async def</span>{" "}
-                  <span className="text-cyan-300">scale_idea</span>(vision):
+                  <span className="text-indigo-400">async def</span>{" "}
+                  <span className="text-blue-300">scale_idea</span>(vision):
                   {"\n"}
-                  {"  "}agent = <span className="text-amber-300">AICore</span>()
+                  {"  "}agent = <span className="text-indigo-300">AICore</span>()
                   {"\n"}
                   {"  "}
                   <span className="text-emerald-400">return await</span>{" "}
@@ -594,9 +594,9 @@ function DeveloperWorkstationGroup({
               distanceFactor={6.5}
               zIndexRange={[10, 0]}
             >
-              <div className="w-56 rounded-xl border border-pink-400/50 bg-slate-950/90 p-3 backdrop-blur-md shadow-[0_0_30px_rgba(236,72,153,0.28)] select-none pointer-events-none">
+              <div className="w-56 rounded-xl border border-indigo-500/30 bg-slate-950/90 p-3 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.5)] select-none pointer-events-none">
                 <div className="flex items-center justify-between border-b border-white/10 pb-1.5 mb-2">
-                  <span className="font-mono text-[10px] tracking-wider text-pink-300 uppercase">
+                  <span className="font-mono text-[10px] tracking-wider text-indigo-400 uppercase">
                     {brandName}
                   </span>
                   <span className="rounded bg-emerald-500/20 border border-emerald-400/40 px-1.5 py-0.5 font-mono text-[9px] text-emerald-300">
@@ -606,12 +606,12 @@ function DeveloperWorkstationGroup({
                 <div className="space-y-1.5 font-mono text-[10px]">
                   <div className="flex justify-between text-slate-200">
                     <span>Multi-Cloud Engine</span>
-                    <span className="text-amber-300">60 FPS</span>
+                    <span className="text-blue-400">60 FPS</span>
                   </div>
                   <div className="h-1.5 w-full overflow-hidden rounded-full bg-slate-800">
-                    <div className="h-full w-[94%] bg-gradient-to-r from-cyan-400 via-purple-500 via-pink-500 to-amber-400" />
+                    <div className="h-full w-[94%] bg-gradient-to-r from-blue-500 to-indigo-500" />
                   </div>
-                  <div className="text-[9px] text-cyan-300">
+                  <div className="text-[9px] text-slate-400 font-mono">
                     SELECT * FROM revenue_growth;
                   </div>
                 </div>
@@ -621,7 +621,7 @@ function DeveloperWorkstationGroup({
         )}
 
         {/* ======================================================= */}
-        {/* 7. ANIMATED MULTI-COLOR ORBITAL RINGS & TECH ICONS      */}
+        {/* 7. ANIMATED ORBITAL RINGS & TECH ICONS                  */}
         {/* ======================================================= */}
         <group ref={orbitRing1Ref}>
           {orbitingIcons.map((item) => {
@@ -642,9 +642,9 @@ function DeveloperWorkstationGroup({
                   <div
                     className="flex items-center gap-1.5 rounded-full border px-2.5 py-1 backdrop-blur-md shadow-lg select-none pointer-events-none whitespace-nowrap"
                     style={{
-                      borderColor: `${item.color}88`,
-                      backgroundColor: "rgba(3, 7, 18, 0.88)",
-                      boxShadow: `0 0 18px ${item.color}55`,
+                      borderColor: `${item.color}66`,
+                      backgroundColor: "rgba(8, 11, 17, 0.9)",
+                      boxShadow: `0 0 14px ${item.color}40`,
                     }}
                   >
                     <span
@@ -663,48 +663,41 @@ function DeveloperWorkstationGroup({
           })}
         </group>
 
-        {/* Triple Multi-Color Glowing Orbital Rings */}
+        {/* Glowing Orbital Rings */}
         <group ref={orbitRing2Ref} rotation={[Math.PI / 2.3, 0.2, 0]}>
           <Torus args={[2.9, 0.014, 16, 100]}>
-            <meshBasicMaterial color="#00F0FF" transparent opacity={0.45} />
+            <meshBasicMaterial color="#3B82F6" transparent opacity={0.35} />
           </Torus>
           <Torus args={[2.35, 0.012, 16, 90]} rotation={[0.35, 0, 0]}>
-            <meshBasicMaterial color="#EC4899" transparent opacity={0.4} />
+            <meshBasicMaterial color="#6366F1" transparent opacity={0.3} />
           </Torus>
           <Torus args={[1.85, 0.01, 16, 80]} rotation={[-0.3, 0.2, 0]}>
-            <meshBasicMaterial color="#F59E0B" transparent opacity={0.35} />
+            <meshBasicMaterial color="#38BDF8" transparent opacity={0.25} />
           </Torus>
         </group>
       </Float>
 
-      {/* Multi-Color Ambient Floating Particles */}
+      {/* Atmospheric Particles */}
       <Sparkles
         count={isMobile ? 35 : 70}
         scale={6.5}
         size={2.3}
         speed={0.45}
-        color="#00F0FF"
+        color="#3B82F6"
       />
       <Sparkles
         count={isMobile ? 25 : 50}
         scale={6}
         size={2.1}
         speed={0.38}
-        color="#EC4899"
+        color="#6366F1"
       />
       <Sparkles
         count={isMobile ? 20 : 40}
         scale={5.5}
         size={2.0}
         speed={0.32}
-        color="#F59E0B"
-      />
-      <Sparkles
-        count={isMobile ? 20 : 40}
-        scale={5.5}
-        size={1.9}
-        speed={0.35}
-        color="#10B981"
+        color="#38BDF8"
       />
     </group>
   );
@@ -716,9 +709,9 @@ export default function HeroWorkstationCanvas({
 }: WorkstationSceneProps) {
   return (
     <div className="relative h-[440px] sm:h-[520px] lg:h-[620px] w-full cursor-grab active:cursor-grabbing">
-      {/* Vibrant Multi-Color Radial Glow Behind 3D Canvas */}
+      {/* Refined Ambient Glow Behind 3D Canvas */}
       <div
-        className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-500/20 via-purple-500/20 via-pink-500/15 to-amber-500/15 blur-3xl"
+        className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-tr from-blue-600/15 via-indigo-600/10 to-transparent blur-3xl"
         aria-hidden="true"
       />
 
@@ -731,29 +724,23 @@ export default function HeroWorkstationCanvas({
           powerPreference: "high-performance",
         }}
       >
-        <ambientLight intensity={0.85} />
-        <directionalLight position={[5, 8, 5]} intensity={1.9} color="#00F0FF" />
+        <ambientLight intensity={0.9} />
+        <directionalLight position={[5, 8, 5]} intensity={1.8} color="#3B82F6" />
         <directionalLight
           position={[-5, 4, -4]}
-          intensity={1.6}
-          color="#EC4899"
+          intensity={1.4}
+          color="#6366F1"
         />
         <pointLight
           position={[0, 1.2, 1.5]}
-          intensity={2.2}
-          color="#8B5CF6"
+          intensity={1.8}
+          color="#38BDF8"
           distance={6}
         />
         <pointLight
           position={[2, -0.5, 1.5]}
-          intensity={1.8}
-          color="#10B981"
-          distance={5}
-        />
-        <pointLight
-          position={[-2, -0.5, 1.5]}
-          intensity={1.8}
-          color="#F59E0B"
+          intensity={1.2}
+          color="#818CF8"
           distance={5}
         />
 
@@ -770,7 +757,7 @@ export default function HeroWorkstationCanvas({
 
       {/* Interactive 3D HUD Corner Hint */}
       <div className="pointer-events-none absolute bottom-3 right-4 flex items-center gap-2 rounded-full border border-white/15 bg-slate-950/80 px-3.5 py-1 text-[11px] font-mono text-slate-300 backdrop-blur-md">
-        <span className="h-2 w-2 rounded-full bg-gradient-to-r from-cyan-400 to-pink-500 animate-ping" />
+        <span className="h-2 w-2 rounded-full bg-blue-500 animate-ping" />
         <span>DRAG OR MOVE CURSOR TO INSPECT 3D WORKSTATION</span>
       </div>
     </div>

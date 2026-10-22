@@ -73,7 +73,7 @@ function TechConstellationScene({
           end: target.position,
           highlighted: Boolean(isSelectedEdge),
           color: isSelectedEdge
-            ? "#00F0FF"
+            ? "#3B82F6"
             : isCategoryMatch
             ? "#6366F1"
             : "#1E293B",
@@ -97,15 +97,15 @@ function TechConstellationScene({
 
   return (
     <group ref={groupRef}>
-      {/* Central Holographic Neural Core */}
+      {/* Central Neural Core */}
       <Icosahedron args={[0.75, 1]}>
-        <meshBasicMaterial color="#00F0FF" wireframe transparent opacity={0.25} />
+        <meshBasicMaterial color="#3B82F6" wireframe transparent opacity={0.2} />
       </Icosahedron>
       <Sphere args={[0.38, 24, 24]}>
         <meshStandardMaterial
-          color="#8B5CF6"
-          emissive="#8B5CF6"
-          emissiveIntensity={0.9}
+          color="#6366F1"
+          emissive="#6366F1"
+          emissiveIntensity={0.8}
           roughness={0.2}
         />
       </Sphere>
@@ -154,11 +154,11 @@ function TechConstellationScene({
                 onClick={() => onSelectNode(node)}
                 className={`group flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-mono transition-all duration-300 whitespace-nowrap ${
                   isSelected
-                    ? "scale-110 border-cyan-300 bg-slate-900/95 text-white shadow-[0_0_20px_rgba(0,240,255,0.6)]"
+                    ? "scale-110 border-blue-400 bg-slate-900/95 text-white shadow-[0_0_20px_rgba(59,130,246,0.5)]"
                     : isConnectedToSelected
-                    ? "border-purple-400/70 bg-slate-900/90 text-cyan-200"
+                    ? "border-indigo-500/70 bg-slate-900/90 text-blue-200"
                     : isMatch
-                    ? "border-white/15 bg-slate-950/80 text-slate-200 hover:border-cyan-400/60 hover:text-white"
+                    ? "border-white/15 bg-slate-950/80 text-slate-200 hover:border-blue-500/60 hover:text-white"
                     : "border-white/5 bg-slate-950/40 text-slate-500 opacity-45"
                 }`}
               >
@@ -181,7 +181,7 @@ function TechConstellationScene({
         scale={7}
         size={1.8}
         speed={0.3}
-        color="#00F0FF"
+        color="#3B82F6"
       />
     </group>
   );
@@ -191,7 +191,7 @@ export default function TechCloudCanvas(props: TechCloudCanvasProps) {
   return (
     <div className="relative h-[440px] sm:h-[520px] w-full rounded-3xl border border-white/10 bg-slate-950/50 backdrop-blur-xl overflow-hidden cursor-grab active:cursor-grabbing">
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,240,255,0.12),transparent_65%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.1),transparent_65%)]"
         aria-hidden="true"
       />
 
@@ -200,9 +200,9 @@ export default function TechCloudCanvas(props: TechCloudCanvasProps) {
         camera={{ position: [0, 0.4, 7.2], fov: 45 }}
         gl={{ antialias: true, alpha: true }}
       >
-        <ambientLight intensity={0.8} />
-        <pointLight position={[5, 5, 5]} intensity={2} color="#00F0FF" />
-        <pointLight position={[-5, -5, -3]} intensity={1.6} color="#8B5CF6" />
+        <ambientLight intensity={0.9} />
+        <pointLight position={[5, 5, 5]} intensity={1.8} color="#3B82F6" />
+        <pointLight position={[-5, -5, -3]} intensity={1.4} color="#6366F1" />
 
         <TechConstellationScene {...props} />
 
@@ -214,7 +214,7 @@ export default function TechCloudCanvas(props: TechCloudCanvasProps) {
       </Canvas>
 
       <div className="pointer-events-none absolute bottom-3 left-4 flex items-center gap-2 rounded-full border border-white/10 bg-slate-950/80 px-3 py-1 text-[11px] font-mono text-slate-400">
-        <span className="h-1.5 w-1.5 rounded-full bg-purple-400 animate-pulse" />
+        <span className="h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse" />
         <span>INTERACTIVE 3D NEURAL TECH CLOUD • CLICK ANY NODE TO INSPECT</span>
       </div>
     </div>
