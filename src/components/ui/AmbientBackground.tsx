@@ -20,48 +20,40 @@ export default function AmbientBackground() {
       className="pointer-events-none fixed inset-0 z-0 overflow-hidden"
       aria-hidden="true"
     >
-      {/* Base deep space obsidian gradient */}
-      <div className="absolute inset-0 bg-[#030712]" />
+      {/* Base deep obsidian canvas */}
+      <div className="absolute inset-0 bg-[#080b11]" />
 
-      {/* Top Prismatic Multi-Color Aurora Ribbon */}
-      <div className="absolute inset-x-0 top-0 h-[520px] bg-gradient-to-b from-indigo-950/40 via-purple-950/15 to-transparent" />
+      {/* Top subtle sapphire atmosphere */}
+      <div className="absolute inset-x-0 top-0 h-[500px] bg-gradient-to-b from-blue-950/20 via-indigo-950/10 to-transparent" />
 
-      {/* Interactive multi-color mouse-following ambient aura */}
+      {/* Interactive mouse-following atmospheric glow */}
       <div
-        className="absolute inset-0 transition-opacity duration-500"
+        className="absolute inset-0 transition-opacity duration-700"
         style={{
-          background: `radial-gradient(680px circle at ${mousePos.x}% ${mousePos.y}%, rgba(0, 240, 255, 0.08), rgba(168, 85, 247, 0.06) 35%, rgba(236, 72, 153, 0.04) 60%, transparent 80%)`,
+          background: `radial-gradient(650px circle at ${mousePos.x}% ${mousePos.y}%, rgba(59, 130, 246, 0.06), rgba(99, 102, 241, 0.03) 40%, transparent 75%)`,
         }}
       />
 
-      {/* Rich Multi-Color Glowing Nebula Orbs */}
-      <div className="absolute -top-36 -left-36 h-[540px] w-[540px] rounded-full bg-cyan-500/15 blur-[140px] animate-float-orb" />
+      {/* Refined Atmospheric Lighting Pools */}
+      <div className="absolute -top-32 -left-32 h-[520px] w-[520px] rounded-full bg-blue-600/10 blur-[150px] animate-float-orb" />
       <div
-        className="absolute top-[12%] -right-36 h-[560px] w-[560px] rounded-full bg-purple-600/15 blur-[150px] animate-float-orb"
-        style={{ animationDelay: "2s" }}
-      />
-      <div
-        className="absolute top-[38%] left-[18%] h-[460px] w-[460px] rounded-full bg-pink-500/12 blur-[145px] animate-float-orb"
-        style={{ animationDelay: "4s" }}
-      />
-      <div
-        className="absolute top-[60%] -left-32 h-[500px] w-[500px] rounded-full bg-emerald-500/12 blur-[145px] animate-float-orb"
-        style={{ animationDelay: "1s" }}
-      />
-      <div
-        className="absolute top-[75%] right-[10%] h-[480px] w-[480px] rounded-full bg-amber-500/10 blur-[150px] animate-float-orb"
+        className="absolute top-[18%] -right-32 h-[540px] w-[540px] rounded-full bg-indigo-600/08 blur-[160px] animate-float-orb"
         style={{ animationDelay: "3s" }}
       />
-      <div className="absolute -bottom-40 left-1/3 h-[520px] w-[520px] rounded-full bg-blue-600/15 blur-[150px]" />
-
-      {/* Subtle multi-color architectural perspective grid */}
       <div
-        className="absolute inset-0 hologram-grid opacity-55"
+        className="absolute top-[52%] left-[12%] h-[460px] w-[460px] rounded-full bg-sky-600/06 blur-[150px] animate-float-orb"
+        style={{ animationDelay: "6s" }}
+      />
+      <div className="absolute -bottom-40 left-1/3 h-[500px] w-[500px] rounded-full bg-blue-900/10 blur-[150px]" />
+
+      {/* Subtle modern architectural perspective grid */}
+      <div
+        className="absolute inset-0 hologram-grid opacity-35"
         style={{
           maskImage:
-            "radial-gradient(ellipse 85% 75% at 50% 40%, black 35%, transparent 100%)",
+            "radial-gradient(ellipse 85% 75% at 50% 40%, black 25%, transparent 100%)",
           WebkitMaskImage:
-            "radial-gradient(ellipse 85% 75% at 50% 40%, black 35%, transparent 100%)",
+            "radial-gradient(ellipse 85% 75% at 50% 40%, black 25%, transparent 100%)",
         }}
       />
     </div>

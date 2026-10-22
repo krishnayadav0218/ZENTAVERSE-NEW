@@ -45,11 +45,11 @@ export default function MagneticButton({
 
   const variantStyles = {
     primary:
-      "bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-500 to-pink-500 text-white font-semibold shadow-[0_0_28px_rgba(0,240,255,0.4),0_0_20px_rgba(236,72,153,0.3)] hover:shadow-[0_0_38px_rgba(0,240,255,0.65),0_0_30px_rgba(236,72,153,0.5)] border border-white/30",
+      "bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 text-white font-medium shadow-[0_1px_2px_rgba(0,0,0,0.5),0_8px_20px_-4px_rgba(59,130,246,0.35)] hover:shadow-[0_1px_2px_rgba(0,0,0,0.5),0_12px_28px_-4px_rgba(59,130,246,0.5)] border border-blue-400/30",
     secondary:
-      "bg-slate-900/80 text-slate-100 border border-purple-400/45 hover:border-cyan-400/80 hover:bg-slate-900/95 shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),0_0_20px_rgba(139,92,246,0.2)] hover:shadow-neon-cyan backdrop-blur-xl",
+      "bg-slate-900/90 text-slate-100 border border-slate-700/60 hover:border-blue-400/60 hover:bg-slate-800/90 shadow-sm backdrop-blur-xl",
     ghost:
-      "bg-white/[0.05] text-slate-200 border border-white/15 hover:border-pink-400/60 hover:text-white hover:bg-white/[0.09] backdrop-blur-md",
+      "bg-white/[0.04] text-slate-200 border border-white/10 hover:border-blue-400/40 hover:text-white hover:bg-white/[0.08] backdrop-blur-md",
   };
 
   const innerContent = (
@@ -65,10 +65,10 @@ export default function MagneticButton({
     >
       {/* Shimmer sweep on hover */}
       <span
-        className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full"
+        className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full"
         aria-hidden="true"
       />
-      <span className="relative z-10 flex items-center gap-2 drop-shadow-sm">
+      <span className="relative z-10 flex items-center gap-2 drop-shadow-sm font-medium">
         {children}
       </span>
     </motion.div>

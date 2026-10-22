@@ -15,8 +15,8 @@ interface TiltCardProps {
 export default function TiltCard({
   children,
   className = "",
-  glowColor = "rgba(0, 240, 255, 0.25)",
-  secondaryGlowColor = "rgba(236, 72, 153, 0.18)",
+  glowColor = "rgba(59, 130, 246, 0.18)",
+  secondaryGlowColor = "rgba(99, 102, 241, 0.12)",
   intensity = 10,
   onClick,
 }: TiltCardProps) {
@@ -64,31 +64,31 @@ export default function TiltCard({
           rotateY,
           transformStyle: "preserve-3d",
         }}
-        whileHover={{ z: 16, scale: 1.015 }}
+        whileHover={{ z: 14, scale: 1.012 }}
         transition={{ duration: 0.25 }}
         className={`relative h-full rounded-2xl glass-panel-interactive overflow-hidden group ${className}`}
       >
-        {/* Dynamic multi-color cursor-following holographic spotlight */}
+        {/* Dynamic cursor-following atmospheric spotlight */}
         <motion.div
           className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-0"
           style={{
             background: useTransform(
               [glareX, glareY],
               ([gx, gy]) =>
-                `radial-gradient(380px circle at ${gx} ${gy}, ${glowColor}, ${secondaryGlowColor} 45%, transparent 75%)`
+                `radial-gradient(360px circle at ${gx} ${gy}, ${glowColor}, ${secondaryGlowColor} 45%, transparent 75%)`
             ),
           }}
         />
 
-        {/* Multi-color prismatic top edge highlight */}
+        {/* Refined top edge accent highlight */}
         <div
-          className="pointer-events-none absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-cyan-400 via-purple-500 via-pink-500 to-amber-400 opacity-75 group-hover:opacity-100 transition-opacity"
+          className="pointer-events-none absolute inset-x-0 top-0 h-[1.5px] bg-gradient-to-r from-blue-500/50 via-indigo-500/30 to-transparent opacity-60 group-hover:opacity-100 transition-opacity"
           aria-hidden="true"
         />
 
-        {/* Subtle bottom-right ambient corner glow */}
+        {/* Subtle ambient corner glow */}
         <div
-          className="pointer-events-none absolute -bottom-16 -right-16 h-36 w-36 rounded-full opacity-25 group-hover:opacity-55 transition-opacity blur-2xl"
+          className="pointer-events-none absolute -bottom-16 -right-16 h-32 w-32 rounded-full opacity-20 group-hover:opacity-40 transition-opacity blur-2xl"
           style={{ backgroundColor: glowColor }}
           aria-hidden="true"
         />
@@ -97,8 +97,8 @@ export default function TiltCard({
         <div
           className="relative z-10 h-full"
           style={{
-            transform: isHovered ? "translateZ(18px)" : "translateZ(0px)",
-            transition: "transform 0.3s cubic-bezier(0.22, 1, 0.36, 1)",
+            transform: isHovered ? "translateZ(14px)" : "translateZ(0px)",
+            transition: "transform 0.25s ease-out",
           }}
         >
           {children}
