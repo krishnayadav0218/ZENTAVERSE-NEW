@@ -112,10 +112,11 @@ export default function HomePage() {
       {/* Floating Interactive Sci-Fi Sound FX Toggle (Web Audio API) */}
       <AudioToggle />
 
-      {/* Floating Interactive WhatsApp Chat Button */}
+      {/* Floating Interactive Zyntaverse AI Copilot & WhatsApp Assistant */}
       <WhatsAppButton
         phoneNumber={brand.whatsapp || brand.phone}
         businessName={brand.name}
+        onOpenBooking={handleOpenBooking}
       />
 
       {/* Appointment & Strategy Call Booking Modal */}

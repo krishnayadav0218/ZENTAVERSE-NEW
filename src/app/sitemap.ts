@@ -1,8 +1,16 @@
 import { MetadataRoute } from "next";
+import { servicesData } from "@/data/siteData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.zyntaverse.com";
   const currentDate = new Date().toISOString();
+
+  const serviceUrls: MetadataRoute.Sitemap = servicesData.map((s) => ({
+    url: `${baseUrl}/services/${s.id}`,
+    lastModified: currentDate,
+    changeFrequency: "weekly",
+    priority: 0.9,
+  }));
 
   return [
     {
@@ -11,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1.0,
     },
+    ...serviceUrls,
     {
       url: `${baseUrl}#services`,
       lastModified: currentDate,
