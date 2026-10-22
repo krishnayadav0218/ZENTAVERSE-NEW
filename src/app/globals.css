@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --bg-void: #030712;
-  --bg-obsidian: #060b19;
-  --accent-cyan: #00f0ff;
-  --accent-purple: #8b5cf6;
-  --accent-magenta: #ec4899;
+  --bg-void: #080b11;
+  --bg-obsidian: #0b0f19;
+  --accent-primary: #3b82f6;
+  --accent-secondary: #6366f1;
+  --accent-cyan: #38bdf8;
+  --accent-purple: #818cf8;
   --accent-emerald: #10b981;
   --accent-amber: #f59e0b;
 }
@@ -18,35 +19,33 @@
 }
 
 body {
-  background-color: #030712;
-  color: #f8fafc;
+  background-color: #080b11;
+  color: #f1f5f9;
   overflow-x: hidden;
 }
 
 ::selection {
-  background: rgba(236, 72, 153, 0.3);
-  color: #00f0ff;
+  background: rgba(59, 130, 246, 0.28);
+  color: #ffffff;
 }
 
-/* Multi-color gradient scrollbar */
+/* Modern Minimalist Dark Scrollbar */
 ::-webkit-scrollbar {
-  width: 9px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #030712;
+  background: #080b11;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    180deg,
-    #00f0ff 0%,
-    #3b82f6 25%,
-    #8b5cf6 50%,
-    #ec4899 75%,
-    #f59e0b 100%
-  );
+  background: #1e293b;
   border-radius: 9999px;
+  border: 2px solid #080b11;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
 }
 
 @keyframes gradientShift {
@@ -76,10 +75,10 @@ body {
     transform: translate3d(0, 0, 0) scale(1);
   }
   33% {
-    transform: translate3d(25px, -20px, 0) scale(1.06);
+    transform: translate3d(20px, -15px, 0) scale(1.04);
   }
   66% {
-    transform: translate3d(-20px, 15px, 0) scale(0.95);
+    transform: translate3d(-15px, 12px, 0) scale(0.96);
   }
 }
 
@@ -120,65 +119,57 @@ body {
 }
 
 .animate-scanline {
-  animation: scanline 5s linear infinite;
+  animation: scanline 6s linear infinite;
 }
 
 .animate-float-orb {
-  animation: floatOrb 12s ease-in-out infinite;
+  animation: floatOrb 14s ease-in-out infinite;
 }
 
-/* Reusable Multi-Color Glassmorphism & Holographic Utilities */
+/* Modern Enterprise Glassmorphism Utilities */
 @layer utilities {
   .glass-panel {
     background: linear-gradient(
       135deg,
-      rgba(15, 23, 42, 0.76) 0%,
-      rgba(9, 13, 28, 0.88) 50%,
-      rgba(18, 12, 36, 0.84) 100%
+      rgba(15, 23, 42, 0.72) 0%,
+      rgba(10, 15, 28, 0.88) 100%
     );
-    backdrop-filter: blur(22px);
-    -webkit-backdrop-filter: blur(22px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.16),
-      0 20px 45px -15px rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.08),
+      0 20px 45px -15px rgba(0, 0, 0, 0.7);
   }
 
   .glass-panel-interactive {
     background: linear-gradient(
       145deg,
-      rgba(15, 23, 42, 0.72) 0%,
-      rgba(8, 12, 26, 0.88) 55%,
-      rgba(22, 13, 42, 0.82) 100%
+      rgba(15, 23, 42, 0.75) 0%,
+      rgba(9, 14, 26, 0.9) 100%
     );
-    backdrop-filter: blur(22px);
-    -webkit-backdrop-filter: blur(22px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.18),
-      0 20px 45px -15px rgba(0, 0, 0, 0.82);
-    transition: border-color 0.35s ease, box-shadow 0.35s ease;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.1),
+      0 18px 40px -15px rgba(0, 0, 0, 0.75);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
   }
 
   .glass-panel-interactive:hover {
-    border-color: rgba(0, 240, 255, 0.5);
-    box-shadow: inset 0 1px 2px 0 rgba(255, 255, 255, 0.3),
-      0 0 32px -5px rgba(0, 240, 255, 0.25),
-      0 0 45px -10px rgba(236, 72, 153, 0.2),
-      0 25px 50px -12px rgba(0, 0, 0, 0.9);
+    border-color: rgba(59, 130, 246, 0.35);
+    box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.16),
+      0 0 25px -5px rgba(59, 130, 246, 0.15),
+      0 20px 45px -12px rgba(0, 0, 0, 0.85);
   }
 
-  /* Vibrant Animated Multi-Color Spectrum Text Gradient */
+  /* Refined, Authoritative Typography Gradients */
   .text-gradient-cyber {
     background: linear-gradient(
-      90deg,
-      #00f0ff 0%,
-      #38bdf8 20%,
-      #a855f7 45%,
-      #ec4899 70%,
-      #f59e0b 90%,
-      #00f0ff 100%
+      135deg,
+      #60a5fa 0%,
+      #818cf8 45%,
+      #38bdf8 100%
     );
-    background-size: 200% auto;
-    animation: gradientShift 6s linear infinite;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -187,10 +178,9 @@ body {
   .text-gradient-aurora {
     background: linear-gradient(
       135deg,
-      #10b981 0%,
-      #00f0ff 35%,
-      #8b5cf6 70%,
-      #ec4899 100%
+      #ffffff 0%,
+      #e2e8f0 40%,
+      #94a3b8 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -200,9 +190,20 @@ body {
   .text-gradient-sunset {
     background: linear-gradient(
       135deg,
-      #f59e0b 0%,
-      #ec4899 50%,
-      #8b5cf6 100%
+      #38bdf8 0%,
+      #60a5fa 50%,
+      #818cf8 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-white {
+    background: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #cbd5e1 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -211,27 +212,24 @@ body {
 
   .bg-gradient-spectrum {
     background: linear-gradient(
-      90deg,
-      #00f0ff 0%,
-      #3b82f6 25%,
-      #8b5cf6 50%,
-      #ec4899 75%,
-      #f59e0b 100%
+      135deg,
+      #2563eb 0%,
+      #3b82f6 35%,
+      #4f46e5 70%,
+      #6366f1 100%
     );
-    background-size: 200% 200%;
-    animation: gradientShift 5s ease infinite;
   }
 
   .hologram-grid {
-    background-size: 44px 44px;
+    background-size: 40px 40px;
     background-image: linear-gradient(
         to right,
-        rgba(0, 240, 255, 0.05) 1px,
+        rgba(255, 255, 255, 0.03) 1px,
         transparent 1px
       ),
       linear-gradient(
         to bottom,
-        rgba(236, 72, 153, 0.05) 1px,
+        rgba(255, 255, 255, 0.03) 1px,
         transparent 1px
       );
   }

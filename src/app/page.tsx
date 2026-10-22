@@ -40,7 +40,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="relative min-h-screen bg-[#030712] text-slate-100 overflow-x-hidden selection:bg-cyan-500/30 selection:text-cyan-200">
+    <div className="relative min-h-screen bg-[#080b11] text-slate-100 overflow-x-hidden selection:bg-blue-600/30 selection:text-blue-100">
       {/* Magnetic Futuristic Cyber Cursor (Smooth follower, desktop only) */}
       <CustomCyberCursor />
 
