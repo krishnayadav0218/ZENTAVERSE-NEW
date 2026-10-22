@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Layers,
@@ -379,17 +380,27 @@ export default function ServicesSection({ onOpenBooking }: ServicesSectionProps)
               </div>
 
               <div className="mt-6 pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-3">
-                <a
-                  href={`https://wa.me/917992153750?text=Hi%20Zyntaverse%20Technologies,%20I%20am%20interested%20in%20your%20service:%20${encodeURIComponent(
-                    selectedService.title
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 px-4 py-2.5 text-xs font-bold text-slate-950 shadow-sm hover:opacity-95"
-                >
-                  <MessageCircle className="h-4 w-4" />
-                  <span>Inquire for this on WhatsApp</span>
-                </a>
+                <div className="flex flex-wrap items-center gap-2">
+                  <a
+                    href={`https://wa.me/917992153750?text=Hi%20Zyntaverse%20Technologies,%20I%20am%20interested%20in%20your%20service:%20${encodeURIComponent(
+                      selectedService.title
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 px-4 py-2.5 text-xs font-bold text-slate-950 shadow-sm hover:opacity-95"
+                  >
+                    <MessageCircle className="h-4 w-4" />
+                    <span>Inquire on WhatsApp</span>
+                  </a>
+
+                  <Link
+                    href={`/services/${selectedService.id}`}
+                    className="inline-flex items-center gap-1.5 rounded-xl border border-blue-500/30 bg-blue-500/10 px-4 py-2.5 font-mono text-xs text-blue-300 hover:bg-blue-500/20 transition-colors"
+                  >
+                    <span>Full Service Specs &amp; Pricing</span>
+                    <ArrowUpRight className="h-3.5 w-3.5" />
+                  </Link>
+                </div>
 
                 {onOpenBooking && (
                   <button
@@ -398,7 +409,7 @@ export default function ServicesSection({ onOpenBooking }: ServicesSectionProps)
                       setSelectedService(null);
                       onOpenBooking();
                     }}
-                    className="inline-flex items-center gap-1.5 rounded-xl border border-blue-500/30 bg-blue-500/10 px-4 py-2.5 font-mono text-xs text-blue-300 hover:bg-blue-500/20"
+                    className="inline-flex items-center gap-1.5 rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 font-mono text-xs text-slate-300 hover:text-white"
                   >
                     <span>Book Strategy Call</span>
                   </button>
