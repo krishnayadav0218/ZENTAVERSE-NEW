@@ -202,41 +202,43 @@ export default function AIAssistantWidget({
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-40 font-sans">
+    <div className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50 font-sans">
       {/* Interactive Chat Window */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
+            initial={{ opacity: 0, y: 15, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
-            className="mb-4 w-[350px] sm:w-[420px] max-w-[calc(100vw-32px)] rounded-3xl border border-blue-500/30 bg-[#080b11]/95 shadow-[0_25px_80px_rgba(0,0,0,0.85)] backdrop-blur-2xl overflow-hidden flex flex-col h-[560px] max-h-[80vh]"
+            exit={{ opacity: 0, y: 15, scale: 0.96 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="mb-3 w-[330px] sm:w-[380px] max-w-[calc(100vw-32px)] rounded-3xl border border-blue-500/30 bg-[#080b11]/98 shadow-[0_20px_70px_rgba(0,0,0,0.9)] backdrop-blur-2xl overflow-hidden flex flex-col h-[460px] sm:h-[480px] max-h-[calc(100vh-105px)]"
           >
             {/* Header */}
-            <div className="p-4 border-b border-white/10 bg-slate-950/70">
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center gap-3">
-                  <div className="relative h-10 w-10 rounded-2xl border border-white/15 bg-slate-900 p-1 flex items-center justify-center shadow-md">
+            <div className="p-3.5 sm:p-4 border-b border-white/10 bg-slate-950/80 shrink-0">
+              <div className="flex items-center justify-between mb-2.5">
+                <div className="flex items-center gap-2.5 min-w-0">
+                  <div className="relative h-9 w-9 shrink-0 rounded-xl border border-white/15 bg-slate-900 p-1 flex items-center justify-center shadow-md">
                     <Image
                       src="/logo.png"
                       alt={businessName}
-                      width={32}
-                      height={32}
+                      width={28}
+                      height={28}
                       className="object-contain"
                     />
-                    <span className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full border-2 border-slate-950 bg-emerald-400" />
+                    <span className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full border-2 border-slate-950 bg-emerald-400" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <div className="flex items-center gap-1.5">
-                      <span className="text-sm font-bold text-white tracking-wide">
-                        Zyntaverse AI Copilot
+                      <span className="text-xs sm:text-sm font-bold text-white tracking-wide truncate">
+                        {businessName}
                       </span>
-                      <Sparkles className="h-3.5 w-3.5 text-blue-400" />
+                      <span className="shrink-0 rounded bg-blue-500/20 border border-blue-400/30 px-1 py-0.2 font-mono text-[9px] text-blue-300 font-semibold uppercase">
+                        AI
+                      </span>
                     </div>
-                    <div className="flex items-center gap-1 text-[11px] font-mono text-emerald-400">
-                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                      <span>Online • Instant Technical Advisory</span>
+                    <div className="flex items-center gap-1 text-[10px] font-mono text-emerald-400">
+                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+                      <span className="truncate">Online • Instant Technical Copilot</span>
                     </div>
                   </div>
                 </div>
@@ -244,38 +246,38 @@ export default function AIAssistantWidget({
                 <button
                   type="button"
                   onClick={() => setIsOpen(false)}
-                  className="flex h-8 w-8 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-slate-400 hover:text-white transition-colors"
+                  className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-slate-400 hover:text-white transition-colors"
                   aria-label="Close Assistant"
                 >
-                  <X className="h-4 w-4" />
+                  <X className="h-3.5 w-3.5" />
                 </button>
               </div>
 
               {/* Mode Switcher Tabs */}
-              <div className="grid grid-cols-2 gap-1 rounded-xl bg-slate-900/90 p-1 border border-white/10 text-xs font-mono">
+              <div className="grid grid-cols-2 gap-1 rounded-xl bg-slate-900/90 p-1 border border-white/10 text-[11px] font-mono">
                 <button
                   type="button"
                   onClick={() => setMode("ai")}
-                  className={`flex items-center justify-center gap-1.5 py-1.5 rounded-lg transition-all ${
+                  className={`flex items-center justify-center gap-1.5 py-1 rounded-lg transition-all ${
                     mode === "ai"
                       ? "bg-blue-600 text-white font-bold shadow-md"
                       : "text-slate-400 hover:text-white"
                   }`}
                 >
-                  <Bot className="h-3.5 w-3.5" />
+                  <Bot className="h-3 w-3" />
                   <span>AI Copilot</span>
                 </button>
 
                 <button
                   type="button"
                   onClick={() => setMode("whatsapp")}
-                  className={`flex items-center justify-center gap-1.5 py-1.5 rounded-lg transition-all ${
+                  className={`flex items-center justify-center gap-1.5 py-1 rounded-lg transition-all ${
                     mode === "whatsapp"
                       ? "bg-emerald-600 text-white font-bold shadow-md"
                       : "text-slate-400 hover:text-white"
                   }`}
                 >
-                  <MessageCircle className="h-3.5 w-3.5" />
+                  <MessageCircle className="h-3 w-3" />
                   <span>WhatsApp Direct</span>
                 </button>
               </div>
