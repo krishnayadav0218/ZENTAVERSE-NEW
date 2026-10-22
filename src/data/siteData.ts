@@ -94,7 +94,7 @@ export const aboutPillars: AboutPillar[] = [
     description:
       "Architecting high-throughput React/Next.js platforms and cross-platform mobile apps with enterprise microservices and secure distributed databases.",
     metrics: "99.9% Uptime • <100ms API Latency",
-    accent: "#00F0FF",
+    accent: "#3B82F6",
   },
   {
     id: "ai",
@@ -103,7 +103,7 @@ export const aboutPillars: AboutPillar[] = [
     description:
       "Deploying proprietary RAG systems, AI customer automation, predictive models, and self-learning pipelines that transform operations and multiply team productivity.",
     metrics: "3.5x Efficiency Lift • 24/7 AI Automation",
-    accent: "#8B5CF6",
+    accent: "#6366F1",
   },
   {
     id: "cloud",
@@ -121,7 +121,7 @@ export const aboutPillars: AboutPillar[] = [
     description:
       "Transforming complex operational datasets into interactive Power BI, Tableau, and custom web dashboards that drive data-backed executive decisions.",
     metrics: "10M+ Rows Handled • Real-Time KPI Sync",
-    accent: "#EC4899",
+    accent: "#0284C7",
   },
   {
     id: "problemsolving",
@@ -169,8 +169,8 @@ export const servicesData: ServiceItem[] = [
       "Custom websites and apps built for growth and performance.",
     fullDescription:
       "Engineering blazing-fast, responsive web applications and scalable digital platforms built with Next.js, React, and Node.js. Tailored for maximum conversion, speed, and reliability.",
-    accentColor: "#00F0FF",
-    glowClass: "from-cyan-500/20 via-blue-500/10 to-transparent",
+    accentColor: "#3B82F6",
+    glowClass: "from-blue-500/20 via-sky-500/10 to-transparent",
     iconType: "fullstack",
     deliverables: [
       "Custom Full-Stack Web Applications & SaaS",
@@ -189,8 +189,8 @@ export const servicesData: ServiceItem[] = [
       "Interfaces and identities that users love and businesses remember.",
     fullDescription:
       "Crafting world-class design systems, futuristic glassmorphic UI, and seamless user experiences. We combine human psychology with motion design to maximize engagement and brand prestige.",
-    accentColor: "#EC4899",
-    glowClass: "from-pink-500/20 via-purple-500/10 to-transparent",
+    accentColor: "#6366F1",
+    glowClass: "from-indigo-500/20 via-blue-500/10 to-transparent",
     iconType: "uiux",
     deliverables: [
       "Brand Identity, Logo & Design Language",
@@ -209,8 +209,8 @@ export const servicesData: ServiceItem[] = [
       "Powerful, scalable tools built around the way your team works.",
     fullDescription:
       "Tailor-made internal business tools, customized ERP/CRM suites, enterprise inventory engines, and automated backends designed specifically to eliminate friction in your workflow.",
-    accentColor: "#8B5CF6",
-    glowClass: "from-purple-500/20 via-indigo-500/10 to-transparent",
+    accentColor: "#0EA5E9",
+    glowClass: "from-sky-500/20 via-indigo-500/10 to-transparent",
     iconType: "custom-software",
     deliverables: [
       "Bespoke Enterprise Resource Planning (ERP)",
@@ -249,8 +249,8 @@ export const servicesData: ServiceItem[] = [
       "Scalable, secure and high-performing cloud solutions.",
     fullDescription:
       "Modern cloud architecture engineered for 99.99% uptime, zero-downtime CI/CD deployment pipelines, automated auto-scaling, container orchestration, and serverless backends.",
-    accentColor: "#38BDF8",
-    glowClass: "from-sky-500/20 via-cyan-500/10 to-transparent",
+    accentColor: "#2563EB",
+    glowClass: "from-blue-600/20 via-indigo-500/10 to-transparent",
     iconType: "cloud",
     deliverables: [
       "AWS & Multi-Cloud Infrastructure Architecture",
@@ -270,7 +270,7 @@ export const servicesData: ServiceItem[] = [
     fullDescription:
       "Enterprise-grade security audits, zero-trust authentication, automated vulnerability scanning, end-to-end data encryption, and GDPR/data compliance safeguards for your platforms.",
     accentColor: "#F43F5E",
-    glowClass: "from-rose-500/20 via-pink-500/10 to-transparent",
+    glowClass: "from-rose-500/20 via-red-500/10 to-transparent",
     iconType: "cybersecurity",
     deliverables: [
       "Zero-Trust Authentication & OAuth2 / JWT Security",
@@ -289,8 +289,8 @@ export const servicesData: ServiceItem[] = [
       "Native & cross-platform apps for iOS and Android.",
     fullDescription:
       "Crafting smooth, high-fidelity mobile experiences that delight users. Using Flutter and React Native, we deliver 60fps performance with single-codebase efficiency across iOS and Android.",
-    accentColor: "#06B6D4",
-    glowClass: "from-cyan-500/20 via-teal-500/10 to-transparent",
+    accentColor: "#38BDF8",
+    glowClass: "from-sky-500/20 via-blue-500/10 to-transparent",
     iconType: "mobile",
     deliverables: [
       "Flutter Cross-Platform iOS & Android Apps",
@@ -309,8 +309,8 @@ export const servicesData: ServiceItem[] = [
       "Connect systems, streamline workflows, boost efficiency.",
     fullDescription:
       "Designing sub-millisecond RESTful and GraphQL APIs, seamless payment gateway integrations, webhooks, and third-party CRM/ERP connectors that make your software ecosystem click together.",
-    accentColor: "#F59E0B",
-    glowClass: "from-amber-500/20 via-orange-500/10 to-transparent",
+    accentColor: "#818CF8",
+    glowClass: "from-indigo-500/20 via-sky-500/10 to-transparent",
     iconType: "api",
     deliverables: [
       "Ultra-Fast RESTful & GraphQL Microservice APIs",
@@ -329,8 +329,8 @@ export const servicesData: ServiceItem[] = [
       "Smart automation for better customer experiences.",
     fullDescription:
       "Harness the power of generative AI with custom RAG chatbots, WhatsApp automated support agents, intelligent semantic search engines, and automated AI lead qualification systems.",
-    accentColor: "#A855F7",
-    glowClass: "from-purple-500/20 via-pink-500/10 to-transparent",
+    accentColor: "#4F46E5",
+    glowClass: "from-indigo-600/20 via-blue-500/10 to-transparent",
     iconType: "ai",
     deliverables: [
       "Custom Enterprise RAG Knowledge Copilots",
@@ -369,8 +369,8 @@ export const servicesData: ServiceItem[] = [
       "Immersive experiences for a smarter tomorrow.",
     fullDescription:
       "Pushing the boundaries of the digital web with interactive 3D WebGL scenes, virtual product showrooms, Augmented Reality previewers, and spatial interactive brand experiences.",
-    accentColor: "#EC4899",
-    glowClass: "from-pink-500/20 via-purple-500/10 to-transparent",
+    accentColor: "#6366F1",
+    glowClass: "from-indigo-500/20 via-sky-500/10 to-transparent",
     iconType: "arvr",
     deliverables: [
       "Web-Based 3D Interactive Spatial Portals",
@@ -389,8 +389,8 @@ export const servicesData: ServiceItem[] = [
       "Strategy, technology and support for long-term success.",
     fullDescription:
       "Guiding businesses through technology modernizations, legacy cloud migrations, technical architecture assessments, and long-term digital roadmaps designed for lasting competitive advantage.",
-    accentColor: "#00F0FF",
-    glowClass: "from-cyan-500/20 via-indigo-500/10 to-transparent",
+    accentColor: "#3B82F6",
+    glowClass: "from-blue-500/20 via-indigo-500/10 to-transparent",
     iconType: "consulting",
     deliverables: [
       "Legacy Codebase Modernization & Cloud Migration",
@@ -455,7 +455,7 @@ export const projectsData: ProjectItem[] = [
       "An interactive self-learning AI simulation where autonomous neural agents learn complex navigation and strategy in real time using Deep Q-Learning and genetic evolution algorithms.",
     technologies: ["Python", "Machine Learning", "React", "Three.js", "TypeScript"],
     metrics: ["120 FPS Neural Sim", "98.4% Win-Rate Convergence", "Live Policy Heatmap"],
-    accentColor: "#00F0FF",
+    accentColor: "#3B82F6",
     visualType: "ai-game",
     githubUrl: "https://github.com/zyntaverse/neuro-arena-rl",
     liveUrl: "#demo-ai-game",
@@ -474,7 +474,7 @@ export const projectsData: ProjectItem[] = [
       "A high-density executive analytics platform aggregating multi-channel revenue, supply chain telemetry, and ML-driven anomaly detection with interactive drill-downs.",
     technologies: ["Python", "SQL", "React", "Next.js", "Power BI", "Tableau"],
     metrics: ["15M+ Events/Day", "<180ms Query Speed", "Automated Anomaly Alerts"],
-    accentColor: "#8B5CF6",
+    accentColor: "#6366F1",
     visualType: "analytics-bi",
     githubUrl: "https://github.com/zyntaverse/pulse-analytics-bi",
     liveUrl: "#demo-analytics",
@@ -493,7 +493,7 @@ export const projectsData: ProjectItem[] = [
       "Comprehensive enterprise resource planning platform combining client pipelines, automated invoicing, inventory tracking, role-based access control, and team analytics.",
     technologies: ["Next.js", "Node.js", "Express", "MySQL", "Docker", "AWS"],
     metrics: ["45+ Active Teams", "Zero-Downtime RBAC", "Automated Billing Engine"],
-    accentColor: "#3B82F6",
+    accentColor: "#2563EB",
     visualType: "erp-system",
     githubUrl: "https://github.com/zyntaverse/nexus-erp-suite",
     liveUrl: "#demo-erp",
@@ -512,7 +512,7 @@ export const projectsData: ProjectItem[] = [
       "Enterprise conversational AI platform with semantic vector retrieval over company documentation, APIs, and catalogs—complete with live tool-calling and WhatsApp integration.",
     technologies: ["Python", "AI", "React", "Next.js", "MongoDB", "Node.js"],
     metrics: ["94% Auto-Resolution", "0.7s First-Token TTFT", "Verified Citations"],
-    accentColor: "#EC4899",
+    accentColor: "#4F46E5",
     visualType: "ai-chatbot",
     githubUrl: "https://github.com/zyntaverse/aether-rag-copilot",
     liveUrl: "#demo-chatbot",
@@ -550,7 +550,7 @@ export const projectsData: ProjectItem[] = [
       "Bespoke interactive 3D business flagship blending React Three Fiber spatial scenes, glassmorphic UI architecture, physics-driven micro-interactions, and instant lead capture.",
     technologies: ["Next.js", "TypeScript", "Three.js", "Tailwind CSS", "React"],
     metrics: ["60 FPS Spatial WebGL", "100% Mobile Scannable", "3.8x Lead Engagement"],
-    accentColor: "#06B6D4",
+    accentColor: "#0EA5E9",
     visualType: "portfolio-3d",
     githubUrl: "https://github.com/zyntaverse/business-website",
     liveUrl: "#home",
@@ -577,7 +577,7 @@ export const techStackData: TechNode[] = [
     id: "react",
     name: "React",
     category: "Frontend",
-    color: "#00F0FF",
+    color: "#38BDF8",
     level: "Expert",
     description: "Component architecture, custom hooks, concurrent UI & R3F spatial rendering",
     connections: ["nextjs", "javascript", "html", "css", "nodejs"],
@@ -756,7 +756,7 @@ export const workProcessData: ProcessStage[] = [
       "Deep-dive discovery into your business model, target users, operational bottlenecks, and measurable ROI objectives.",
     deliverable: "Requirements Brief & Solution Roadmap",
     duration: "Days 1–3",
-    accent: "#00F0FF",
+    accent: "#3B82F6",
   },
   {
     step: "02",
@@ -776,7 +776,7 @@ export const workProcessData: ProcessStage[] = [
       "Crafting high-conversion glassmorphic interfaces, interactive prototypes, responsive layouts, and design tokens.",
     deliverable: "Interactive Prototypes & Design System",
     duration: "Week 2",
-    accent: "#8B5CF6",
+    accent: "#6366F1",
   },
   {
     step: "04",
@@ -786,7 +786,7 @@ export const workProcessData: ProcessStage[] = [
       "Writing clean, modular TypeScript, Next.js, and Python code—building responsive frontends, secure APIs, and intelligent engines.",
     deliverable: "Production Codebase & Staging Preview",
     duration: "Weeks 2–5",
-    accent: "#EC4899",
+    accent: "#2563EB",
   },
   {
     step: "05",
@@ -816,7 +816,7 @@ export const workProcessData: ProcessStage[] = [
       "Continuous performance monitoring, feature expansion, AI fine-tuning, and dedicated long-term technical partnership.",
     deliverable: "SLA Warranty & Dedicated Maintenance",
     duration: "Ongoing",
-    accent: "#00F0FF",
+    accent: "#38BDF8",
   },
 ];
 
@@ -842,7 +842,7 @@ export const whyMeData: WhyChooseItem[] = [
       "We handle every phase of your digital evolution—from initial architectural concept and UI/UX design to high-throughput cloud infrastructure and 24/7 post-launch maintenance.",
     metricLabel: "Execution Scope",
     metricValue: "100% Full-Cycle",
-    accentColor: "#00F0FF",
+    accentColor: "#3B82F6",
     highlights: [
       "Discovery, wireframing, development & deployment",
       "Seamless integration between web, mobile & cloud",
@@ -858,7 +858,7 @@ export const whyMeData: WhyChooseItem[] = [
       "Our team brings deep engineering mastery across React/Next.js, Python AI/ML, cloud DevOps, and high-performance databases to deliver resilient software.",
     metricLabel: "Engineering Standard",
     metricValue: "Top 1% Quality",
-    accentColor: "#8B5CF6",
+    accentColor: "#6366F1",
     highlights: [
       "Modern tech stack: Next.js, Python, Flutter, AWS",
       "Production-tested patterns & enterprise clean code",
@@ -874,7 +874,7 @@ export const whyMeData: WhyChooseItem[] = [
       "Every architecture is fortified with zero-trust authentication, robust data encryption, automated backup routines, and rigorous compliance to protect your enterprise assets.",
     metricLabel: "Security & Uptime",
     metricValue: "99.9% Uptime",
-    accentColor: "#EC4899",
+    accentColor: "#0EA5E9",
     highlights: [
       "Zero-Trust OAuth2, JWT & strict data encryption",
       "Automated backups & disaster recovery readiness",
@@ -956,7 +956,7 @@ export const testimonialsData: TestimonialItem[] = [
     projectDelivered: "AI Copilot & Multi-Tenant SaaS",
     quote:
       "Zyntaverse delivered our AI copilot and enterprise dashboard in just 4 weeks. Their code architecture, 3D spatial web expertise, and speed blew our investors away during our Series A round.",
-    accent: "#00F0FF",
+    accent: "#3B82F6",
   },
   {
     id: "priya-sharma",
@@ -969,7 +969,7 @@ export const testimonialsData: TestimonialItem[] = [
     projectDelivered: "Full-Stack Fintech Portal & Payment Gateway",
     quote:
       "Working with Zyntaverse Technologies was seamless. They re-architected our transaction portal with zero downtime, cutting latency by 45% and immediately boosting user retention.",
-    accent: "#8B5CF6",
+    accent: "#6366F1",
   },
   {
     id: "marcus-sterling",
@@ -982,7 +982,7 @@ export const testimonialsData: TestimonialItem[] = [
     projectDelivered: "Real-Time Telemetry Dashboard & AWS Microservices",
     quote:
       "From planning to launch, the Zyntaverse team acted as our dedicated in-house tech partners. Exceptional full-stack TypeScript code, clean documentation, and 24/7 post-launch commitment.",
-    accent: "#EC4899",
+    accent: "#0EA5E9",
   },
   {
     id: "omar-al-mansoor",
