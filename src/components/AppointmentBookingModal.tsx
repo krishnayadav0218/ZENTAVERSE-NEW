@@ -61,6 +61,22 @@ export default function AppointmentBookingModal({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    try {
+      const existing = JSON.parse(
+        localStorage.getItem("zyntaverse_bookings") || "[]"
+      );
+      existing.push({
+        ...formData,
+        service: selectedService,
+        platform: selectedPlatform,
+        date: selectedDate,
+        timeSlot: selectedSlot,
+        bookedAt: new Date().toISOString(),
+      });
+      localStorage.setItem("zyntaverse_bookings", JSON.stringify(existing));
+    } catch {
+      // Local storage fallback
+    }
     setIsBooked(true);
   };
 

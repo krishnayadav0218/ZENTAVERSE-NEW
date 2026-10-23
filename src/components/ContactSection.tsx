@@ -131,6 +131,18 @@ export default function ContactSection({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    try {
+      const existing = JSON.parse(
+        localStorage.getItem("zyntaverse_inquiries") || "[]"
+      );
+      existing.push({
+        ...formData,
+        submittedAt: new Date().toISOString(),
+      });
+      localStorage.setItem("zyntaverse_inquiries", JSON.stringify(existing));
+    } catch {
+      // Local storage fallback
+    }
     setSubmitted(true);
   };
 

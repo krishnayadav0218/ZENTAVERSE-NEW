@@ -216,8 +216,20 @@ export default function Footer({
             rights reserved. | Mumbai, India
           </div>
 
-          <div className="font-mono text-xs text-slate-300">
-            Smart technology. Real solutions. Lasting impact.
+          <div className="flex items-center gap-4">
+            {onOpenBrandModal && (
+              <button
+                type="button"
+                onClick={onOpenBrandModal}
+                className="inline-flex items-center gap-1.5 rounded-lg border border-cyan-500/30 bg-cyan-500/10 px-2.5 py-1 font-mono text-[11px] text-cyan-300 hover:bg-cyan-500/20 transition-colors"
+                title="Preview live with custom brand name or colors"
+              >
+                <span>White-Label Customizer</span>
+              </button>
+            )}
+            <div className="hidden md:block font-mono text-xs text-slate-300">
+              Smart technology. Real solutions. Lasting impact.
+            </div>
           </div>
 
           <button
