@@ -22,14 +22,16 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import AppointmentBookingModal from "@/components/AppointmentBookingModal";
 import CompanyProfileModal from "@/components/CompanyProfileModal";
+import BrandCustomizerModal from "@/components/BrandCustomizerModal";
 import CustomCyberCursor from "@/components/CustomCyberCursor";
 import AudioToggle from "@/components/AudioToggle";
 import ExitIntentModal from "@/components/ExitIntentModal";
 
 export default function HomePage() {
-  const [brand] = useState<BrandConfig>(defaultBrandConfig);
+  const [brand, setBrand] = useState<BrandConfig>(defaultBrandConfig);
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
   const [deckModalOpen, setDeckModalOpen] = useState(false);
+  const [brandModalOpen, setBrandModalOpen] = useState(false);
 
   const handleOpenBooking = () => {
     setBookingModalOpen(true);
@@ -37,6 +39,10 @@ export default function HomePage() {
 
   const handleOpenDeck = () => {
     setDeckModalOpen(true);
+  };
+
+  const handleOpenBrandModal = () => {
+    setBrandModalOpen(true);
   };
 
   return (
@@ -51,6 +57,7 @@ export default function HomePage() {
       <Navbar
         brand={brand}
         onOpenBooking={handleOpenBooking}
+        onOpenBrandModal={handleOpenBrandModal}
       />
 
       {/* Main Content Flow */}
@@ -107,6 +114,7 @@ export default function HomePage() {
         brand={brand}
         onOpenBooking={handleOpenBooking}
         onOpenDeck={handleOpenDeck}
+        onOpenBrandModal={handleOpenBrandModal}
       />
 
       {/* Floating Interactive Sci-Fi Sound FX Toggle (Web Audio API) */}
@@ -129,6 +137,14 @@ export default function HomePage() {
       <CompanyProfileModal
         isOpen={deckModalOpen}
         onClose={() => setDeckModalOpen(false)}
+      />
+
+      {/* Live Brand Customizer & White-Label Preview Modal */}
+      <BrandCustomizerModal
+        isOpen={brandModalOpen}
+        onClose={() => setBrandModalOpen(false)}
+        brand={brand}
+        onSaveBrand={(updated) => setBrand(updated)}
       />
 
       {/* Desktop Exit Intent Modal (Free 15-Minute Blueprint Lead Magnet) */}
